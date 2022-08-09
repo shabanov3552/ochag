@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<!-- добавить класс main-page к wrapper только когда на главной странице находимся. -->
+	<div class="wrapper main-page">
+
+		@@include('html/_header.htm',{})
+		<div class="main-page-baner">
+			<div class="main-page-baner__container">
+				<!-- Оболочка слайдера -->
+				<div class="main-page-baner__slider swiper">
+					<!-- Двигающееся часть слайдера -->
+					<div class="main-page-baner__wrapper swiper-wrapper">
+						<!-- Слайд -->
+						<div class="main-page-baner__slide swiper-slide">
+							<a href="" class="main-page-baner__link">
+								<div class="main-page-baner__image-ibg main-page-baner__image-ibg_contain"><img src="@img/main-page/main-slider.jpg" alt=""></div>
+							</a>
+						</div>
+						<div class="main-page-baner__slide swiper-slide">
+							<a href="" class="main-page-baner__link">
+								<div class="main-page-baner__image-ibg main-page-baner__image-ibg_contain"><img src="@img/main-page/main-slider.jpg" alt=""></div>
+							</a>
+						</div>
+						<div class="main-page-baner__slide swiper-slide">
+							<a href="" class="main-page-baner__link">
+								<div class="main-page-baner__image-ibg main-page-baner__image-ibg_contain"><img src="@img/main-page/main-slider.jpg" alt=""></div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="main-page-baner__swiper-button-prev">
+					<svg class="main-page-baner__svg">
+						<use xlink:href="img/icons/icons.svg#svg-arrow-main-slider-left"></use>
+					</svg>
+				</button>
+				<button type="button" class="main-page-baner__swiper-button-next">
+					<svg class="main-page-baner__svg">
+						<use xlink:href="img/icons/icons.svg#svg-arrow-main-slider-right"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<main class="page">
+			<div class="page__container">
+
+
+				<div class="product-slider">
+
+					<div class="product-slider__header">
+						<div class="product-slider__title">Выгодно сейчас</div>
+						<a href="" class="product-slider__view-all-link">
+							<span class="product-slider__view-all-span">Смотреть все</span>
+							<svg class="product-slider__view-all-svg">
+								<use xlink:href="img/icons/icons.svg#svg-arrow__view-all"></use>
+							</svg>
+						</a>
+						<div class="product-slider__nav-btns">
+							<button type="button" class="product-slider__swiper-button swiper-button-prev">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_left"></use>
+								</svg>
+							</button>
+							<button type="button" class="product-slider__swiper-button swiper-button-next">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_right"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!-- Оболочка слайдера -->
+					<div class="product-slider__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="product-slider__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-1.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Набор посуды MAYER&BOCH сталь 23463</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_blue">Хит</div>
+													<div class="tag__item tag__item_orange">Акция</div>
+													<div class="tag__item tag__item_purple">Новинка</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">6&nbsp;840&nbsp;₽</div>
+												<del class="product-card__old-price">6&nbsp;840&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-2.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Подушка стеганая SELENA, "Оригами" 50х70 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">682&nbsp;₽</div>
+												<del class="product-card__old-price">982&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">Нет в наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange btn__orange_white">Нет в наличии</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites _delete">
+												<span class="product-card__btn-span">Убрать</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare _delete">
+												<span class="product-card__btn-span">Удалить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-3.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Ложка столовая EME POSATERIE SEGNO 7018 3 шт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">530&nbsp;₽</div>
+												<del class="product-card__old-price">830&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-4.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Набор посуды для пикника пластик бежевый, 6 персон</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;144&nbsp;₽</div>
+												<del class="product-card__old-price">1&nbsp;144&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-5.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Сушилка для посуды 18х16х34 см сталь, цвет хром</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">590&nbsp;₽</div>
+												<del class="product-card__old-price">890&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-6.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Комплект Одеяло 140x200 см Подушка 50x70 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;570&nbsp;₽</div>
+												<del class="product-card__old-price">2&nbsp;570&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="product-slider">
+
+					<div class="product-slider__header">
+						<div class="product-slider__title">Готовимся к дачному сезону</div>
+						<div class="product-slider__baners baners">
+							<div class="baners__row">
+								<a href="" class="baners__item">
+									<img src="@img/baners/item-1.jpg" alt="">
+								</a>
+								<a href="" class="baners__item">
+									<img src="@img/baners/item-2.jpg" alt="">
+								</a>
+								<a href="" class="baners__item">
+									<img src="@img/baners/item-3.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<a href="" class="product-slider__view-all-link">
+							<span class="product-slider__view-all-span">Смотреть все</span>
+							<svg class="product-slider__view-all-svg">
+								<use xlink:href="img/icons/icons.svg#svg-arrow__view-all"></use>
+							</svg>
+						</a>
+						<div class="product-slider__nav-btns">
+							<button type="button" class="product-slider__swiper-button swiper-button-prev">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_left"></use>
+								</svg>
+							</button>
+							<button type="button" class="product-slider__swiper-button swiper-button-next">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_right"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!-- Оболочка слайдера -->
+					<div class="product-slider__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="product-slider__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-7.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Гриль передвижной Naterial «Phoenix Alpha»</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">6&nbsp;840&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-8.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Мангал Без Шампуров Boyscout 61231</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;549&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-9.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Фигура садовая «Мальчик-эльф с тачкой» высота 55 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">5&nbsp;863&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-10.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Средство от насекомых Green Belt Prosto 900 мл</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;331&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-11.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Газонокосилка Gardena PowerMax 1100/32 1100 Вт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">7&nbsp;600&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-12.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Бассейн каркасный Bestway 366x122 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">33&nbsp;668&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="product-slider">
+					<div class="product-slider__header">
+						<div class="product-slider__title">Климатическая техника</div>
+						<div class="product-slider__baners baners">
+							<div class="baners__row">
+								<a href="" class="baners__item">
+									<img src="@img/baners/item-4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<a href="" class="product-slider__view-all-link">
+							<span class="product-slider__view-all-span">Смотреть все</span>
+							<svg class="product-slider__view-all-svg">
+								<use xlink:href="img/icons/icons.svg#svg-arrow__view-all"></use>
+							</svg>
+						</a>
+						<div class="product-slider__nav-btns">
+							<button type="button" class="product-slider__swiper-button swiper-button-prev">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_left"></use>
+								</svg>
+							</button>
+							<button type="button" class="product-slider__swiper-button swiper-button-next">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_right"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!-- Оболочка слайдера -->
+					<div class="product-slider__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="product-slider__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-13.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Электроводонагреватель Equation-100, 100 л, эмаль</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">11&nbsp;710&nbsp;₽</div>
+												<del class="product-card__old-price">12&nbsp;710&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-14.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Увлажнитель воздуха Neoclima NHL–500-VS белый</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-15.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Вентилятор напольный Equation Jervis 45 Вт D30 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-16.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Вентилятор колонный Equation Tower 45 Вт 75 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-17.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Конвектор электрический LM/LCM-1000, 1000 Вт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;600&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-18.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Обогреватель масляный Monlan MS-20 U2000 Вт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">5&nbsp;668&nbsp;₽</div>
+												<del class="product-card__old-price">7&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="product-slider">
+					<div class="product-slider__header">
+						<div class="product-slider__title">Интерьер и декор для вашего дома</div>
+						<div class="product-slider__baners baners">
+							<div class="baners__row">
+								<a href="" class="baners__item">
+									<img src="@img/baners/item-5.jpg" alt="">
+								</a>
+								<a href="" class="baners__item">
+									<img src="@img/baners/item-6.jpg" alt="">
+								</a>
+								<a href="" class="baners__item">
+									<img src="@img/baners/item-7.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<a href="" class="product-slider__view-all-link">
+							<span class="product-slider__view-all-span">Смотреть все</span>
+							<svg class="product-slider__view-all-svg">
+								<use xlink:href="img/icons/icons.svg#svg-arrow__view-all"></use>
+							</svg>
+						</a>
+						<div class="product-slider__nav-btns">
+							<button type="button" class="product-slider__swiper-button swiper-button-prev">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_left"></use>
+								</svg>
+							</button>
+							<button type="button" class="product-slider__swiper-button swiper-button-next">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_right"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!-- Оболочка слайдера -->
+					<div class="product-slider__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="product-slider__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-19.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Ваза «Мальвина» малая стекло прозрачный 31см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">336&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-20.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Свеча ароматизированная в стакане «Зелёное яблоко»</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">88&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-21.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Ваза Катерина, цвет серый матовый</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">245&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">Нет в наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange btn__orange_white">Нет в наличии</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-22.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Свеча парафиновая Молодые курочки микс</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">50&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-23.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Статуэтка Bogacho Ангел с виноградом кремовый</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">7&nbsp;600&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-24.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Картина Rabbits at full moon, 1920г</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">33&nbsp;668&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="product-slider">
+					<div class="product-slider__header">
+						<div class="product-slider__title">Вы смотрели</div>
+						<div class="product-slider__nav-btns">
+							<button type="button" class="product-slider__swiper-button swiper-button-prev">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_left"></use>
+								</svg>
+							</button>
+							<button type="button" class="product-slider__swiper-button swiper-button-next">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_right"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!-- Оболочка слайдера -->
+					<div class="product-slider__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="product-slider__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-16.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Вентилятор колонный Equation Tower 45 Вт 75 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-24.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Картина Rabbits at full moon, 1920г</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">33&nbsp;668&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-10.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Средство от насекомых Green Belt Prosto 900 мл</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;331&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-14.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Увлажнитель воздуха Neoclima NHL–500-VS белый</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-8.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Мангал Без Шампуров Boyscout 61231</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;549&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-15.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Вентилятор напольный Equation Jervis 45 Вт D30 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-17.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Конвектор электрический LM/LCM-1000, 1000 Вт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;600&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-18.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Обогреватель масляный Monlan MS-20 U2000 Вт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">5&nbsp;668&nbsp;₽</div>
+												<del class="product-card__old-price">7&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
