@@ -26,10 +26,10 @@ body::after {
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
+	z-index: 150;
 }
 
 .popup_show {
-	z-index: 150;
 	visibility: visible;
 	overflow: auto;
 	pointer-events: auto;
@@ -56,7 +56,7 @@ body::after {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
+	background-color: #fff;
 	padding: 20px;
 	width: 100%;
 	max-width: 900px;
@@ -66,3 +66,129 @@ body::after {
 		visibility: visible;
 	}
 }
+
+.popup {
+
+	// .popup__close
+
+	&__close {
+		width: 55px;
+		height: 55px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	// .popup__close-svg
+
+	&__close-svg {
+		width: 28px;
+		height: 28px;
+
+		use {
+			fill: #EB7A1D;
+		}
+	}
+}
+
+//========================================================================================================================================================
+
+// #region popup-filters
+
+#filters-more {
+	padding: 0;
+	overflow: hidden;
+
+	.popup__wrapper {
+		height: 100%;
+	}
+
+	.popup__content {
+		max-width: 100%;
+		border-radius: 0;
+		height: 100%;
+		overflow: auto;
+		padding: 60px 80px;
+		overflow-x: hidden;
+
+		@media (max-width:$tablet) {
+			padding: rem(20);
+			padding-bottom: rem(50);
+		}
+	}
+
+	.choice-items-filter {
+		flex: 1 1 100%;
+		overflow: auto;
+	}
+
+	.filters {
+		// height: 100%;
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+		max-width: 1630px;
+		gap: 0 20px;
+
+		&__title {
+			flex: 1 1 100%;
+			display: none;
+
+			@media (max-width:$tablet) {
+				display: block;
+			}
+
+			@media (max-width:$mobileSmall) {
+				font-weight: 600;
+				font-size: 17px;
+				line-height: 21px;
+			}
+		}
+
+		&__wrapper {
+			flex: 1 1 auto;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 30px;
+		}
+
+
+		// .filters__col
+
+		&__col {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+
+			@media (max-width:$mobile) {
+				gap: 15px;
+			}
+		}
+
+		&__buttons {
+			flex: 0 0 240px;
+		}
+
+		&__apply-btn {
+			width: 100%;
+		}
+
+		&__price {
+			@media (min-width:em(550)) {
+				width: 250px;
+
+			}
+		}
+
+		&__reset-btn {
+			@media (max-width:$tablet) {
+				display: flex;
+			}
+		}
+	}
+}
+
+// #endregion

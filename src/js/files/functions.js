@@ -483,22 +483,29 @@ export function showMore() {
 		}
 		function initItem(showMoreBlock, matchMedia = false) {
 			showMoreBlock = matchMedia ? showMoreBlock.item : showMoreBlock;
+			showMoreBlock.classList.add('_show-more-init')
 			let showMoreContent = showMoreBlock.querySelectorAll('[data-showmore-content]');
 			let showMoreButton = showMoreBlock.querySelectorAll('[data-showmore-button]');
 			showMoreContent = Array.from(showMoreContent).filter(item => item.closest('[data-showmore]') === showMoreBlock)[0];
 			showMoreButton = Array.from(showMoreButton).filter(item => item.closest('[data-showmore]') === showMoreBlock)[0];
 			const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
-			if (matchMedia.matches || !matchMedia) {
-				if (hiddenHeight < getOriginalHeight(showMoreContent)) {
-					_slideUp(showMoreContent, 0, hiddenHeight);
-					showMoreButton.hidden = false;
+			if (!showMoreContent.closest('._showmore-active')) {
+				if (matchMedia.matches || !matchMedia) {
+					if (hiddenHeight < getOriginalHeight(showMoreContent)) {
+						_slideUp(showMoreContent, 0, hiddenHeight);
+						showMoreButton.hidden = false;
+					} else {
+						_slideDown(showMoreContent, 0, hiddenHeight);
+						showMoreButton.hidden = true;
+					}
 				} else {
 					_slideDown(showMoreContent, 0, hiddenHeight);
 					showMoreButton.hidden = true;
 				}
-			} else {
-				_slideDown(showMoreContent, 0, hiddenHeight);
+			} else if (showMoreContent.closest('._showmore-active') && !(matchMedia.matches || !matchMedia)) {
 				showMoreButton.hidden = true;
+			} else if (showMoreContent.closest('._showmore-active') && (matchMedia.matches || !matchMedia)) {
+				showMoreButton.hidden = false;
 			}
 		}
 		function getHeight(showMoreBlock, showMoreContent) {
@@ -507,6 +514,20 @@ export function showMore() {
 			if (showMoreType === 'items') {
 				const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 3;
 				const showMoreItems = showMoreContent.children;
+				if (showMoreContent.children.length <= showMoreTypeValue) {
+					return
+				}
+				for (let index = 1; index < showMoreItems.length; index++) {
+					const showMoreItem = showMoreItems[index - 1];
+					hiddenHeight += showMoreItem.offsetHeight;
+					if (index == showMoreTypeValue) break
+				}
+			} else if (showMoreType === 'parag') {
+				const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 2;
+				const showMoreItems = showMoreContent.children;
+				if (showMoreContent.children.length <= showMoreTypeValue) {
+					return
+				}
 				for (let index = 1; index < showMoreItems.length; index++) {
 					const showMoreItem = showMoreItems[index - 1];
 					hiddenHeight += showMoreItem.offsetHeight;
@@ -547,7 +568,7 @@ export function showMore() {
 					}
 				}
 			} else if (targetType === 'resize') {
-				// showMoreBlocksRegular && showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
+				showMoreBlocksRegular && showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
 				mdQueriesArray && mdQueriesArray.length ? initItemsMedia(mdQueriesArray) : null;
 			}
 		}

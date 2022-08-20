@@ -171,6 +171,7 @@ body {
 // Подключение стилей общих элементов проекта
 @import "common";
 @import "breadcrumbs";
+@import "base/pagging";
 
 // Подключение стилей отдельных блоков
 @import "header";

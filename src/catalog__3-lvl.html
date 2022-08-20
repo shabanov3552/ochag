@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Каталог 2 уровень"
+})
+
+<body>
+	<!-- добавить класс main-page к wrapper только когда на главной странице находимся. -->
+	<div class="wrapper">
+
+		@@include('html/_header.htm',{})
+
+		<main class="page">
+			<div class="page__container">
+				@@include('html/_breadcrumbs.htm',{})
+				<div class="page__title">Одеяла</div>
+				<div class="main-catalog">
+					<div class="main-catalog__row">
+						<div class="main-catalog__sidebar">
+							<a href="" class="back-btn">
+								<svg class="back-btn__svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_left"></use>
+								</svg>
+								<span class="back-btn__span">Товары для дома</span>
+							</a>
+							<a href="" class="back-btn">
+								<svg class="back-btn__svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_left"></use>
+								</svg>
+								<span class="back-btn__span">Текстиль</span>
+							</a>
+							<div class="main-catalog__sidebar-categories">
+								<div class="category">
+									<div class="category__title">Одеяла</div>
+									<ul class="category__list">
+										<li class="category__item"><a href="">Одеяла бамбуковые</a></li>
+										<li class="category__item"><a href="">Одеяла верблюжьи</a></li>
+										<li class="category__item"><a href="">Одеяла из лебяжьего пуха</a></li>
+										<li class="category__item"><a href="">Одеяла из овечьей шерсти</a></li>
+										<li class="category__item"><a href="">Одеяла полифайбер</a></li>
+										<li class="category__item"><a href="">Одеяла синтепоновые</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="main-catalog__filters filters">
+								<div class="filters__title">Фильтры</div>
+								<div class="filters__wrapper">
+									<div class="filters__price">
+										<div class="filters__box-header">
+											<div class="filters__filter-title">Цена (₽)</div>
+										</div>
+										<div class="price">
+											<div class="price__inputs">
+												<input autocomplete="off" type="number" name="form[]" placeholder="" class="price__input js_input-from">
+												<span>—</span>
+												<input autocomplete="off" type="number" name="form[]" placeholder="" class="price__input js_input-to">
+											</div>
+											<div class="price__range-slider">
+												<div id="range" data-from="0" data-to="999999"></div>
+											</div>
+										</div>
+									</div>
+									<div class="checkbox checkbox_switch">
+										<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="c_1" class="checkbox__label"><span class="checkbox__text">Гипоаллергенно</span></label>
+									</div>
+									<div class="filters__box">
+										<div class="filters__box-header">
+											<div class="filters__filter-title">Скидка</div>
+											<div class="filters__tippy tippy" data-tippy-content="Подсказка">
+												<img src="@img/icons/question-mark.svg" alt="">
+											</div>
+										</div>
+										<div class="filters__box-content">
+											<div class="options">
+												<div class="options__item">
+													<input id="o_1" class="options__input" type="radio" value="1" name="option">
+													<label for="o_1" class="options__label"><span class="options__text">От 10% и выше</span></label>
+												</div>
+												<div class="options__item">
+													<input id="o_2" class="options__input" type="radio" value="2" name="option">
+													<label for="o_2" class="options__label"><span class="options__text">От 30% и выше</span></label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="filters__box showmore" data-showmore="items">
+										<div class="filters__box-header">
+											<div class="filters__filter-title">Размер</div>
+											<span class="filters__tippy tippy" data-tippy-content="Подсказка">
+												<img src="@img/icons/question-mark.svg" alt="">
+											</span>
+										</div>
+										<div class="filters__box-content" data-showmore-content="3">
+											<div class="checkbox">
+												<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_2" class="checkbox__label"><span class="checkbox__text">150х200</span></label>
+											</div>
+											<div class="checkbox">
+												<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_3" class="checkbox__label"><span class="checkbox__text">100х125</span></label>
+											</div>
+											<div class="checkbox">
+												<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_4" class="checkbox__label"><span class="checkbox__text">125х150</span></label>
+											</div>
+											<div class="checkbox">
+												<input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_5" class="checkbox__label"><span class="checkbox__text">150х200</span></label>
+											</div>
+											<div class="checkbox">
+												<input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_6" class="checkbox__label"><span class="checkbox__text">100х125</span></label>
+											</div>
+											<div class="checkbox">
+												<input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_7" class="checkbox__label"><span class="checkbox__text">125х150</span></label>
+											</div>
+										</div>
+										<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скыть</span></button>
+									</div>
+									<div class="filters__box showmore" data-showmore="items">
+										<div class="filters__box-header">
+											<div class="filters__filter-title">Сезон</div>
+											<span class="filters__tippy tippy" data-tippy-content="Сезонность одеяла указывает, для какого времени года оно предназначено и на какую погоду рассчитано. Сезонность зависит в первую очередь от плотности наполнителя одеяла: у летних – 200 г/м. кв, у всесезонных – около 300 г/м. кв., у зимних – от 350 г/м. кв. и больше.">
+												<img src="@img/icons/question-mark.svg" alt="">
+											</span>
+										</div>
+										<div class="filters__box-content" data-showmore-content="3">
+											<div class="checkbox">
+												<input id="c_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_8" class="checkbox__label"><span class="checkbox__text">Всесезонное</span></label>
+											</div>
+											<div class="checkbox">
+												<input id="c_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_9" class="checkbox__label"><span class="checkbox__text">Зимнее</span></label>
+											</div>
+											<div class="checkbox">
+												<input id="c_10" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_10" class="checkbox__label"><span class="checkbox__text">Летнее</span></label>
+											</div>
+										</div>
+										<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скыть</span></button>
+									</div>
+								</div>
+								<div class="filters__reset-btn">
+									<svg class="filters__reset-svg">
+										<use xlink:href="img/icons/icons.svg#svg-reset-icon"></use>
+									</svg>
+									<span>Сбросить фильтры</span>
+								</div>
+								<div class="filters__more-btn" data-popup="#filters-more">
+									<svg class="filters__more-svg">
+										<use xlink:href="img/icons/icons.svg#svg-filters-btn"></use>
+									</svg>
+									<span>Показать все фильтры</span>
+								</div>
+							</div>
+						</div>
+						<div class="main-catalog__content">
+							<div class="main-catalog__sort sort">
+								<div class="sort__row">
+									<div class="sort__left">
+										<div class="sort__title">Сортировка</div>
+										<div class="sort__select-wrapper">
+											<select name="form[]" data-class-modif="sort">
+												<option value="1" selected>Сортировать по возрастанию цены</option>
+												<option value="2">Сначала новинки</option>
+												<option value="3">Пункт №3</option>
+												<option value="4">Пункт №4</option>
+											</select>
+										</div>
+									</div>
+									<div class="sort__right">
+										<div class="sort__select-wrapper">
+											<select name="form[]" data-class-modif="sort">
+												<option value="1" selected>Показывать по 15</option>
+												<option value="2">Показывать по 30</option>
+												<option value="3">Показывать по 60</option>
+											</select>
+										</div>
+										<div class="sort__layout js-layout">
+											<button type="button" class="sort__layout-button js-layout__column _active">
+												<svg class="sort__layout-svg">
+													<use xlink:href="img/icons/icons.svg#svg-layout__col-icon"></use>
+												</svg>
+											</button>
+											<button type="button" class="sort__layout-button js-layout__row">
+												<svg class="sort__layout-svg">
+													<use xlink:href="img/icons/icons.svg#svg-layout__row-icon"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="filters__more-btn" data-popup="#filters-more">
+									<svg class="filters__more-svg">
+										<use xlink:href="img/icons/icons.svg#svg-filters-btn"></use>
+									</svg>
+									<span>Показать все фильтры</span>
+								</div>
+							</div>
+							<div data-da=".popup__filters,767.98,1" class="main-catalog__filters-items choice-items-filter">
+								<ul class="choice-items-filter__list">
+									<li>
+										<span>Чехия</span>
+										<span class="choice-items-filter__del">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+											</svg>
+										</span>
+									</li>
+									<li>
+										<span>Полиэфир</span>
+										<span class="choice-items-filter__del">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+											</svg>
+										</span>
+									</li>
+									<li>
+										<span>Чехия</span>
+										<span class="choice-items-filter__del">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+											</svg>
+										</span>
+									</li>
+									<li>
+										<span>Полиэфир</span>
+										<span class="choice-items-filter__del">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+											</svg>
+										</span>
+									</li>
+									<li>
+										<span>Чехия</span>
+										<span class="choice-items-filter__del">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+											</svg>
+										</span>
+									</li>
+									<li>
+										<span>Полиэфир</span>
+										<span class="choice-items-filter__del">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+											</svg>
+										</span>
+									</li>
+									<li>
+										<span>Чехия</span>
+										<span class="choice-items-filter__del">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+											</svg>
+										</span>
+									</li>
+									<li>
+										<span>Полиэфир</span>
+										<span class="choice-items-filter__del">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+											</svg>
+										</span>
+									</li>
+
+								</ul>
+								<button type="button" class="choice-items-filter__reset">
+									<svg class="choice-items-filter__svg">
+										<use xlink:href="img/icons/icons.svg#svg-reset-icon"></use>
+									</svg>
+									<span class="choice-items-filter__span">Сбросить</span>
+								</button>
+							</div>
+							<div class="main-catalog__cards">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-1.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Набор посуды MAYER&BOCH сталь 23463</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_blue">Хит</div>
+													<div class="tag__item tag__item_orange">Акция</div>
+													<div class="tag__item tag__item_purple">Новинка</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">6&nbsp;840&nbsp;₽</div>
+												<del class="product-card__old-price">6&nbsp;840&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-2.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Подушка стеганая SELENA, "Оригами" 50х70 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">682&nbsp;₽</div>
+												<del class="product-card__old-price">982&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">Нет в наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange btn__orange_white">Нет в наличии</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites _delete">
+												<span class="product-card__btn-span">Убрать</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare _delete">
+												<span class="product-card__btn-span">Удалить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-3.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Ложка столовая EME POSATERIE SEGNO 7018 3 шт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">530&nbsp;₽</div>
+												<del class="product-card__old-price">830&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-4.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Набор посуды для пикника пластик бежевый, 6 персон</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;144&nbsp;₽</div>
+												<del class="product-card__old-price">1&nbsp;144&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-5.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Сушилка для посуды 18х16х34 см сталь, цвет хром</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">590&nbsp;₽</div>
+												<del class="product-card__old-price">890&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-6.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Комплект Одеяло 140x200 см Подушка 50x70 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;570&nbsp;₽</div>
+												<del class="product-card__old-price">2&nbsp;570&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-1.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Набор посуды MAYER&BOCH сталь 23463</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_blue">Хит</div>
+													<div class="tag__item tag__item_orange">Акция</div>
+													<div class="tag__item tag__item_purple">Новинка</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">6&nbsp;840&nbsp;₽</div>
+												<del class="product-card__old-price">6&nbsp;840&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-2.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Подушка стеганая SELENA, "Оригами" 50х70 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">682&nbsp;₽</div>
+												<del class="product-card__old-price">982&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">Нет в наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange btn__orange_white">Нет в наличии</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites _delete">
+												<span class="product-card__btn-span">Убрать</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare _delete">
+												<span class="product-card__btn-span">Удалить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-3.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Ложка столовая EME POSATERIE SEGNO 7018 3 шт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">530&nbsp;₽</div>
+												<del class="product-card__old-price">830&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-4.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Набор посуды для пикника пластик бежевый, 6 персон</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;144&nbsp;₽</div>
+												<del class="product-card__old-price">1&nbsp;144&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-5.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Сушилка для посуды 18х16х34 см сталь, цвет хром</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">590&nbsp;₽</div>
+												<del class="product-card__old-price">890&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-6.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Комплект Одеяло 140x200 см Подушка 50x70 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;570&nbsp;₽</div>
+												<del class="product-card__old-price">2&nbsp;570&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-1.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Набор посуды MAYER&BOCH сталь 23463</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_blue">Хит</div>
+													<div class="tag__item tag__item_orange">Акция</div>
+													<div class="tag__item tag__item_purple">Новинка</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">6&nbsp;840&nbsp;₽</div>
+												<del class="product-card__old-price">6&nbsp;840&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-2.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Подушка стеганая SELENA, "Оригами" 50х70 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">682&nbsp;₽</div>
+												<del class="product-card__old-price">982&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">Нет в наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange btn__orange_white">Нет в наличии</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites _delete">
+												<span class="product-card__btn-span">Убрать</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare _delete">
+												<span class="product-card__btn-span">Удалить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-3.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Ложка столовая EME POSATERIE SEGNO 7018 3 шт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">530&nbsp;₽</div>
+												<del class="product-card__old-price">830&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-4.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Набор посуды для пикника пластик бежевый, 6 персон</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;144&nbsp;₽</div>
+												<del class="product-card__old-price">1&nbsp;144&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-5.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Сушилка для посуды 18х16х34 см сталь, цвет хром</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">590&nbsp;₽</div>
+												<del class="product-card__old-price">890&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-6.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Комплект Одеяло 140x200 см Подушка 50x70 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;570&nbsp;₽</div>
+												<del class="product-card__old-price">2&nbsp;570&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-1.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Набор посуды MAYER&BOCH сталь 23463</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_blue">Хит</div>
+													<div class="tag__item tag__item_orange">Акция</div>
+													<div class="tag__item tag__item_purple">Новинка</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">6&nbsp;840&nbsp;₽</div>
+												<del class="product-card__old-price">6&nbsp;840&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-2.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Подушка стеганая SELENA, "Оригами" 50х70 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">682&nbsp;₽</div>
+												<del class="product-card__old-price">982&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">Нет в наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange btn__orange_white">Нет в наличии</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites _delete">
+												<span class="product-card__btn-span">Убрать</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare _delete">
+												<span class="product-card__btn-span">Удалить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-3.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Ложка столовая EME POSATERIE SEGNO 7018 3 шт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">530&nbsp;₽</div>
+												<del class="product-card__old-price">830&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-4.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Набор посуды для пикника пластик бежевый, 6 персон</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;144&nbsp;₽</div>
+												<del class="product-card__old-price">1&nbsp;144&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-5.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Сушилка для посуды 18х16х34 см сталь, цвет хром</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">590&nbsp;₽</div>
+												<del class="product-card__old-price">890&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-6.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Комплект Одеяло 140x200 см Подушка 50x70 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+													<div class="tag__item tag__item_orange">Акция</div>
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;570&nbsp;₽</div>
+												<del class="product-card__old-price">2&nbsp;570&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+										<div class="product-card__footer-bottom">
+											<button type="submit" class="product-card__btn-favorites">
+												<span class="product-card__btn-span">В избранное</span>
+											</button>
+											<button type="submit" class="product-card__btn-compare">
+												<span class="product-card__btn-span">Сравнить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="main-catalog__pagging">
+								@@include('html/_pagging.htm',{})
+							</div>
+							<button class="main-catalog__load-more">Раскрыть еще</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

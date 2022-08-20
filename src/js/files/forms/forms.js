@@ -33,7 +33,7 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 				targetElement.parentElement.classList.add('_form-focus');
 				targetElement.addEventListener('input', function (e) {
 					if (e.target.value.length > 0) {
-						targetElement.parentElement.querySelector('.form__clear-svg').classList.add('_active')
+						if (targetElement.parentElement.querySelector('.form__clear-svg')) targetElement.parentElement.querySelector('.form__clear-svg').classList.add('_active')
 					}
 				})
 			}

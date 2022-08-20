@@ -3,6 +3,11 @@
 	z-index: 1;
 	transition: all 0.3s ease 0s;
 	margin-bottom: rem(35);
+
+	@media (max-width:$tablet) {
+		margin-bottom: rem(20);
+	}
+
 	// .breadcrumbs__list
 
 	&__list {
@@ -34,8 +39,8 @@
 
 	&__link {
 		color: #000;
-		font-size: 16px;
-		line-height: 24px;
+		font-size: 14px;
+		line-height: 22px;
 		white-space: nowrap;
 
 		// .breadcrumbs__link_back-svg
@@ -55,8 +60,8 @@
 
 	&__item {
 		color: #000;
-		font-size: 16px;
-		line-height: 24px;
+		font-size: 14px;
+		line-height: 22px;
 		white-space: nowrap;
 	}
 }

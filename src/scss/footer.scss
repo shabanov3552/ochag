@@ -128,6 +128,11 @@
 
 .form-footer {
 	background: url(@img/footer/footer-form__bg.png) right/cover no-repeat;
+
+	@media (max-width:$mobile) {
+		background: url(@img/footer/footer-form__bg.png) left/cover no-repeat;
+	}
+
 	// .form-footer__container
 
 	&__container {}

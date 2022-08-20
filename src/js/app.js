@@ -77,7 +77,7 @@ import * as flsForms from "./files/forms/forms.js";
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
 
 flsForms.formFieldsInit({
-	viewPass: false,
+	viewPass: true,
 	autoHeight: true
 });
 
@@ -93,7 +93,7 @@ flsForms.formFieldsInit({
 // flsForms.formRating();
 
 /* Модуль работы с select. */
-// import './libs/select.js'
+import './libs/select.js'
 
 /* Модуль работы с календарем */
 // import './files/forms/datepicker.js'
@@ -114,7 +114,7 @@ import "./files/forms/inputmask.js";
 Документация плагина: https://refreshless.com/nouislider/
 Сниппет (HTML): range
 */
-// import "./files/forms/range.js";
+import "./files/forms/range.js";
 
 /* Модуль работы с подсказками (tippy) */
 /*
@@ -123,7 +123,7 @@ import "./files/forms/inputmask.js";
 Документация плагина: https://atomiks.github.io/tippyjs/
 Сниппет (HTML): tip (добавляет атрибут с подсказкой для html тега)
 */
-// import "./files/tippy.js";
+import "./files/tippy.js";
 
 // ========================================================================================================================================================================================================================================================
 // Работа со слайдером (Swiper) ========================================================================================================================================================================================================================================================
