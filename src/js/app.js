@@ -31,6 +31,8 @@ flsFunctions.addTouchClass();
 // flsFunctions.addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
 flsFunctions.menuInit();
+/* Модуль для работы с выпадашкой поиска (Бургер) */
+flsFunctions.searchInit();
 /* Учет плавающей панели на мобильных устройствах при 100vh */
 // flsFunctions.fullVHfix();
 

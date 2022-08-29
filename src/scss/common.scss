@@ -24,6 +24,16 @@
 				color: #000;
 			}
 		}
+
+		&_black {
+			color: #000;
+			border: 1px solid #000;
+
+			&:hover {
+				background: #000;
+				color: #fff;
+			}
+		}
 	}
 
 	// .btn__orange

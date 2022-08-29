@@ -438,6 +438,34 @@ export function menuClose() {
 	bodyUnlock();
 	document.documentElement.classList.remove("menu-open");
 }
+
+// Модуль открытия Модалки поиска ==============================================================================================================================================================================================================
+
+export function searchInit() {
+	if (document.querySelector(".header__search-input")) {
+		document.addEventListener("click", function (e) {
+			if (bodyLockStatus && e.target.closest('.header__search-label')) {
+				if (document.documentElement.closest(".search-open")) {
+					console.log('qwe');
+					return
+				}
+				// bodyLock();з
+				document.documentElement.classList.add("search-open");
+				document.querySelector(".header__search-input").classList.add("_active");
+				document.querySelector(".header__search-input").parentElement.classList.add("_active");
+				_slideDown(document.querySelector(".search-res"), 300);
+			}
+			if (!e.target.closest('.header__search-input') && !e.target.closest('.search-res') && document.documentElement.classList.contains("search-open")) {
+				// bodyUnlock();
+				document.documentElement.classList.remove("search-open");
+				document.querySelector(".header__search-input").classList.remove("_active");
+				document.querySelector(".header__search-input").parentElement.classList.remove("_active");
+				_slideUp(document.querySelector(".search-res"), 300);
+			}
+		});
+	};
+}
+
 // Модуль "показать еще" =======================================================================================================================================================================================================================
 /*
 Документация по работе в шаблоне: https://template.fls.guru/template-docs/modul-pokazat-eshhjo.html

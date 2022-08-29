@@ -8,8 +8,8 @@ import * as noUiSlider from 'nouislider';
 // import 'nouislider/dist/nouislider.css';
 
 export function rangeInit(rangeSlider) {
-	let priceCnt = rangeSlider.closest('.price')
 	if (rangeSlider) {
+		let priceCnt = rangeSlider.closest('.price')
 		let textFrom = parseInt(rangeSlider.getAttribute('data-from'));
 		let textTo = parseInt(rangeSlider.getAttribute('data-to'));
 		noUiSlider.create(rangeSlider, {
