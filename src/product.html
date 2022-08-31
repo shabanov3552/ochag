@@ -12,341 +12,70 @@
 		<main class="page">
 			<div class="page__container">
 				@@include('html/_breadcrumbs.htm',{})
-				<div class="page__title">Одеяла</div>
-				<section class="product">
-					<h1 class="product__title">Костюм утепленный «Статус» с полукомбинезоном, (смесовая)</h1>
-					<div class="product__content">
-						<div class="product__left">
-							<div class="product__slider slider-product ">
-								<div class="slider-product__inner">
-									<div class="slider-product__nav swiper-container">
-										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="slider-product__nav-image js_ibg"><img loading="lazy" src="img/pictures/product_1.png"></div>
-											</div>
-											<div class="swiper-slide">
-												<div class="slider-product__nav-image js_ibg"><img loading="lazy" src="img/pictures/product_2.png"></div>
-											</div>
-											<div class="swiper-slide">
-												<div class="slider-product__nav-image js_ibg"><img loading="lazy" src="img/pictures/product_3.png"></div>
-											</div>
-											<div class="swiper-slide">
-												<div class="slider-product__nav-image js_ibg"><img loading="lazy" src="img/pictures/product_4.png"></div>
-											</div>
-											<div class="swiper-slide">
-												<div class="slider-product__nav-image js_ibg"><img loading="lazy" src="img/logo/360deg.png"></div>
-											</div>
-											<div class="swiper-slide">
-												<div class="slider-product__nav-image js_ibg"><img loading="lazy" src="img/pictures/product_2.png"></div>
-											</div>
-											<div class="swiper-slide">
-												<div class="slider-product__nav-image js_ibg"><img loading="lazy" src="img/pictures/product_3.png"></div>
-											</div>
-											<div class="swiper-slide">
-												<div class="slider-product__nav-image js_ibg"><img loading="lazy" src="img/pictures/product_4.png"></div>
-											</div>
+				<div class="product">
+					<div class="product__main">
+						<div class="product__sliders slider-prod">
+							<div class="slider-prod__sidebar">
+								<div class="mini-prod__slider swiper">
+									<div class="mini-prod__wrapper swiper-wrapper">
+										<div class="mini-prod__slide swiper-slide">
+											<img data-src="@img/detail-prod/1.webp" alt="" class="swiper-lazy">
+											<div class="swiper-lazy-preloader"></div>
 										</div>
-									</div>
-									<div class="slider-product__nav-btns">
-										<div class="slider-product__nav-prev">
-											<svg class="slider-product__nav-svg">
-												<use xlink:href=" img/svg/sprite.svg#arrow_up"></use>
-											</svg>
+										<div class="mini-prod__slide swiper-slide">
+											<img data-src="@img/detail-prod/2.webp" alt="" class="swiper-lazy">
+											<div class="swiper-lazy-preloader"></div>
 										</div>
-										<div class="slider-product__nav-next">
-											<svg class="slider-product__nav-svg">
-												<use xlink:href=" img/svg/sprite.svg#arrow_down"></use>
-											</svg>
+										<div class="mini-prod__slide swiper-slide">
+											<img data-src="@img/detail-prod/2.webp" alt="" class="swiper-lazy">
+											<div class="swiper-lazy-preloader"></div>
+										</div>
+										<div class="mini-prod__slide swiper-slide">
+											<img data-src="@img/detail-prod/3.webp" alt="" class="swiper-lazy">
+											<div class="swiper-lazy-preloader"></div>
+										</div>
+										<div class="mini-prod__slide swiper-slide">
+											<img data-src="@img/detail-prod/4.webp" alt="" class="swiper-lazy">
+											<div class="swiper-lazy-preloader"></div>
+										</div>
+										<div class="mini-prod__slide swiper-slide">
+											<img data-src="@img/detail-prod/5.webp" alt="" class="swiper-lazy">
+											<div class="swiper-lazy-preloader"></div>
 										</div>
 									</div>
 								</div>
-								<div class="slider-product__big swiper-container">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="slider-product__image js_ibg"><img loading="lazy" src="img/pictures/product_1.png"></div>
-										</div>
-										<div class="swiper-slide">
-											<div class="slider-product__image js_ibg"><img loading="lazy" src="img/pictures/product_2.png"></div>
-										</div>
-										<div class="swiper-slide">
-											<div class="slider-product__image js_ibg"><img loading="lazy" src="img/pictures/product_3.png"></div>
-										</div>
-										<div class="swiper-slide">
-											<div class="slider-product__image js_ibg"><img loading="lazy" src="img/pictures/product_4.png"></div>
-										</div>
-										<div class="swiper-slide">
-											<div class="slider-product__image js_ibg"><video autoplay muted loop preload="auto" pip="false" src="videos/lider_krasnyj.mov"> </video></div>
-										</div>
-										<div class="swiper-slide">
-											<div class="slider-product__image js_ibg"><img loading="lazy" src="img/pictures/product_2.png"></div>
-										</div>
-										<div class="swiper-slide">
-											<div class="slider-product__image js_ibg"><img loading="lazy" src="img/pictures/product_3.png"></div>
-										</div>
-										<div class="swiper-slide">
-											<div class="slider-product__image js_ibg"><img loading="lazy" src="img/pictures/product_4.png"></div>
-										</div>
-									</div>
+								<div class="slider-prod__nav">
+									<button type="button" class="slider-prod__nav-btn swiper-button-prev">
+										<svg class="main-page-baner__svg">
+											<use xlink:href="img/icons/icons.svg#svg-arrow-main-slider-left"></use>
+										</svg>
+									</button>
+									<button type="button" class="slider-prod__nav-btn swiper-button-next">
+										<svg class="main-page-baner__svg">
+											<use xlink:href="img/icons/icons.svg#svg-arrow-main-slider-right"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
-							<div class="product__left-bottom">
-								<a href="" class="product__link-to-delivery">
-									<svg class="product__link-to-delivery-svg">
-										<use xlink:href="img/svg/sprite.svg#icon_delivery"></use>
-									</svg>
-									<div class="product__link-to-delivery-text">Доставка и оплата</div>
-									<svg class="product__link-to-delivery-arrow">
-										<use xlink:href="img/svg/sprite.svg#arrow_rt_grn"></use>
-									</svg>
-								</a>
-								<div class="product__share">
-									<div class="product__share-text">
-										Поделиться
+							<div class="slider-prod__main">
+								<div class="main-prod__slider swiper">
+									<div class="main-prod__wrapper swiper-wrapper">
+										<div class="main-prod__slide swiper-slide"></div>
 									</div>
-									<!-- uSocial -->
-									<script async src="https://usocial.pro/usocial/usocial.js?uid=d02c8a5b67f61697&v=6.1.5" data-script="usocial" charset="utf-8"></script>
-									<div class="uSocial-Share" data-pid="147571bff140d3ca971c0fe5fe406b86" data-type="share" data-options="round-rect,style1,default,absolute,horizontal,size24,eachCounter0,counter0,mobile_position_left" data-social="telegram,vk,fb,ok,vi,wa"></div>
-									<!-- /uSocial -->
 								</div>
 							</div>
 						</div>
-						<div class="product__right">
-							<div class="product__advantages">
-								<div class="product__advantages-item">
-									<img class="product__advantages-img" src="img/pictures/product_advantages_1.png" alt="">
-									<div class="product__advantages-text">Защита от общих производственных загрязнений</div>
-								</div>
-								<div class="product__advantages-item">
-									<img class="product__advantages-img" src="img/pictures/product_advantages_2.png" alt="Водоотталкивающая отделка">
-									<div class="product__advantages-text">Водоотталкивающая отделка</div>
-								</div>
-								<div class="product__advantages-item">
-									<img class="product__advantages-img" src="img/pictures/product_advantages_2.png" alt="">
-									<div class="product__advantages-text">Защита от истирания</div>
-								</div>
-								<div class="product__advantages-item">
-									<img class="product__advantages-img" src="img/pictures/product_advantages_1.png" alt="">
-									<div class="product__advantages-text">Защита от общих производственных загрязнений</div>
-								</div>
-								<div class="product__advantages-item">
-									<img class="product__advantages-img" src="img/pictures/product_advantages_2.png" alt="Водоотталкивающая отделка">
-									<div class="product__advantages-text">Водоотталкивающая отделка</div>
-								</div>
-								<div class="product__advantages-item">
-									<img class="product__advantages-img" src="img/pictures/product_advantages_2.png" alt="">
-									<div class="product__advantages-text">Защита от истирания</div>
-								</div>
-							</div>
-							<div class="product__desc" data-spollers>
-								<p class="product__desc-p">Прямой силуэт на поясе с центральной застежкой на молнию,прикрыта пластроном, который фиксируется на 3 потайные кнопки </p>
-								<p class="product__desc-p">Воротник отложной состоит из двух деталей : верхняя деталь воротника серого цвета, нижняя деталь - лимонного цвета </p>
-								<p class="product__desc-p">Имеются кокетки полочек и спинки </p>
-								<p class="product__desc-p">Боковые части куртки выполнены из отделочной ткани черного цвета</p>
-								<div class="product__desc-more-btn" data-spoller></div>
-								<div class="product__desc-more-block">
-									<p class="product__desc-p">Прямой силуэт на поясе с центральной застежкой на молнию,прикрыта пластроном, который фиксируется на 3 потайные кнопки </p>
-									<p class="product__desc-p">Воротник отложной состоит из двух деталей : верхняя деталь воротника серого цвета, нижняя деталь - лимонного цвета </p>
-									<p class="product__desc-p">Имеются кокетки полочек и спинки </p>
-									<p class="product__desc-p">Боковые части куртки выполнены из отделочной ткани черного цвета</p>
-								</div>
+						<div class="product__tags">
 
-							</div>
-							<div class="product__sizes">
-								<div id="bx_117848907_131_skudiv">
-									<div id="custom-select" class="product-item-detail-info-container" data-entity="sku-line-block">
-										<div class="product-item-detail-info-container-title">Размер</div>
-										<div class="product-item-scu-container">
-											<div class="product-item-scu-block">
-												<div class="product-item-scu-list">
-													<ul hidden class="product-item-scu-item-list">
-														<li class="product-item-scu-item-text-container selected" title="36" data-treevalue="152_398" data-onevalue="398">
-															<div class="product-item-scu-item-text-block">
-																<div class="product-item-scu-item-text">36</div>
-															</div>
-														</li>
-														<li class="product-item-scu-item-text-container" title="40" data-treevalue="152_399" data-onevalue="399">
-															<div class="product-item-scu-item-text-block">
-																<div class="product-item-scu-item-text">40</div>
-															</div>
-														</li>
-														<li class="product-item-scu-item-text-container" title="-" data-treevalue="152_0" data-onevalue="0">
-															<div class="product-item-scu-item-text-block">
-																<div class="product-item-scu-item-text">-</div>
-															</div>
-														</li>
-													</ul>
-													<div style="clear: both;"></div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div id="custom-select" class="product-item-detail-info-container" data-entity="sku-line-block">
-										<div class="product-item-detail-info-container-title">Цвет</div>
-										<div class="product-item-scu-container">
-											<div class="product-item-scu-block">
-												<div class="product-item-scu-list">
-													<ul hidden class="product-item-scu-item-list">
-														<li class="product-item-scu-item-text-container selected" title="Черный" data-treevalue="155_402" data-onevalue="402">
-															<div class="product-item-scu-item-text-block">
-																<div class="product-item-scu-item-text">Черный</div>
-															</div>
-														</li>
-														<li class="product-item-scu-item-text-container notallowed" title="Синий" data-treevalue="155_403" data-onevalue="403">
-															<div class="product-item-scu-item-text-block">
-																<div class="product-item-scu-item-text">Синий</div>
-															</div>
-														</li>
-														<li class="product-item-scu-item-text-container notallowed" title="-" data-treevalue="155_0" data-onevalue="0">
-															<div class="product-item-scu-item-text-block">
-																<div class="product-item-scu-item-text">-</div>
-															</div>
-														</li>
-													</ul>
-													<div style="clear: both;"></div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="product__sizes-title">Размер / рост</div>
-								<div class="product__sizes-select">
-									<select name="form[]" class="">
-										<option value="1" selected="selected">Выберите</option>
-										<option value="2">48-50/182-188</option>
-										<option value="3">52-54/170-176</option>
-										<option value="4">52-54/182-188</option>
-										<option value="5">56-58/170-176</option>
-										<option value="6">44-46/170-176</option>
-										<option value="7">48-50/170-176</option>
-										<option value="8">48-50/182-188</option>
-										<option value="9">52-54/170-176</option>
-										<option value="10">52-54/182-188</option>
-										<option value="11">56-58/170-176</option>
-									</select>
-								</div>
-								<a href="#size-table" class="product__sizes-link js_popup-link">Таблица размеров</a>
-							</div>
-							<div class="product__price">
-								<div class="price">
-									<div class="price__opt">
-										<div class="price__title">Опт</div>
-										<div class="price__main">66 680 ₽</div>
-										<div data-tippy-content="Текст подсказки, снимающий все недопонимания. Умещает тонну текста и несет много пользы. Знания - сила." class="price__tippy tippy">?</div>
-									</div>
-									<div class="price__rozn">
-										<div class="price__title">Розница</div>
-										<div class="price__main">66 680 ₽</div>
-										<div class="price__old">66 800 ₽</div>
-										<div class="price__discount">-20%</div>
-									</div>
-								</div>
-							</div>
-							<div class="product__bottom">
-								<div class="quantity">
-									<div class="quantity__button quantity__button_minus _icon-minus"></div>
-									<div class="quantity__input"><input autocomplete="off" type="text" name="form[]" value="1"></div>
-									<div class="quantity__button quantity__button_plus _icon-plus"></div>
-								</div>
-								<button type="submit" class="card__button green-btn">В корзину</button>
-								<a href="" class="card__button-item">
-									<svg class="card__button-svg">
-										<use xlink:href=" img/svg/sprite.svg#add_favorites"></use>
-									</svg>
-									<span class="card__button-item-span">В избранное</span>
-								</a>
-								<a href="" class="card__button-item">
-									<svg class="card__button-svg">
-										<use xlink:href=" img/svg/sprite.svg#add_compare"></use>
-									</svg>
-									<span class="card__button-item-span">Сравнить</span>
-								</a>
-							</div>
+						</div>
+						<div class="product__content">
+
 						</div>
 					</div>
-					<div class="product__tabs js_tabs">
-						<div class="product__tab-items float-line">
-							<div class="product__tab-item float-line__item js_tabs-item _active">Характеристики</div>
-							<div class="product__tab-item float-line__item js_tabs-item">Рекомендации по уходу</div>
-						</div>
-						<div class="product__tab-blocks">
-							<div class="product__block js_tabs-block _active">
-								<div class="product__spec">
-									<div class="product__row">
-										<div class="product__spec-name">Вид изделия</div>
-										<div class="product__spec-value">Куртка</div>
-									</div>
-									<div class="product__row">
-										<div class="product__spec-name">Назначения</div>
-										<div class="product__spec-value">Для защиты от ОПЗ и МВ</div>
-									</div>
-									<div class="product__row">
-										<div class="product__spec-name">Цвет</div>
-										<div class="product__spec-value">темно-серый с черным и салатовой отделкой</div>
-									</div>
-									<div class="product__row">
-										<div class="product__spec-name">Основная ткань</div>
-										<div class="product__spec-value">"Milan" производитель Klopman (Италия) смесовая, пл. 245 г/м² МВО (Масло-водоотталкивающая), несминаемая отделка</div>
-									</div>
-									<div class="product__row">
-										<div class="product__spec-name">Состав</div>
-										<div class="product__spec-value">65%ПЭ/35%ХБ</div>
-									</div>
-									<div class="product__row">
-										<div class="product__spec-name">Бренд</div>
-										<div class="product__spec-value">Бригадир</div>
-									</div>
-									<div class="product__row">
-										<div class="product__spec-name">Гарантийный срок хранения</div>
-										<div class="product__spec-value">5 лет с даты изготовления (при соблюдении условий хранения) </div>
-									</div>
-									<div class="product__row">
-										<div class="product__spec-name">Размеры</div>
-										<div class="product__spec-value">с 44 до 74 </div>
-									</div>
-									<div class="product__row">
-										<div class="product__spec-name">Рост</div>
-										<div class="product__spec-value">с 158 до 212 см</div>
-									</div>
-									<div class="product__row">
-										<div class="product__spec-name">Гост</div>
-										<div class="product__spec-value">12.4.280-2014</div>
-									</div>
-									<div class="product__row">
-										<div class="product__spec-name">ТР</div>
-										<div class="product__spec-value">019/2011</div>
-									</div>
-								</div>
-							</div>
-							<div class="product__block product__block_second js_tabs-block">
-								<div class="product__block-row">
-									<div class="product__advantages-item">
-										<img class="product__advantages-img" src="http://cs61220-bitrix-lzqpe.tw1.ru/upload/uf/087/nav27v8iyjhs6at1jeejudvlxkxc64n7.png" alt="Макс 30 мягкий">
-										<div class="product__advantages-text">Максимальная температура стирки 30°С мягкий режим</div>
-									</div>
-									<div class="product__advantages-item">
-										<img class="product__advantages-img" src="http://cs61220-bitrix-lzqpe.tw1.ru/upload/uf/875/el8r2vkyhlmfjh0yjmbj0h1wkazu4xoa.png" alt="Вертикальная без отжима">
-										<div class="product__advantages-text">Вертикальная сушка без отжима</div>
-									</div>
-									<div class="product__advantages-item">
-										<img class="product__advantages-img" src="http://cs61220-bitrix-lzqpe.tw1.ru/upload/uf/627/b6j0m4zor4uop8c2vbzyd1cuv3v09vrp.png" alt="Отбеливание кислородосодержащими">
-										<div class="product__advantages-text">Разрешено отбеливать только кислородосодержащим нехлорным веществом</div>
-									</div>
-									<div class="product__advantages-item">
-										<img class="product__advantages-img" src="http://cs61220-bitrix-lzqpe.tw1.ru/upload/uf/1cd/1o5zfe36xyy38hg0zbkey3tijs53nfop.png" alt="Барабанная сушка запрещена">
-										<div class="product__advantages-text">Барабанная сушка запрещена</div>
-									</div>
-									<div class="product__advantages-item">
-										<img class="product__advantages-img" src="http://cs61220-bitrix-lzqpe.tw1.ru/upload/uf/f56/04ylq5vdshnzln4zg72dmmfrbl43nd2v.png" alt="Глажение 150">
-										<div class="product__advantages-text">Глажение при максимальной температуры подошвы утюга 150°С</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<div class="product-bottom">
-
+					<div class="product__desc"></div>
+					<div class="product__spec"></div>
 				</div>
+
 			</div>
 		</main>
 		@@include('html/_footer.htm',{})

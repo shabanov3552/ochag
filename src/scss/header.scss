@@ -104,6 +104,10 @@
 			flex: 0 0 108px;
 			margin-right: rem(30);
 		}
+
+		@media (max-width:$mobile) {
+			margin-right: rem(20);
+		}
 	}
 
 
@@ -159,9 +163,8 @@
 	// .header__search-label
 
 	&__search-label {
-		position: relative;
 		z-index: 50;
-		transition: background-color 0.3s ease 0s;
+		transition: all 0.3s ease 0s;
 
 		&::before {
 			content: '';
@@ -177,10 +180,16 @@
 			box-shadow: 0px 20px 0px rgb(255 255 255), 0px -20px 20px rgb(0 0 0 / 40%);
 
 			@media (max-width:$tablet) {
-				position: fixed;
 				height: 140px;
-				top: 0;
-				left: 0;
+				top: -50px;
+				left: -30px;
+			}
+
+			@media (max-width:$mobile) {
+
+				height: 75px;
+				top: -25px;
+
 			}
 
 			@media (max-width: em(600)) {
@@ -191,16 +200,22 @@
 
 		&._active {
 			background-color: #fff;
+			position: relative;
 
 			@media (max-width:$tablet) {
-				position: fixed;
-				top: 40px;
-				left: 24px;
-				width: calc(100% - 48px);
+				position: absolute;
+				top: -20px;
+				left: -210px;
+				width: calc(100vw - 48px);
+			}
+
+			@media (max-width:$mobile) {
+				left: -200px;
 			}
 
 			@media (max-width: em(600)) {
-				top: 29px;
+				top: -15px;
+				left: -160px;
 			}
 
 			&::before {
@@ -214,7 +229,8 @@
 	// .header__search-input
 
 	&__search-input {
-		padding: rem(0) rem(0) rem(0) rem(24);
+		transition: all 0.3s ease 0s;
+		padding: rem(0) rem(46) rem(0) rem(24);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -942,26 +958,34 @@
 		padding: rem(24);
 		padding-bottom: rem(40);
 		min-width: 320px;
-		width: 100%;
-		left: 0;
-		position: fixed;
-		top: 140px;
+		width: 100vw;
+		left: -238px;
+		position: absolute;
+		top: 90px;
+	}
+
+	@media (max-width:$mobile) {
+		left: -228px;
+		top: 50px;
 	}
 
 	@media (max-width: em(600)) {
-		top: 104px;
+		top: 64px;
+		left: -189px;
+		padding: rem(20);
+		padding-top: 0;
 	}
 
 	// .search-res__wrapper
 
-	&__wrapper {}
-
-	// .search-res__list
-
-	&__list {
+	&__wrapper {
 		max-height: 470px;
 		overflow: auto;
 	}
+
+	// .search-res__list
+
+	&__list {}
 
 	// .search-res__item
 

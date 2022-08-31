@@ -1,5 +1,15 @@
 .main-catalog {
 
+
+	// .main-catalog_first-level
+
+	&_first-level {
+		.main-catalog__sidebar-categories {
+			display: none;
+		}
+	}
+
+
 	// .main-catalog__row
 
 	&__row {
