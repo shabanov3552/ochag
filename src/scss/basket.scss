@@ -1,0 +1,307 @@
+.basket {
+
+	// .basket__row
+
+	&__row {
+		display: flex;
+
+		@media (max-width:$tablet) {
+			display: block;
+		}
+	}
+
+	// .basket__list
+
+	&__list {
+		flex: 1 1 auto;
+		margin-right: rem(160);
+
+		@media (max-width: em(1280)) {
+			margin-right: rem(40);
+		}
+
+		@media (max-width:$tablet) {
+			margin-bottom: rem(28);
+			margin-right: 0;
+		}
+
+		@media (max-width:$mobile) {
+			margin: 0 -11px;
+			margin-bottom: rem(28);
+		}
+	}
+
+	// .basket__item
+
+	&__item {}
+
+	// .basket__sidebar
+
+	&__sidebar {
+		flex: 0 0 243px;
+	}
+}
+
+.item-basket {
+	border: 1px solid #CACACA;
+	padding: rem(20);
+	display: grid;
+	grid-template-columns: 94px 1fr 40px;
+	grid-template-rows: repeat(3, auto);
+	gap: 0 20px;
+	position: relative;
+
+	@media (max-width: em(374)) {
+		padding: rem(20) rem(10);
+		gap: 0 10px;
+		grid-template-columns: 94px 1fr 30px;
+	}
+
+	&:not(:last-child) {
+		border-bottom: none;
+	}
+
+	// .item-basket__image
+
+	&__image {
+		width: 94px;
+		height: 96px;
+		grid-row: 1 / 4;
+
+		@media (max-width:$mobile) {
+			margin-bottom: rem(20);
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	// .item-basket__name
+
+	&__name {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: rem(9);
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 93%;
+			height: 70%;
+
+			@media (max-width:$mobile) {
+				width: 87%;
+				height: 70%;
+			}
+		}
+
+		@media (max-width: em(374)) {
+			font-size: 14px;
+		}
+	}
+
+	// .item-basket__prices
+
+	&__prices {
+		grid-column: 2 / 3;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+		align-items: center;
+		align-self: start;
+		margin-bottom: rem(17);
+
+		@media (max-width:$mobile) {
+			grid-column: 1 / 3;
+		}
+	}
+
+	// .item-basket__price
+
+	&__price {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 24px;
+		margin-right: rem(26);
+
+		@media (max-width: em(375)) {
+			margin-right: rem(10);
+		}
+	}
+
+	// .item-basket__old-price
+
+	&__old-price {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 20px;
+		margin-right: rem(19);
+
+		@media (max-width: em(375)) {
+			margin-right: rem(10);
+		}
+	}
+
+	// .item-basket__discont
+
+	&__discont {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 20px;
+		color: #fff;
+		background: #2FA827;
+		padding: rem(2) rem(6);
+		border-radius: 3px;
+		display: inline-block;
+	}
+
+	// .item-basket__quantity
+
+	&__quantity {
+		grid-column: 2 / 3;
+		display: flex;
+		align-items: center;
+
+		@media (max-width:$mobile) {
+			grid-column: 1 / 3;
+		}
+
+		.quantity {
+			margin-right: rem(14);
+		}
+	}
+
+	// .item-basket__total
+
+	&__total {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 24px;
+
+	}
+
+	// .item-basket__buttons
+
+	&__buttons {
+		grid-column: 3 / 4;
+		grid-row: 1 / 4;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	// .item-basket__del
+
+	&__del {
+		width: 15px;
+		height: 19px;
+		margin-bottom: rem(25);
+
+		&:hover {
+			.item-basket__svg {
+				use {
+					fill: #817d7a;
+				}
+			}
+		}
+	}
+
+	// .item-basket__svg
+
+	&__svg {
+		width: 100%;
+		height: 100%;
+
+		use {
+			transition: fill 0.3s ease 0s;
+			fill: #C0B9B4;
+		}
+	}
+
+	// .item-basket__favorites
+
+	&__favorites {}
+}
+
+.sidebar-basket {
+
+	// .sidebar-basket__row
+
+	&__row {
+		margin-bottom: rem(25);
+	}
+
+	// .sidebar-basket__name
+
+	&__name {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 22px;
+		margin-bottom: rem(3);
+	}
+
+	// .sidebar-basket__value
+
+	&__value {
+		font-weight: 600;
+		font-size: 25px;
+		line-height: 24px;
+	}
+
+	// .sidebar-basket__text
+
+	&__text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 22px;
+		margin-bottom: rem(25);
+	}
+
+	// .sidebar-basket__btn
+
+	&__btn {
+		width: 100%;
+	}
+}
+
+// .basket_empty
+
+.basket {
+
+
+	&_empty {
+		margin-top: rem(70);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	// .basket__svg
+
+	&__svg {
+		width: 52px;
+		height: 43px;
+		margin-bottom: rem(46);
+
+		use {
+			fill: #C0B9B4;
+		}
+	}
+
+	// .basket__text
+
+	&__text {
+		max-width: 200px;
+		text-align: center;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 29px;
+	}
+}

@@ -48,7 +48,7 @@
 		"html-webpack-plugin": "latest",
 		"inputmask": "latest",
 		"js-datepicker": "latest",
-		"lightgallery": "latest",
+		"lightgallery": "^2.6.0",
 		"load-plugins": "latest",
 		"mini-css-extract-plugin": "2.4.7",
 		"nouislider": "^15.6.0",
@@ -72,6 +72,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"@fancyapps/ui": "^4.0.31",
 		"gulp-cheerio": "^1.0.0",
 		"simplebar": "latest"
 	}

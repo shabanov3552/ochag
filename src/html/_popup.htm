@@ -97,7 +97,7 @@
 									<label for="c_700" class="checkbox__label"><span class="checkbox__text">125х150</span></label>
 								</div>
 							</div>
-							<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скыть</span></button>
+							<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скрыть</span></button>
 						</div>
 
 					</div>
@@ -123,7 +123,7 @@
 									<label for="c_1000" class="checkbox__label"><span class="checkbox__text">Летнее</span></label>
 								</div>
 							</div>
-							<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скыть</span></button>
+							<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скрыть</span></button>
 						</div>
 						<div class="filters__box">
 							<div class="filters__box-header">
@@ -178,7 +178,7 @@
 									<label for="c_1700" class="checkbox__label"><span class="checkbox__text">125х150</span></label>
 								</div>
 							</div>
-							<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скыть</span></button>
+							<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скрыть</span></button>
 						</div>
 					</div>
 					<div class="filters__col">
@@ -203,7 +203,7 @@
 									<label for="c_11000" class="checkbox__label"><span class="checkbox__text">Летнее</span></label>
 								</div>
 							</div>
-							<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скыть</span></button>
+							<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скрыть</span></button>
 						</div>
 						<div class="filters__box">
 							<div class="filters__box-header">
@@ -258,7 +258,7 @@
 									<label for="c_2700" class="checkbox__label"><span class="checkbox__text">125х150</span></label>
 								</div>
 							</div>
-							<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скыть</span></button>
+							<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скрыть</span></button>
 						</div>
 					</div>
 					<div class="filters__col">
@@ -283,7 +283,7 @@
 									<label for="c_21000" class="checkbox__label"><span class="checkbox__text">Летнее</span></label>
 								</div>
 							</div>
-							<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скыть</span></button>
+							<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скрыть</span></button>
 						</div>
 					</div>
 				</div>
@@ -303,16 +303,45 @@
 		</div>
 	</div>
 </div>
-<div id="search" aria-hidden="true" class="popup">
+<div id="empt-basket" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">
-				<svg class="popup__close-svg">
-					<use xlink:href="img/icons/icons.svg#svg-icon-close-modal"></use>
+			<div class="popup__header">
+				<div class="popup__title">Корзина</div>
+				<button data-close type="button" class="popup__close">
+					<svg class="popup__close-svg">
+						<use xlink:href="img/icons/icons.svg#svg-icon-close-modal"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="basket basket_empty">
+				<svg class="basket__svg">
+					<use xlink:href="img/icons/icons.svg#svg-basket-empty"></use>
 				</svg>
-			</button>
-			<div class="search-res">
-
+				<p class="basket__text">В корзине
+					пока ничего нет</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="del-compare" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="popup__header">
+				<div class="popup__title">Удаление списка</div>
+				<button data-close type="button" class="popup__close">
+					<svg class="popup__close-svg">
+						<use xlink:href="img/icons/icons.svg#svg-icon-close-modal"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="compare-del">
+				<div class="compare-del__text">
+					<p>Вы действительно хотите удалить все товары из сравнения?</p>
+					<p>Отменить действие будет невозможно.</p>
+				</div>
+				<button type="button" class="compare-del__button btn btn__transparent_black">Очистить список</button>
+				<button data-close type="button" class="compare-del__button btn btn__transparent_black">Отменить</button>
 			</div>
 		</div>
 	</div>

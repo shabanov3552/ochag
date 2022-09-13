@@ -5,7 +5,10 @@
 
 	&_first-level {
 		.main-catalog__sidebar-categories {
-			display: none;
+			@media (max-width:$tablet) {
+				display: none;
+
+			}
 		}
 	}
 

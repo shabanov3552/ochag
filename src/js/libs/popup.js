@@ -344,9 +344,11 @@ class Popup {
 	}
 	_focusTrap() {
 		const focusable = this.previousOpen.element.querySelectorAll(this._focusEl);
+		console.log(this);
 		if (!this.isOpen && this.lastFocusEl) {
 			this.lastFocusEl.focus();
 		} else {
+			console.log(focusable);
 			focusable[0].focus();
 		}
 	}

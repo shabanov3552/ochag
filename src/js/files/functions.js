@@ -444,22 +444,22 @@ export function menuClose() {
 export function searchInit() {
 	if (document.querySelector(".header__search-input")) {
 		document.addEventListener("click", function (e) {
-			if (bodyLockStatus && e.target.closest('.header__search-label')) {
-				if (document.documentElement.closest(".search-open")) {
-					console.log('qwe');
-					return
+			let target = e.target
+			if (target.closest('.header__search')) {
+				if (target.closest('.header__search-icon-close')) {
+					setTimeout(function () {
+						document.querySelector('.header__search').classList.remove('search-open')
+					}, 300);
+					_slideUp(document.querySelector(".search-res"), 300);
 				}
-				// bodyLock();з
-				document.documentElement.classList.add("search-open");
-				document.querySelector(".header__search-input").classList.add("_active");
-				document.querySelector(".header__search-input").parentElement.classList.add("_active");
+				if (document.querySelector('.header__search').classList.contains("search-open")) return
+				document.querySelector('.header__search').classList.add('search-open')
 				_slideDown(document.querySelector(".search-res"), 300);
-			}
-			if (!e.target.closest('.header__search-input') && !e.target.closest('.search-res') && document.documentElement.classList.contains("search-open")) {
-				// bodyUnlock();
-				document.documentElement.classList.remove("search-open");
-				document.querySelector(".header__search-input").classList.remove("_active");
-				document.querySelector(".header__search-input").parentElement.classList.remove("_active");
+
+			} else if (document.querySelector('.header__search').classList.contains("search-open")) {
+				setTimeout(function () {
+					document.querySelector('.header__search').classList.remove('search-open')
+				}, 300);
 				_slideUp(document.querySelector(".search-res"), 300);
 			}
 		});

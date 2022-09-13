@@ -15,64 +15,91 @@
 				<span>товаров для дома и дачи</span>
 			</div>
 			<div class="header__search">
-				<form action="" class="header__search-form">
-					<label class="header__search-label">
-						<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="header__search-input">
+				<form action="" class="header__search-form form">
+					<div class="form__line">
+						<label for="search" class="header__search-label form__label">Поиск по товарам</label>
+						<input autocomplete="off" id="search" type="email" name="email" class="header__search-input form__input">
+						<svg class="form__clear-svg">
+							<use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+						</svg>
 						<svg class="header__search-icon">
 							<use xlink:href="img/icons/icons.svg#svg-search"></use>
 						</svg>
-					</label>
+					</div>
+					<svg class="header__search-icon-close">
+						<use xlink:href="img/icons/icons.svg#svg-icon-close-modal"></use>
+					</svg>
 				</form>
 				<div hidden class="search-res">
 					<div class="search-res__wrapper" data-simplebar>
 						<ul class="search-res__list">
 							<li class="search-res__item">
-								<img src="@img/products/search-res-img-1.png" alt="" class="search-res__image">
+								<div class="search-res__image">
+									<img src="@img/products/search-res-img-1.png" alt="">
+								</div>
 								<a href="" class="search-res__link">Одеяло Василиса 172х205 см, полиэфирное</a>
 								<div class="search-res__price">19780 ₽</div>
 							</li>
 							<li class="search-res__item">
-								<img src="@img/products/search-res-img-2.png" alt="" class="search-res__image">
+								<div class="search-res__image">
+									<img src="@img/products/search-res-img-2.png" alt="">
+								</div>
 								<a href="" class="search-res__link">Одеяло евро Butterfly, 220х200,</a>
 								<div class="search-res__price">19780 ₽</div>
 							</li>
 							<li class="search-res__item">
-								<img src="@img/products/search-res-img-3.png" alt="" class="search-res__image">
+								<div class="search-res__image">
+									<img src="@img/products/search-res-img-3.png" alt="">
+								</div>
 								<a href="" class="search-res__link">Одеяло Споки Ноки Q0511143, 105х140 см,</a>
 								<div class="search-res__price">19780 ₽</div>
 							</li>
 							<li class="search-res__item">
-								<img src="@img/products/search-res-img-4.png" alt="" class="search-res__image">
+								<div class="search-res__image">
+									<img src="@img/products/search-res-img-4.png" alt="">
+								</div>
 								<a href="" class="search-res__link">Одеяло ГлавПостель 172х205 см, хлопок</a>
 								<div class="search-res__price">19780 ₽</div>
 							</li>
 							<li class="search-res__item">
-								<img src="@img/products/search-res-img-5.png" alt="" class="search-res__image">
+								<div class="search-res__image">
+									<img src="@img/products/search-res-img-5.png" alt="">
+								</div>
 								<a href="" class="search-res__link">Одеяло Tango, 205x150 см, шерсть</a>
 								<div class="search-res__price">19780 ₽</div>
 							</li>
 							<li class="search-res__item">
-								<img src="@img/products/pd-c-1.png" alt="" class="search-res__image">
+								<div class="search-res__image">
+									<img src="@img/products/pd-c-1.png" alt="">
+								</div>
 								<a href="" class="search-res__link">Одеяло Василиса 172х205 см, полиэфирное</a>
 								<div class="search-res__price">19780 ₽</div>
 							</li>
 							<li class="search-res__item">
-								<img src="@img/products/search-res-img-2.png" alt="" class="search-res__image">
+								<div class="search-res__image">
+									<img src="@img/products/search-res-img-2.png" alt="">
+								</div>
 								<a href="" class="search-res__link">Одеяло евро Butterfly, 220х200,</a>
 								<div class="search-res__price">19780 ₽</div>
 							</li>
 							<li class="search-res__item">
-								<img src="@img/products/search-res-img-3.png" alt="" class="search-res__image">
+								<div class="search-res__image">
+									<img src="@img/products/search-res-img-3.png" alt="">
+								</div>
 								<a href="" class="search-res__link">Одеяло Споки Ноки Q0511143, 105х140 см,</a>
 								<div class="search-res__price">19780 ₽</div>
 							</li>
 							<li class="search-res__item">
-								<img src="@img/products/search-res-img-4.png" alt="" class="search-res__image">
+								<div class="search-res__image">
+									<img src="@img/products/search-res-img-4.png" alt="">
+								</div>
 								<a href="" class="search-res__link">Одеяло ГлавПостель 172х205 см, хлопок</a>
 								<div class="search-res__price">19780 ₽</div>
 							</li>
 							<li class="search-res__item">
-								<img src="@img/products/search-res-img-5.png" alt="" class="search-res__image">
+								<div class="search-res__image">
+									<img src="@img/products/search-res-img-5.png" alt="">
+								</div>
 								<a href="" class="search-res__link">Одеяло Tango, 205x150 см, шерсть</a>
 								<div class="search-res__price">19780 ₽</div>
 							</li>
@@ -99,7 +126,7 @@
 						<use xlink:href="img/icons/icons.svg#svg-cabinet"></use>
 					</svg>
 				</a>
-				<a href="" class="right-menu__link">
+				<a href="" class="right-menu__link" data-popup="#empt-basket">
 					<span class="right-menu__count">3</span>
 					<svg class="right-menu__svg">
 						<use xlink:href="img/icons/icons.svg#svg-basket"></use>
@@ -415,7 +442,7 @@
 													<li class="category__item"><a href="">Халаты</a></li>
 													<li class="category__item"><a href="">Чехлы</a></li>
 												</ul>
-												<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть все</span><span>Скыть</span></button>
+												<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть все</span><span>Скрыть</span></button>
 											</div>
 											<div data-showmore="" class="category showmore">
 												<div class="category__title">Интерьер и декор</div>
@@ -431,7 +458,7 @@
 													<li class="category__item"><a href="">Халаты</a></li>
 													<li class="category__item"><a href="">Чехлы</a></li>
 												</ul>
-												<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть все</span><span>Скыть</span></button>
+												<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть все</span><span>Скрыть</span></button>
 											</div>
 											<div data-showmore="" class="category showmore">
 												<div class="category__title">Посуда</div>
@@ -447,7 +474,7 @@
 													<li class="category__item"><a href="">Халаты</a></li>
 													<li class="category__item"><a href="">Чехлы</a></li>
 												</ul>
-												<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть все</span><span>Скыть</span></button>
+												<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть все</span><span>Скрыть</span></button>
 											</div>
 											<div data-showmore="" class="category showmore">
 												<div class="category__title">Хозяйственные товары</div>
@@ -463,7 +490,7 @@
 													<li class="category__item"><a href="">Халаты</a></li>
 													<li class="category__item"><a href="">Чехлы</a></li>
 												</ul>
-												<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть все</span><span>Скыть</span></button>
+												<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть все</span><span>Скрыть</span></button>
 											</div>
 											<div data-showmore="" class="category showmore">
 												<div class="category__title">Хранение вещей</div>
@@ -471,7 +498,7 @@
 													<li class="category__item"><a href="">Вешалки</a></li>
 													<li class="category__item"><a href="">Полки для обуви</a></li>
 												</ul>
-												<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть все</span><span>Скыть</span></button>
+												<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть все</span><span>Скрыть</span></button>
 											</div>
 											<div data-showmore="" class="category showmore">
 												<div class="category__title">Товары для праздника</div>
@@ -487,7 +514,7 @@
 													<li class="category__item"><a href="">Халаты</a></li>
 													<li class="category__item"><a href="">Чехлы</a></li>
 												</ul>
-												<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть все</span><span>Скыть</span></button>
+												<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть все</span><span>Скрыть</span></button>
 											</div>
 											<div data-showmore="" class="category showmore">
 												<div class="category__title">Освещение</div>
@@ -503,7 +530,7 @@
 													<li class="category__item"><a href="">Халаты</a></li>
 													<li class="category__item"><a href="">Чехлы</a></li>
 												</ul>
-												<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть все</span><span>Скыть</span></button>
+												<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть все</span><span>Скрыть</span></button>
 											</div>
 										</div>
 									</div>

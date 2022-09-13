@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Сравнение товаров пустое"
+})
+
+<body>
+	<div class="wrapper">
+
+		@@include('html/_header.htm',{})
+
+		<main class="page">
+			<div class="page__container">
+				@@include('html/_breadcrumbs.htm',{})
+				<div class="page__title">Сравнение товаров</div>
+
+				<div class="compare compare_empty">
+					<div class="compare__title">
+						<img src="@img/icons/compare-empty.svg" alt="">
+						<p>Здесь пока пусто</p>
+					</div>
+					<div class="compare__text">
+						Перейдите к каталогу товаров и добавьте интересующие вас товары
+					</div>
+				</div>
+				<div class="product-slider">
+					<div class="product-slider__header">
+						<div class="product-slider__title">Хиты продаж</div>
+						<div class="product-slider__nav-btns">
+							<button type="button" class="product-slider__swiper-button swiper-button-prev">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_left"></use>
+								</svg>
+							</button>
+							<button type="button" class="product-slider__swiper-button swiper-button-next">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_right"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!-- Оболочка слайдера -->
+					<div class="product-slider__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="product-slider__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-16.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Вентилятор колонный Equation Tower 45 Вт 75 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-24.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Картина Rabbits at full moon, 1920г</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">33&nbsp;668&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-10.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Средство от насекомых Green Belt Prosto 900 мл</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;331&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-14.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Увлажнитель воздуха Neoclima NHL–500-VS белый</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-8.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Мангал Без Шампуров Boyscout 61231</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;549&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-15.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Вентилятор напольный Equation Jervis 45 Вт D30 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-17.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Конвектор электрический LM/LCM-1000, 1000 Вт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;600&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-18.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Обогреватель масляный Monlan MS-20 U2000 Вт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">5&nbsp;668&nbsp;₽</div>
+												<del class="product-card__old-price">7&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

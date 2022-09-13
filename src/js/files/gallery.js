@@ -12,6 +12,7 @@ import { flsModules } from "./modules.js";
 
 // Подключение базового набора функционала
 import lightGallery from 'lightgallery';
+import lgVideo from 'lightgallery/plugins/video/lg-video.es5.js'
 
 // Плагины
 // lgZoom, lgAutoplay, lgComment, lgFullscreen, lgHash, lgPager, lgRotate, lgShare, lgThumbnail, lgVideo, lgMediumZoom
@@ -22,7 +23,7 @@ import lightGallery from 'lightgallery';
 import '@scss/libs/gallery/lightgallery.scss';
 // Стили дополнений
 // import '@scss/libs/gallery/lg-thumbnail.scss';
-// import '@scss/libs/gallery/lg-video.scss';
+import '@scss/libs/gallery/lg-video.scss';
 // import '@scss/libs/gallery/lg-autoplay.scss';
 // import '@scss/libs/gallery/lg-zoom.scss';
 // import '@scss/libs/gallery/lg-pager.scss';
@@ -45,8 +46,13 @@ if (galleries.length) {
 			gallery,
 			galleryClass: lightGallery(gallery, {
 				// plugins: [lgZoom, lgThumbnail],
+				plugins: [lgVideo],
 				licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
 				speed: 500,
+				videojs: true,
+				videojsOptions: {
+					muted: true,
+				},
 			})
 		})
 	});

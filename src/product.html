@@ -5,7 +5,8 @@
 })
 
 <body>
-	<div class="wrapper">
+	<!-- класс detail-product у wrapper добавить только на деталке товара -->
+	<div class="wrapper detail-product">
 
 		@@include('html/_header.htm',{})
 
@@ -19,65 +20,993 @@
 								<div class="mini-prod__slider swiper">
 									<div class="mini-prod__wrapper swiper-wrapper">
 										<div class="mini-prod__slide swiper-slide">
+											<img data-src="@img/detail-prod/6.png" alt="" class="swiper-lazy">
+											<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+										</div>
+										<div class="mini-prod__slide swiper-slide">
 											<img data-src="@img/detail-prod/1.webp" alt="" class="swiper-lazy">
-											<div class="swiper-lazy-preloader"></div>
+											<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
 										</div>
 										<div class="mini-prod__slide swiper-slide">
 											<img data-src="@img/detail-prod/2.webp" alt="" class="swiper-lazy">
-											<div class="swiper-lazy-preloader"></div>
+											<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+										</div>
+										<div class="mini-prod__slide swiper-slide">
+											<img data-src="@img/detail-prod/1.webp" alt="" class="swiper-lazy">
+											<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
 										</div>
 										<div class="mini-prod__slide swiper-slide">
 											<img data-src="@img/detail-prod/2.webp" alt="" class="swiper-lazy">
-											<div class="swiper-lazy-preloader"></div>
+											<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
 										</div>
 										<div class="mini-prod__slide swiper-slide">
 											<img data-src="@img/detail-prod/3.webp" alt="" class="swiper-lazy">
-											<div class="swiper-lazy-preloader"></div>
+											<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
 										</div>
 										<div class="mini-prod__slide swiper-slide">
 											<img data-src="@img/detail-prod/4.webp" alt="" class="swiper-lazy">
-											<div class="swiper-lazy-preloader"></div>
+											<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
 										</div>
 										<div class="mini-prod__slide swiper-slide">
 											<img data-src="@img/detail-prod/5.webp" alt="" class="swiper-lazy">
-											<div class="swiper-lazy-preloader"></div>
+											<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
 										</div>
 									</div>
 								</div>
 								<div class="slider-prod__nav">
 									<button type="button" class="slider-prod__nav-btn swiper-button-prev">
-										<svg class="main-page-baner__svg">
+										<svg class="slider-prod__svg">
 											<use xlink:href="img/icons/icons.svg#svg-arrow-main-slider-left"></use>
 										</svg>
 									</button>
 									<button type="button" class="slider-prod__nav-btn swiper-button-next">
-										<svg class="main-page-baner__svg">
+										<svg class="slider-prod__svg">
 											<use xlink:href="img/icons/icons.svg#svg-arrow-main-slider-right"></use>
 										</svg>
 									</button>
 								</div>
 							</div>
+
 							<div class="slider-prod__main">
 								<div class="main-prod__slider swiper">
 									<div class="main-prod__wrapper swiper-wrapper">
-										<div class="main-prod__slide swiper-slide"></div>
+										<div class="main-prod__slide swiper-slide">
+											<a data-fancybox="main-prod__slider" href="@img/detail-prod/6.png" class="main-prod__image-ibg main-prod__image-ibg_contain">
+												<img data-src="@img/detail-prod/6.png" alt="" class="swiper-lazy">
+											</a>
+											<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+										</div>
+										<div class="main-prod__slide swiper-slide">
+											<a data-fancybox="main-prod__slider" href="@img/detail-prod/1.webp" class="main-prod__image-ibg main-prod__image-ibg_contain">
+												<img data-src="@img/detail-prod/1.webp" alt="" class="swiper-lazy">
+											</a>
+											<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+										</div>
+										<div class="main-prod__slide swiper-slide">
+											<a data-fancybox="main-prod__slider" href="@img/detail-prod/2.webp" class="main-prod__image-ibg main-prod__image-ibg_contain">
+												<img data-src="@img/detail-prod/2.webp" alt="" class="swiper-lazy">
+											</a>
+											<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+										</div>
+										<div class="main-prod__slide swiper-slide">
+											<a data-fancybox="main-prod__slider" href="files/video/видос.mp4" class="main-prod__image-ibg main-prod__image-ibg_contain">
+												<video loop muted controls src="files/video/видос.mp4"></video>
+											</a>
+										</div>
+										<div class="main-prod__slide swiper-slide">
+											<a data-fancybox="main-prod__slider" href="@img/detail-prod/6.png" class="main-prod__image-ibg main-prod__image-ibg_contain">
+												<img data-src="@img/detail-prod/2.webp" alt="" class="swiper-lazy">
+											</a>
+											<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+										</div>
+										<div class="main-prod__slide swiper-slide">
+											<a data-fancybox="main-prod__slider" href="@img/detail-prod/6.png" class="main-prod__image-ibg main-prod__image-ibg_contain">
+												<img data-src="@img/detail-prod/3.webp" alt="" class="swiper-lazy">
+											</a>
+											<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+										</div>
+										<div class="main-prod__slide swiper-slide">
+											<a data-fancybox="main-prod__slider" href="@img/detail-prod/6.png" class="main-prod__image-ibg main-prod__image-ibg_contain">
+												<img data-src="@img/detail-prod/4.webp" alt="" class="swiper-lazy">
+											</a>
+											<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+										</div>
+										<div class="main-prod__slide swiper-slide">
+											<a data-fancybox="main-prod__slider" href="@img/detail-prod/6.png" class="main-prod__image-ibg main-prod__image-ibg_contain">
+												<img data-src="@img/detail-prod/5.webp" alt="" class="swiper-lazy">
+											</a>
+											<div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+										</div>
+
+
+
+
+
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="product__tags">
-
+							<div class="tag">
+								<div class="tag__item tag__item_blue">Хит</div>
+								<div class="tag__item tag__item_orange">Акция</div>
+								<div class="tag__item tag__item_purple">Новинка</div>
+							</div>
 						</div>
 						<div class="product__content">
+							<div class="product__name">Комплект постельного белья Василиса 1,5 спальный, Бязь</div>
+							<div class="product__row">
+								<div class="product__article">
+									<div class="product__article-title">Артикул:</div>
+									<div class="product__article-value">298-142-122</div>
+								</div>
+								<div class="product__buttons">
+									<!-- Добавить к кнопке класс _active если добавили в избранное -->
+									<button type="button" class="product__btn-favorites btn-add-favorites">
+										<img src="@img/icons/add-favorites.svg" alt="">
+										<img src="@img/icons/add-favorites_full.svg" alt="">
+									</button>
+									<button type="button" class="product__btn-compare">
+										<img src="@img/icons/add-compare.svg" alt="">
+									</button>
+									<div class="product__share">
+										<button type="button" id="share-button" class="product__btn-share">
+											<img src="@img/icons/to_share.svg" alt="">
+										</button>
+										<!-- uSocial -->
+										<script async src="https://usocial.pro/usocial/usocial.js?uid=1ea620358cf61697&v=6.1.5" data-script="usocial" charset="utf-8"></script>
+										<div class="uSocial-Share" data-pid="b7450283dbc9e941ee22b283d6036804" data-type="share" data-options="round-rect,style1,default,absolute,vertical,size24,eachCounter0,counter0,nomobile,mobile_position_right" data-social="telegram,vk,ok,vi,wa"></div>
+										<!-- /uSocial -->
 
+										<script>
+											var shareButton = document.getElementById('share-button');
+											let thisUrl = window.location.href
+											let thisTitle = document.title;
+											shareButton.addEventListener('click', function () {
+												// Проверка поддержки navigator.share
+												if (navigator.share) {
+
+													// navigator.share принимает объект с URL, title или text
+													navigator.share({
+														title: thisTitle,
+														url: thisUrl
+													})
+														.then(function () {
+															console.log("Shareing successfull")
+														})
+														.catch(function () {
+															console.log("Sharing failed")
+														})
+
+												} else {
+													if (shareButton.closest('.share-open')) {
+														shareButton.parentElement.classList.remove('share-open')
+														return
+													}
+													shareButton.parentElement.classList.add('share-open')
+												}
+											})
+										</script>
+									</div>
+								</div>
+
+							</div>
+							<div class="product__stock">
+								<div class="in-stock">В наличии</div>
+								<!-- <div class="out-of-stock">Нет в наличии</div>  Это если нет в наличии -->
+							</div>
+							<div class="product__prices">
+								<div class="product__price">666&nbsp;682&nbsp;₽</div>
+								<del class="product__old-price">666&nbsp;982&nbsp;₽</del>
+								<div class="product__discount">-27%</div>
+							</div>
+							<div class="product__bottom">
+								<button class="product__btn-basket btn btn__orange">В корзину</button>
+							</div>
 						</div>
 					</div>
-					<div class="product__desc"></div>
-					<div class="product__spec"></div>
+					<div class="product__desc">
+						<div class="product__title">Описание</div>
+						<div data-showmore class="desc">
+							<div data-showmore-content="216" class="desc__content">
+								<p>Комплект постельного белья "Совы" - милые и забавные, застенчивые и смелые, с большими выразительными глазами, давно стали одним из самых популярных трендов. Совы считаются хранительницами снов, и поэтому прекрасно подойдут для детской комнаты и для спальни родителей. Постельное белье от бренда "Василиса", изготовлено из 100%-хлопок ткань бязь, умеренной плотности 120 гр. Натуральный хлопок абсолютно экологичен, не вызывает аллергии, хорошо пропускает воздух, позволяя телу "дышать". При соблюдении рекомендаций по уходу, ткань легко стирается, не дает усадки и практически не мнется, позволяя гладить белье без отпаривания. Небольшой эффект накрахмаленной ткани позволяет идеально держать форму, меньше загрязняется и сминается. Высокая плотность скрутки нитей ткани не подвержена образованию катышков. Способ застегивания наволочки - клапан, шириной 25 см, при использовании наволочка не раскрывается, пододеяльника - отверстие без застежки по краю изделия с подвернутым краем.</p>
+								<p>Комплект постельного белья "Совы" - милые и забавные, застенчивые и смелые, с большими выразительными глазами, давно стали одним из самых популярных трендов. Совы считаются хранительницами снов, и поэтому прекрасно подойдут для детской комнаты и для спальни родителей. Постельное белье от бренда "Василиса", изготовлено из 100%-хлопок ткань бязь, умеренной плотности 120 гр. Натуральный хлопок абсолютно экологичен, не вызывает аллергии, хорошо пропускает воздух, позволяя телу "дышать". При соблюдении рекомендаций по уходу, ткань легко стирается, не дает усадки и практически не мнется, позволяя гладить белье без отпаривания. Небольшой эффект накрахмаленной ткани позволяет идеально держать форму, меньше загрязняется и сминается. Высокая плотность скрутки нитей ткани не подвержена образованию катышков. Способ застегивания наволочки - клапан, шириной 25 см, при использовании наволочка не раскрывается, пододеяльника - отверстие без застежки по краю изделия с подвернутым краем.</p>
+							</div>
+							<button hidden data-showmore-button type="button" class="desc__more"><span>Раскрыть все</span><span>Скрыть</span></button>
+						</div>
+					</div>
+					<div class="product__spec">
+						<div class="product__title">Характеристики</div>
+						<div class="specifications">
+							<div class="specifications__row">
+								<div class="specifications__name">Тип </div>
+								<div class="specifications__value">Комплект постельного белья</div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Целевая аудитория </div>
+								<div class="specifications__value">Взрослая</div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Размерность комплекта </div>
+								<div class="specifications__value">1,5 спальный</div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Комплектация постельного белья </div>
+								<div class="specifications__value">1 пододеяльник, 1 простыня, 2 наволочки</div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Размер наволочки </div>
+								<div class="specifications__value">70x70</div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Застежка наволочки</div>
+								<div class="specifications__value">С клапанами</div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Количество наволочек в комплекте</div>
+								<div class="specifications__value">2 </div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Размер простыни</div>
+								<div class="specifications__value">150x215</div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Вид простыни</div>
+								<div class="specifications__value">Стандартная </div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Размер пододеяльника</div>
+								<div class="specifications__value">145x215</div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Застежка пододеяльника</div>
+								<div class="specifications__value">С прорезью</div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Плотность плетения ткани</div>
+								<div class="specifications__value">Высокая</div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Материал</div>
+								<div class="specifications__value">Бязь</div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Вид принта</div>
+								<div class="specifications__value">Совы</div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Цвет </div>
+								<div class="specifications__value">Белый, голубой</div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Особенности</div>
+								<div class="specifications__value">Гипоаллергенно</div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Бренд </div>
+								<div class="specifications__value">Василиса</div>
+							</div>
+							<div class="specifications__row">
+								<div class="specifications__name">Страна </div>
+								<div class="specifications__value">Россия</div>
+							</div>
+						</div>
+					</div>
 				</div>
+				<div class="product-slider">
+					<div class="product-slider__header">
+						<div class="product-slider__title">С этим товаром покупают</div>
+						<div class="product-slider__nav-btns">
+							<button type="button" class="product-slider__swiper-button swiper-button-prev">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_left"></use>
+								</svg>
+							</button>
+							<button type="button" class="product-slider__swiper-button swiper-button-next">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_right"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!-- Оболочка слайдера -->
+					<div class="product-slider__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="product-slider__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-16.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Вентилятор колонный Equation Tower 45 Вт 75 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
 
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-24.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Картина Rabbits at full moon, 1920г</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">33&nbsp;668&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-10.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Средство от насекомых Green Belt Prosto 900 мл</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;331&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-14.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Увлажнитель воздуха Neoclima NHL–500-VS белый</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-8.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Мангал Без Шампуров Boyscout 61231</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;549&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-15.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Вентилятор напольный Equation Jervis 45 Вт D30 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-17.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Конвектор электрический LM/LCM-1000, 1000 Вт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;600&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-18.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Обогреватель масляный Monlan MS-20 U2000 Вт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">5&nbsp;668&nbsp;₽</div>
+												<del class="product-card__old-price">7&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="product-slider">
+					<div class="product-slider__header">
+						<div class="product-slider__title">Вас может заинтересовать</div>
+						<div class="product-slider__nav-btns">
+							<button type="button" class="product-slider__swiper-button swiper-button-prev">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_left"></use>
+								</svg>
+							</button>
+							<button type="button" class="product-slider__swiper-button swiper-button-next">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_right"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!-- Оболочка слайдера -->
+					<div class="product-slider__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="product-slider__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-16.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Вентилятор колонный Equation Tower 45 Вт 75 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-24.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Картина Rabbits at full moon, 1920г</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">33&nbsp;668&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-10.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Средство от насекомых Green Belt Prosto 900 мл</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;331&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-14.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Увлажнитель воздуха Neoclima NHL–500-VS белый</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-8.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Мангал Без Шампуров Boyscout 61231</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;549&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-15.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Вентилятор напольный Equation Jervis 45 Вт D30 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-17.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Конвектор электрический LM/LCM-1000, 1000 Вт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;600&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-18.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Обогреватель масляный Monlan MS-20 U2000 Вт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">5&nbsp;668&nbsp;₽</div>
+												<del class="product-card__old-price">7&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="product-slider">
+					<div class="product-slider__header">
+						<div class="product-slider__title">Ранее вы смотрели</div>
+						<div class="product-slider__nav-btns">
+							<button type="button" class="product-slider__swiper-button swiper-button-prev">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_left"></use>
+								</svg>
+							</button>
+							<button type="button" class="product-slider__swiper-button swiper-button-next">
+								<svg class="product-slider__button-svg">
+									<use xlink:href="img/icons/icons.svg#svg-arrow__slider_right"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!-- Оболочка слайдера -->
+					<div class="product-slider__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="product-slider__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-16.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Вентилятор колонный Equation Tower 45 Вт 75 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-24.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Картина Rabbits at full moon, 1920г</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">33&nbsp;668&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-10.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Средство от насекомых Green Belt Prosto 900 мл</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;331&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-14.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Увлажнитель воздуха Neoclima NHL–500-VS белый</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-8.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Мангал Без Шампуров Boyscout 61231</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">1&nbsp;549&nbsp;₽</div>
+											</div>
+											<div class="product-card__stock">
+												<div class="out-of-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-15.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Вентилятор напольный Equation Jervis 45 Вт D30 см</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;998&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-17.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Конвектор электрический LM/LCM-1000, 1000 Вт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">2&nbsp;600&nbsp;₽</div>
+												<del class="product-card__old-price">3&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="product-slider__slide swiper-slide">
+								<div class="product-card">
+									<a href="" class="product-card__link">
+										<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-18.png" alt=""></div>
+										<div class="product-card__info">
+											<div class="product-card__name">Обогреватель масляный Monlan MS-20 U2000 Вт</div>
+											<div class="product-card__tags">
+												<div class="tag">
+												</div>
+											</div>
+											<div class="product-card__prices">
+												<div class="product-card__price">5&nbsp;668&nbsp;₽</div>
+												<del class="product-card__old-price">7&nbsp;998&nbsp;₽</del>
+											</div>
+											<div class="product-card__stock">
+												<div class="in-stock">В наличии</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-card__footer">
+										<div class="product-card__footer-top">
+											<button class="product-card__btn-basket btn btn__orange">В корзину</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</main>
+
 		@@include('html/_footer.htm',{})
 	</div>
 	@@include('html/_popup.htm',{})

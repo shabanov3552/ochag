@@ -1,5 +1,5 @@
 // Подключение функционала "Чертогов Фрилансера"
-import { isMobile, menuClose } from "./functions.js";
+import { isMobile, menuClose, _slideDown, _slideUp } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
@@ -122,6 +122,70 @@ if (layout) {
 			rowBtn.classList.remove('_active')
 		}
 	});
+}
+
+//#endregion
+
+//#region высота строк в сравнении 
+
+window.addEventListener("load", function () {
+	const dataName = Array.from(document.querySelectorAll('[data-name]'));
+	let names = [];
+	dataName.forEach(el => {
+		if (!names.includes(el.dataset.name)) {
+			names.push(el.dataset.name)
+		}
+	});
+	for (const name of names) {
+		setHeight(name)
+	}
+	function setHeight(name) {
+		const nodeName = document.querySelector(`[data-main=${name}]`);
+		const node = document.querySelectorAll(`[data-name=${name}]`);
+		let heights = []
+		heights.push(nodeName.scrollHeight);
+		node.forEach(el => {
+			heights.push(el.scrollHeight);
+		});
+		let maxHei = Math.max(...heights);
+		node.forEach(element => {
+			element.style.height = maxHei + 'px';
+		});
+		nodeName ? nodeName.style.height = maxHei + 'px' : null;
+	}
+	let btnChek = document.querySelector(".radio-inline input[type=\"radio\"]:checked");
+	if (btnChek) {
+		btnChek.closest('.radio-inline').classList.add('checked');
+	}
+});
+
+//#endregion
+
+//#region Плавающая линия для табов
+
+
+document.querySelectorAll(".float-line").forEach(e => {
+	floatLine(e)
+});
+
+function floatLine(node) {
+	if (!node) return
+
+	node.addEventListener("mouseover", (e) => {
+		if (e.target.classList.contains("float-line__item")) {
+			node.style.setProperty(
+				"--underline-width",
+				`${e.target.offsetWidth}px`
+			);
+			node.style.setProperty(
+				"--underline-offset-x",
+				`${e.target.offsetLeft}px`
+			);
+		}
+	});
+	node.addEventListener("mouseleave", () =>
+		node.style.setProperty("--underline-width", "0")
+	);
 }
 
 //#endregion
