@@ -47,6 +47,10 @@ textarea {
 	font-size: inherit;
 }
 
+textarea {
+	resize: vertical;
+}
+
 button {
 	cursor: pointer;
 	color: inherit;

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Личный Кабинет"
+})
+
+<body>
+	<div class="wrapper">
+
+		@@include('html/_header.htm',{})
+
+		<main class="page">
+			<div class="page__container">
+				@@include('html/_breadcrumbs.htm',{})
+				<div class="page__title">Личный кабинет</div>
+
+
+				<section class="data">
+					<div class="data__wrapper">
+						<div class="personal-data">
+							<div class="personal-data__header">
+								<div class="personal-data__title">Данные аккаунта</div>
+								<a data-da=".personal-data,1800,last" href="" class="personal-data__log-out btn btn__transparent_black">Выйти из аккаунта</a>
+							</div>
+							<div class="personal-data__content">
+								<div class="personal-data__row">
+									<div class="personal-data__name">ФИО</div>
+									<div class="personal-data__text">Михаил Пореченков Кностантинопольский</div>
+									<a href="#" class="personal-data__change">
+										<svg class="personal-data__change-svg">
+											<use xlink:href="img/icons/icons.svg#svg-icon_change"></use>
+										</svg>
+									</a>
+									<div class="personal-data__change-block">
+										<div class="form__line">
+											<input type="text" name="form[]" data-error="Ошибка" data-value="" class="personal-data__input form__input">
+										</div>
+										<button type="submit" class="personal-data__btn">
+											<svg class="personal-data__btn-svg">
+												<use xlink:href="img/icons/icons.svg#svg-icon_enter"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="personal-data__row-msg">Изменения внесены</div>
+								</div>
+								<div class="personal-data__row">
+									<div class="personal-data__name">Название компании</div>
+									<div class="personal-data__text">СОЛЬ</div>
+									<a href="#" class="personal-data__change">
+										<svg class="personal-data__change-svg">
+											<use xlink:href="img/icons/icons.svg#svg-icon_change"></use>
+										</svg>
+									</a>
+									<div class="personal-data__change-block">
+										<div class="form__line">
+											<input type="text" name="form[]" data-error="Ошибка" data-value="" class="personal-data__input form__input">
+										</div>
+										<button type="submit" class="personal-data__btn">
+											<svg class="personal-data__btn-svg">
+												<use xlink:href="img/icons/icons.svg#svg-icon_enter"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="personal-data__row-msg err">Ошибка</div>
+								</div>
+								<div class="personal-data__row">
+									<div class="personal-data__name">E-mail</div>
+									<div class="personal-data__text">konstkonstkonst@gmail.com</div>
+									<a href="#" class="personal-data__change">
+										<svg class="personal-data__change-svg">
+											<use xlink:href="img/icons/icons.svg#svg-icon_change"></use>
+										</svg>
+									</a>
+									<div class="personal-data__change-block">
+										<div class="form__line">
+											<input type="text" name="form[]" data-error="Ошибка" data-value="" value="qwer" class="personal-data__input form__input">
+										</div>
+										<button type="submit" class="personal-data__btn">
+											<svg class="personal-data__btn-svg">
+												<use xlink:href="img/icons/icons.svg#svg-icon_enter"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="personal-data__row-msg">Изменения внесены</div>
+								</div>
+								<div class="personal-data__row">
+									<div class="personal-data__name">Телефон</div>
+									<div class="personal-data__text">8 800 555 35 35</div>
+									<a href="#" class="personal-data__change">
+										<svg class="personal-data__change-svg">
+											<use xlink:href="img/icons/icons.svg#svg-icon_change"></use>
+										</svg>
+									</a>
+									<div class="personal-data__change-block">
+										<div class="form__line">
+											<input type="text" name="form[]" data-error="Ошибка" data-value="" class="personal-data__input form__input">
+										</div>
+										<button type="submit" class="personal-data__btn">
+											<svg class="personal-data__btn-svg">
+												<use xlink:href="img/icons/icons.svg#svg-icon_enter"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="personal-data__row-msg">Изменения внесены</div>
+								</div>
+								<div class="personal-data__row">
+									<div class="personal-data__name">Пароль</div>
+									<div class="personal-data__text">*******</div>
+									<a href="#" class="personal-data__change">
+										<svg class="personal-data__change-svg">
+											<use xlink:href="img/icons/icons.svg#svg-icon_change"></use>
+										</svg>
+									</a>
+									<div class="personal-data__change-block">
+										<div class="form__line">
+											<input type="text" name="form[]" data-error="Ошибка" data-value="" class="personal-data__input form__input">
+										</div>
+										<button type="submit" class="personal-data__btn">
+											<svg class="personal-data__btn-svg">
+												<use xlink:href="img/icons/icons.svg#svg-icon_enter"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="personal-data__row-msg">Изменения внесены</div>
+								</div>
+							</div>
+						</div>
+						<div class="addresses">
+							<div class="addresses__header">
+								<h2 class="addresses__title">Профили доставки</h2>
+								<a href="" class="addresses__btn-add btn btn__transparent_black " data-popup="#add-profile">Добавить профиль</a>
+							</div>
+							<div class="addresses__content">
+								<form action="">
+									<div class="addresses__item">
+										<input checked type="radio" name="profile" value="1" id="profile1" class="addresses__input">
+										<label for="profile1" class="addresses__label">
+											<div class="addresses__item-inner">
+												<div class="addresses__item-name">Железнодорожников 13 к2, оф. 213</div>
+												<div class="addresses__item-row">
+													<div class="addresses__item-text">Михаил Пореченков</div>
+													<div class="addresses__item-text">8913-564-67-78</div>
+													<div class="addresses__item-text">физическое лицо</div>
+													<div class="addresses__item-text">mikhail@mail.ru</div>
+												</div>
+											</div>
+										</label>
+										<a href="" class="addresses__change-data btn btn__transparent_black " data-popup="#change-data">Изменить данные</a>
+										<button class="addresses__del-btn">
+											<svg class="addresses__del-btn-svg">
+												<use xlink:href="img/icons/icons.svg#svg-del-compare"></use>
+											</svg>
+
+										</button>
+									</div>
+									<div class="addresses__item">
+										<input type="radio" name="profile" value="2" id="profile2" class="addresses__input">
+										<label for="profile2" class="addresses__label">
+											<div class="addresses__item-inner">
+												<div class="addresses__item-name">Бабушкина 2, 65</div>
+												<div class="addresses__item-row">
+													<div class="addresses__item-text">Соль</div>
+													<div class="addresses__item-text">8999-111-22-33</div>
+													<div class="addresses__item-text">юридическое лицо</div>
+													<div class="addresses__item-text">alevtina@mail.ru</div>
+												</div>
+											</div>
+										</label>
+										<a href="" class="addresses__change-data btn btn__transparent_black " data-popup="#change-data">Изменить данные</a>
+										<button class="addresses__del-btn">
+											<svg class="addresses__del-btn-svg">
+												<use xlink:href="img/icons/icons.svg#svg-del-compare"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="addresses__item">
+										<input type="radio" name="profile" value="3" id="profile3" class="addresses__input">
+										<label for="profile3" class="addresses__label">
+											<div class="addresses__item-inner">
+												<div class="addresses__item-name">Железнодорожников 13 к2, оф. 213</div>
+												<div class="addresses__item-row">
+													<div class="addresses__item-text">Михаил Пореченков</div>
+													<div class="addresses__item-text">8913-564-67-78</div>
+													<div class="addresses__item-text">физическое лицо</div>
+													<div class="addresses__item-text">mikhail@mail.ru</div>
+												</div>
+											</div>
+										</label>
+										<a href="" class="addresses__change-data btn btn__transparent_black " data-popup="#change-data">Изменить данные</a>
+										<button class="addresses__del-btn">
+											<svg class="addresses__del-btn-svg">
+												<use xlink:href="img/icons/icons.svg#svg-del-compare"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="addresses__item">
+										<input type="radio" name="profile" value="4" id="profile4" class="addresses__input">
+										<label for="profile4" class="addresses__label">
+											<div class="addresses__item-inner">
+												<div class="addresses__item-name">Бабушкина 2, 65</div>
+												<div class="addresses__item-row">
+													<div class="addresses__item-text">Соль</div>
+													<div class="addresses__item-text">8999-111-22-33</div>
+													<div class="addresses__item-text">юридическое лицо</div>
+													<div class="addresses__item-text">alevtina@mail.ru</div>
+												</div>
+											</div>
+										</label>
+										<a href="" class="addresses__change-data btn btn__transparent_black " data-popup="#change-data">Изменить данные</a>
+										<button class="addresses__del-btn">
+											<svg class="addresses__del-btn-svg">
+												<use xlink:href="img/icons/icons.svg#svg-del-compare"></use>
+											</svg>
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="orders">
+					<div class="orders__header">
+						<div class="orders__title">История заказов</div>
+						<div class="orders__sort">
+							<div class="orders__select">
+								<select name="form[]" data-class-modif="sort">
+									<option value="1" selected="selected">По возрастанию суммы заказа</option>
+									<option value="2">По убыванию суммы заказа</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div data-spollers class="orders__list">
+						<div class="orders__item order">
+							<div class="order__header">
+								<div class="order__title">
+									<div class="order__number">Заказ №5122341 </div>
+									<div class="order__date">от 05.07.2022</div>
+									<div class="order__price">= 8248 ₽</div>
+								</div>
+								<div class="order__status status__accepted">Принят, ожидается оплата</div>
+
+							</div>
+							<div class="order__cards">
+								<div class="order__cards-title">Состав заказа</div>
+								<a href="" class="order__card card-order">
+									<div class="card-order__image"><img src="@img/detail-prod/6.png" alt=""></div>
+									<div class="card-order__col">
+										<div class="card-order__name">Костюм утепленный "Спектр" с полукомбинезоном
+										</div>
+
+										<div class="card-order__prices">
+											<div class="card-order__price">66 666 руб./шт.</div>
+											<div class="card-order__quantity">10 шт.</div>
+											<div class="card-order__total">= 666 660 руб.</div>
+										</div>
+									</div>
+								</a>
+								<a href="" class="order__card card-order">
+									<div class="card-order__image"><img src="@img/products/pd-c-1.png" alt=""></div>
+									<div class="card-order__col">
+										<div class="card-order__name">Костюм утепленный "Спектр" с полукомбинезоном
+										</div>
+
+										<div class="card-order__prices">
+											<div class="card-order__price">66 666 руб./шт.</div>
+											<div class="card-order__quantity">10 шт.</div>
+											<div class="card-order__total">= 666 660 руб.</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<a href="" data-spoller class="order__more-btn">Показать детали заказа</a>
+							<div class="order__details-wrapper">
+								<div class="order__details">
+									<div class="order__details-col">
+										<div class="order__details-row">
+											<div class="order__details-name">Заказ</div>
+											<div class="order__details-content">№350</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Время заказа</div>
+											<div class="order__details-content">26.11.2020, 08:45:08</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Имя</div>
+											<div class="order__details-content">Константинопольский Константин Константинович</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">E-mail</div>
+											<div class="order__details-content">konstkonstkonst@gmail.com</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Телефон</div>
+											<div class="order__details-content">8 800 555 35 35</div>
+										</div>
+									</div>
+									<div class="order__details-col">
+										<div class="order__details-row">
+											<div class="order__details-name">Адрес доставки</div>
+											<div class="order__details-content">г. Красноярск, ул. ​проспект Газеты Красноярский Рабочий, дом 120, оф. 4</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Способ оплаты</div>
+											<div class="order__details-content">Оплата в магазине</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Способ доставки</div>
+											<div class="order__details-content">Курьером</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Сумма заказа</div>
+											<div class="order__details-content">3 962 811,9 ₽</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="orders__item order">
+							<div class="order__header">
+								<div class="order__title">
+									<div class="order__number">Заказ №5122341 </div>
+									<div class="order__date">от 05.07.2022</div>
+									<div class="order__price">= 8248 ₽</div>
+								</div>
+								<div class="order__status status__paid ">Оплачен, формируется к отправке</div>
+
+							</div>
+							<div class="order__cards">
+								<div class="order__cards-title">Состав заказа</div>
+								<a href="" class="order__card card-order">
+									<div class="card-order__image"><img src="@img/detail-prod/6.png" alt=""></div>
+									<div class="card-order__col">
+										<div class="card-order__name">Костюм утепленный "Спектр" с полукомбинезоном
+										</div>
+
+										<div class="card-order__prices">
+											<div class="card-order__price">56 руб./шт.</div>
+											<div class="card-order__quantity">10 шт.</div>
+											<div class="card-order__total">= 560 руб.</div>
+										</div>
+									</div>
+								</a>
+								<a href="" class="order__card card-order">
+									<div class="card-order__image"><img src="@img/products/pd-c-1.png" alt=""></div>
+									<div class="card-order__col">
+										<div class="card-order__name">Костюм утепленный "Спектр" с полукомбинезоном
+										</div>
+
+										<div class="card-order__prices">
+											<div class="card-order__price">56 руб./шт.</div>
+											<div class="card-order__quantity">10 шт.</div>
+											<div class="card-order__total">= 560 руб.</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<a href="" data-spoller class="order__more-btn">Показать детали заказа</a>
+							<div class="order__details-wrapper">
+								<div class="order__details">
+									<div class="order__details-col">
+										<div class="order__details-row">
+											<div class="order__details-name">Заказ</div>
+											<div class="order__details-content">№350</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Время заказа</div>
+											<div class="order__details-content">26.11.2020, 08:45:08</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Имя</div>
+											<div class="order__details-content">Константинопольский Константин Константинович</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">E-mail</div>
+											<div class="order__details-content">konstkonstkonst@gmail.com</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Телефон</div>
+											<div class="order__details-content">8 800 555 35 35</div>
+										</div>
+									</div>
+									<div class="order__details-col">
+										<div class="order__details-row">
+											<div class="order__details-name">Адрес доставки</div>
+											<div class="order__details-content">г. Красноярск, ул. ​проспект Газеты Красноярский Рабочий, дом 120, оф. 4</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Способ оплаты</div>
+											<div class="order__details-content">Оплата в магазине</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Способ доставки</div>
+											<div class="order__details-content">Курьером</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Сумма заказа</div>
+											<div class="order__details-content">3 962 811,9 ₽</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="orders__item order">
+							<div class="order__header">
+								<div class="order__title">
+									<div class="order__number">Заказ №5122341 </div>
+									<div class="order__date">от 05.07.2022</div>
+									<div class="order__price">= 8248 ₽</div>
+								</div>
+								<div class="order__status status__completed">Выполнен</div>
+
+							</div>
+							<div class="order__cards">
+								<div class="order__cards-title">Состав заказа</div>
+								<a href="" class="order__card card-order">
+									<div class="card-order__image"><img src="@img/detail-prod/6.png" alt=""></div>
+									<div class="card-order__col">
+										<div class="card-order__name">Костюм утепленный "Спектр" с полукомбинезоном
+										</div>
+
+										<div class="card-order__prices">
+											<div class="card-order__price">56 руб./шт.</div>
+											<div class="card-order__quantity">10 шт.</div>
+											<div class="card-order__total">= 560 руб.</div>
+										</div>
+									</div>
+								</a>
+								<a href="" class="order__card card-order">
+									<div class="card-order__image"><img src="@img/products/pd-c-1.png" alt=""></div>
+									<div class="card-order__col">
+										<div class="card-order__name">Костюм утепленный "Спектр" с полукомбинезоном
+										</div>
+
+										<div class="card-order__prices">
+											<div class="card-order__price">56 руб./шт.</div>
+											<div class="card-order__quantity">10 шт.</div>
+											<div class="card-order__total">= 560 руб.</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<a href="" data-spoller class="order__more-btn">Показать детали заказа</a>
+							<div class="order__details-wrapper">
+								<div class="order__details">
+									<div class="order__details-col">
+										<div class="order__details-row">
+											<div class="order__details-name">Заказ</div>
+											<div class="order__details-content">№350</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Время заказа</div>
+											<div class="order__details-content">26.11.2020, 08:45:08</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Имя</div>
+											<div class="order__details-content">Константинопольский Константин Константинович</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">E-mail</div>
+											<div class="order__details-content">konstkonstkonst@gmail.com</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Телефон</div>
+											<div class="order__details-content">8 800 555 35 35</div>
+										</div>
+									</div>
+									<div class="order__details-col">
+										<div class="order__details-row">
+											<div class="order__details-name">Адрес доставки</div>
+											<div class="order__details-content">г. Красноярск, ул. ​проспект Газеты Красноярский Рабочий, дом 120, оф. 4</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Способ оплаты</div>
+											<div class="order__details-content">Оплата в магазине</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Способ доставки</div>
+											<div class="order__details-content">Курьером</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Сумма заказа</div>
+											<div class="order__details-content">3 962 811,9 ₽</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="orders__item order">
+							<div class="order__header">
+								<div class="order__title">
+									<div class="order__number">Заказ №5122341 </div>
+									<div class="order__date">от 05.07.2022</div>
+									<div class="order__price">= 8248 ₽</div>
+								</div>
+								<div class="order__status status__canceled">Отменён</div>
+
+							</div>
+							<div class="order__cards">
+								<div class="order__cards-title">Состав заказа</div>
+								<a href="" class="order__card card-order">
+									<div class="card-order__image"><img src="@img/detail-prod/6.png" alt=""></div>
+									<div class="card-order__col">
+										<div class="card-order__name">Костюм утепленный "Спектр" с полукомбинезоном
+										</div>
+
+										<div class="card-order__prices">
+											<div class="card-order__price">56 руб./шт.</div>
+											<div class="card-order__quantity">10 шт.</div>
+											<div class="card-order__total">= 560 руб.</div>
+										</div>
+									</div>
+								</a>
+								<a href="" class="order__card card-order">
+									<div class="card-order__image"><img src="@img/products/pd-c-1.png" alt=""></div>
+									<div class="card-order__col">
+										<div class="card-order__name">Костюм утепленный "Спектр" с полукомбинезоном
+										</div>
+
+										<div class="card-order__prices">
+											<div class="card-order__price">56 руб./шт.</div>
+											<div class="card-order__quantity">10 шт.</div>
+											<div class="card-order__total">= 560 руб.</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<a href="" data-spoller class="order__more-btn">Показать детали заказа</a>
+							<div class="order__details-wrapper">
+								<div class="order__details">
+									<div class="order__details-col">
+										<div class="order__details-row">
+											<div class="order__details-name">Заказ</div>
+											<div class="order__details-content">№350</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Время заказа</div>
+											<div class="order__details-content">26.11.2020, 08:45:08</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Имя</div>
+											<div class="order__details-content">Константинопольский Константин Константинович</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">E-mail</div>
+											<div class="order__details-content">konstkonstkonst@gmail.com</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Телефон</div>
+											<div class="order__details-content">8 800 555 35 35</div>
+										</div>
+									</div>
+									<div class="order__details-col">
+										<div class="order__details-row">
+											<div class="order__details-name">Адрес доставки</div>
+											<div class="order__details-content">г. Красноярск, ул. ​проспект Газеты Красноярский Рабочий, дом 120, оф. 4</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Способ оплаты</div>
+											<div class="order__details-content">Оплата в магазине</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Способ доставки</div>
+											<div class="order__details-content">Курьером</div>
+										</div>
+										<div class="order__details-row">
+											<div class="order__details-name">Сумма заказа</div>
+											<div class="order__details-content">3 962 811,9 ₽</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					@@include('html/_pagging.htm',{})
+				</section>
+
+
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

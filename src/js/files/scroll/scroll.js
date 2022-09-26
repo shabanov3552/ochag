@@ -132,7 +132,7 @@ export function stickyBlock() {
 		const startPoint = stickyBlockItem.getBoundingClientRect().top + scrollY - offsetTop;
 
 		document.addEventListener("windowScroll", stickyBlockActions);
-		//window.addEventListener("resize", stickyBlockActions);
+		window.addEventListener("resize", stickyBlockActions);
 
 		function stickyBlockActions(e) {
 			const endPoint = (stickyParent.offsetHeight + stickyParent.getBoundingClientRect().top + scrollY) - (offsetTop + stickyBlockItem.offsetHeight + stickyConfig.bottom);
@@ -140,7 +140,7 @@ export function stickyBlock() {
 				position: "relative",
 				bottom: "auto",
 				top: "0px",
-				left: "0px",
+				right: "0px",
 				width: "auto"
 			}
 			if (!stickyConfig.media || stickyConfig.media < window.innerWidth) {
@@ -149,13 +149,13 @@ export function stickyBlock() {
 						stickyItemValues.position = `fixed`;
 						stickyItemValues.bottom = `auto`;
 						stickyItemValues.top = `${offsetTop}px`;
-						stickyItemValues.left = `${stickyBlockItem.getBoundingClientRect().left}px`; // Учесть разницу в ширине экрана?
+						stickyItemValues.right = `${stickyBlockItem.getBoundingClientRect().right}px`; // Учесть разницу в ширине экрана?
 						stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
 					} else if (scrollY >= endPoint) {
 						stickyItemValues.position = `absolute`;
 						stickyItemValues.bottom = `${stickyConfig.bottom}px`;
 						stickyItemValues.top = `auto`;
-						stickyItemValues.left = `0px`;
+						stickyItemValues.right = `0px`;
 						stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
 					}
 				}

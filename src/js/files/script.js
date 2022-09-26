@@ -6,6 +6,7 @@ import { flsModules } from "./modules.js";
 //#region Глобальный клик
 
 document.addEventListener("click", function (e) {
+	// очистка input по клику на крестик
 	if (e.target.closest('.form__clear-svg')) {
 		let input = e.target.closest('.form__line').querySelector('.form__input');
 		input.value = '';
@@ -13,7 +14,9 @@ document.addEventListener("click", function (e) {
 		input.parentElement.classList.remove('_form-focus');
 		e.target.closest('.form__clear-svg').classList.remove('_active');
 	}
+	// закрытие бокового каталога при клике вне каталога.
 	if (!e.target.closest(".catalog__body") && document.querySelector('.menu-open') || e.target.closest(".catalog__close")) {
+		console.log('qwe');
 		menuClose()
 		if (document.documentElement.classList.contains('menu-open')) {
 			document.documentElement.classList.remove('menu-open');
@@ -26,7 +29,21 @@ document.addEventListener("click", function (e) {
 			document.querySelector('._sub-menu-active').classList.remove("_sub-menu-active");
 		}
 	}
-
+	// автовысота для textarea
+	if (e.target.closest('textarea')) {
+		txtarAutoHeight(e.target)
+	}
+	// спрятать/показать input в личкабе
+	if (e.target.closest('.personal-data__change')) {
+		changeData(e.target)
+		e.preventDefault()
+	}
+	// смена текста кнопки в личкабе
+	if (e.target.closest('.order__more-btn')) {
+		let target = e.target.closest('.order__more-btn')
+		target.classList.contains('_spoller-active') ? target.innerHTML = 'Свернуть детали заказа' : target.innerHTML = 'Показать детали заказа';
+		e.preventDefault()
+	}
 });
 
 //#endregion
@@ -66,7 +83,6 @@ export function documentActions(e) {
 			}
 		}
 	}
-
 	if (e.target.closest('.menu-catalog__back')) {
 		document.documentElement.classList.remove('catalog-open');
 		document.querySelector('._sub-menu-active') ? document.querySelector('._sub-menu-active').classList.remove('_sub-menu-active') : null;
@@ -189,3 +205,110 @@ function floatLine(node) {
 }
 
 //#endregion
+
+//#region Шаринг в деталке
+
+
+let shareButton = document.getElementById('share-button');
+if (shareButton) {
+
+
+	let thisUrl = window.location.href
+	let thisTitle = document.title;
+	shareButton.addEventListener('click', function () {
+		// Проверка поддержки navigator.share
+		if (navigator.share && isMobile.any()) {
+
+			// navigator.share принимает объект с URL, title или text
+			navigator.share({
+				title: thisTitle,
+				url: thisUrl
+			})
+				.then(function () {
+					console.log("Shareing successfull")
+				})
+				.catch(function () {
+					console.log("Sharing failed")
+				})
+
+		} else {
+			flsModules.popup.open('#share-popup')
+			copyUrl()
+		}
+	})
+}
+function copyUrl() {
+	const copyButton = document.querySelector('.share__button');
+	const copyInput = document.querySelector('.share__input');
+
+	copyInput.value = window.location.href
+	copyInput.focus()
+
+	copyButton.addEventListener("click", function (e) {
+		copyInput.select()
+		document.execCommand('copy')
+		window.getSelection().removeAllRanges();
+		copyButton.innerHTML = 'Ссылка скопированна'
+		copyButton.classList.remove('btn__orange')
+		copyButton.setAttribute('disabled', 'true')
+	});
+}
+
+//#endregion
+
+//#region автовысота для textarea
+
+function txtarAutoHeight(target) {
+	const el = target;
+	if (el.closest('textarea')) {
+
+		let origHeight
+		if (el.dataset.height) {
+			origHeight = el.dataset.height
+		} else {
+			origHeight = el.scrollHeight
+			el.dataset.height = origHeight
+		}
+		origHeight = Number(origHeight)
+		console.log(origHeight);
+		el.style.height = el.setAttribute('style', 'height: ' + (origHeight + 1) + 'px');
+		el.addEventListener('input', e => {
+			if (el.scrollHeight > origHeight) {
+				el.style.height = 'auto';
+				el.style.height = (el.scrollHeight) + 10 + 'px';
+			} else {
+				el.style.height = 'auto';
+				el.style.height = origHeight + 'px';
+			}
+		});
+	}
+}
+
+//#endregion
+
+//#region спрятать/показать input в личкабе
+
+function changeData(target) {
+	let el = target.closest('.personal-data__row')
+	el.classList.add('_active');
+	let submitBtn = el.querySelector('.personal-data__btn')
+	submitBtn.addEventListener("click", function (e) {
+		el.classList.remove('_active');
+		el.classList.add('show-msg');
+		setTimeout(() => {
+			el.classList.remove('show-msg');
+		}, 3000);
+	});
+	document.addEventListener('keydown', function (e) {
+		if (e.code === 'Escape' || e.code === 'Enter' || e.code === 'NumpadEnter') {
+			el.classList.remove('_active');
+			el.classList.add('show-msg');
+			setTimeout(() => {
+				el.classList.remove('show-msg')
+			}, 3000);
+		}
+	});
+}
+
+//#endregion
+

@@ -142,51 +142,19 @@
 								</div>
 								<div class="product__buttons">
 									<!-- Добавить к кнопке класс _active если добавили в избранное -->
-									<button type="button" class="product__btn-favorites btn-add-favorites">
+									<button type="button" class="product__btn-favorites btn-add">
 										<img src="@img/icons/add-favorites.svg" alt="">
 										<img src="@img/icons/add-favorites_full.svg" alt="">
 									</button>
-									<button type="button" class="product__btn-compare">
+									<!-- Добавить к кнопке класс _active если добавили в сравнение -->
+									<button type="button" class="product__btn-compare btn-add">
 										<img src="@img/icons/add-compare.svg" alt="">
+										<img src="@img/icons/add-compare_full.svg" alt="">
 									</button>
 									<div class="product__share">
 										<button type="button" id="share-button" class="product__btn-share">
 											<img src="@img/icons/to_share.svg" alt="">
 										</button>
-										<!-- uSocial -->
-										<script async src="https://usocial.pro/usocial/usocial.js?uid=1ea620358cf61697&v=6.1.5" data-script="usocial" charset="utf-8"></script>
-										<div class="uSocial-Share" data-pid="b7450283dbc9e941ee22b283d6036804" data-type="share" data-options="round-rect,style1,default,absolute,vertical,size24,eachCounter0,counter0,nomobile,mobile_position_right" data-social="telegram,vk,ok,vi,wa"></div>
-										<!-- /uSocial -->
-
-										<script>
-											var shareButton = document.getElementById('share-button');
-											let thisUrl = window.location.href
-											let thisTitle = document.title;
-											shareButton.addEventListener('click', function () {
-												// Проверка поддержки navigator.share
-												if (navigator.share) {
-
-													// navigator.share принимает объект с URL, title или text
-													navigator.share({
-														title: thisTitle,
-														url: thisUrl
-													})
-														.then(function () {
-															console.log("Shareing successfull")
-														})
-														.catch(function () {
-															console.log("Sharing failed")
-														})
-
-												} else {
-													if (shareButton.closest('.share-open')) {
-														shareButton.parentElement.classList.remove('share-open')
-														return
-													}
-													shareButton.parentElement.classList.add('share-open')
-												}
-											})
-										</script>
 									</div>
 								</div>
 

@@ -3,7 +3,9 @@
 
 .btn {
 	height: 48px;
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	cursor: pointer;
 	padding: 0 rem(10);
 	transition: all 0.3s ease 0s;
@@ -669,7 +671,7 @@
 	}
 }
 
-.btn-add-favorites {
+.btn-add {
 	position: relative;
 	width: 30px;
 	height: 27px;

@@ -194,10 +194,11 @@ body::after {
 
 // #endregion
 
-// #region popup-basket
+// #region popups
 
 #empt-basket,
-#del-compare {
+#del-compare,
+#share-popup {
 	.popup__content {
 		max-width: 624px;
 		padding: 0;
@@ -234,6 +235,14 @@ body::after {
 		}
 	}
 
+	.popup__main {
+		padding: rem(24) rem(60) rem(50);
+
+		@media (max-width:$mobile) {
+			padding: 20px;
+		}
+	}
+
 	.basket_empty {
 		margin-top: rem(85);
 		margin-bottom: rem(116);
@@ -242,6 +251,10 @@ body::after {
 			margin: rem(40) 0;
 		}
 	}
+}
+
+#share-popup .popup__content {
+	max-width: 460px;
 }
 
 // #endregion
