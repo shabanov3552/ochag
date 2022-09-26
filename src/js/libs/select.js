@@ -85,9 +85,9 @@ class SelectConstructor {
 			const selectItems = data ? document.querySelectorAll(data) : document.querySelectorAll('select');
 			if (selectItems.length) {
 				this.selectsInit(selectItems);
-				this.setLogging(`Проснулся, построил селектов: (${selectItems.length})`);
+				// this.setLogging(`Проснулся, построил селектов: (${selectItems.length})`);
 			} else {
-				this.setLogging('Сплю, нет ни одного select zzZZZzZZz');
+				// this.setLogging('Сплю, нет ни одного select zzZZZzZZz');
 			}
 		}
 	}
@@ -398,12 +398,12 @@ class SelectConstructor {
 		if (originalSelect.multiple) { // Если мультивыбор
 			// Выделяем классом элемент
 			optionItem.classList.toggle(this.selectClasses.classSelectOptionSelected);
-			// Очищаем выбранные элементы 
+			// Очищаем выбранные элементы
 			const originalSelectSelectedItems = this.getSelectedOptionsData(originalSelect).elements;
 			originalSelectSelectedItems.forEach(originalSelectSelectedItem => {
 				originalSelectSelectedItem.removeAttribute('selected');
 			});
-			// Выбираем элементы 
+			// Выбираем элементы
 			const selectSelectedItems = selectItem.querySelectorAll(this.getSelectClass(this.selectClasses.classSelectOptionSelected));
 			selectSelectedItems.forEach(selectSelectedItems => {
 				originalSelect.querySelector(`option[value="${selectSelectedItems.dataset.value}"]`).setAttribute('selected', 'selected');
@@ -447,6 +447,11 @@ class SelectConstructor {
 			tempButton.remove();
 		}
 		const selectItem = originalSelect.parentElement;
+
+		var evt = document.createEvent("HTMLEvents");
+		evt.initEvent("change", false, true);
+		originalSelect.dispatchEvent(evt);
+
 		// Вызов коллбэк функции
 		this.selectCallback(selectItem, originalSelect);
 	}
