@@ -16,7 +16,6 @@ document.addEventListener("click", function (e) {
 	}
 	// закрытие бокового каталога при клике вне каталога.
 	if (!e.target.closest(".catalog__body") && document.querySelector('.menu-open') || e.target.closest(".catalog__close")) {
-		console.log('qwe');
 		menuClose()
 		if (document.documentElement.classList.contains('menu-open')) {
 			document.documentElement.classList.remove('menu-open');
@@ -71,7 +70,6 @@ export function documentActions(e) {
 
 			e.preventDefault();
 		} else {
-			console.log('Ой ой, нет такого подменю :(')
 			const activeLink = document.querySelector('._sub-menu-active');
 			const activeBlock = document.querySelector('._sub-menu-open');
 
@@ -108,7 +106,7 @@ if (layout) {
 
 
 	if (localStorage.getItem('layout')) {
-		document.querySelector('.main-catalog__cards').classList.add('row')
+		document.querySelector('.main-catalog__cards, .favorites__cards').classList.add('row')
 		layout.querySelector(".js-layout__row").classList.add('_active')
 		layout.querySelector(".js-layout__column").classList.remove('_active')
 
@@ -117,7 +115,7 @@ if (layout) {
 
 	layout.addEventListener("click", function (e) {
 		let target = e.target;
-		let cards = document.querySelector('.main-catalog__cards')
+		let cards = document.querySelector('.main-catalog__cards, .favorites__cards')
 		let rowBtn = layout.querySelector(".js-layout__row")
 		let colBtn = layout.querySelector(".js-layout__column")
 
@@ -225,10 +223,10 @@ if (shareButton) {
 				url: thisUrl
 			})
 				.then(function () {
-					console.log("Shareing successfull")
+					// Shareing successfull
 				})
 				.catch(function () {
-					console.log("Sharing failed")
+					// Sharing failed
 				})
 
 		} else {
@@ -270,7 +268,6 @@ function txtarAutoHeight(target) {
 			el.dataset.height = origHeight
 		}
 		origHeight = Number(origHeight)
-		console.log(origHeight);
 		el.style.height = el.setAttribute('style', 'height: ' + (origHeight + 1) + 'px');
 		el.addEventListener('input', e => {
 			if (el.scrollHeight > origHeight) {

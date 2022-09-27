@@ -1,0 +1,251 @@
+// Вопросы и ответы ========================================================================================================================================================
+
+.faq {
+	@media (min-width:$tablet) {
+		display: grid;
+		grid-template-columns: 190px 1fr;
+		@include adaptiveValue("column-gap", 130, 60, 1920, 1000, 1);
+
+	}
+
+	// .faq__navigation
+
+	&__navigation {
+		@media (max-width:$tablet) {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+			align-items: start;
+			gap: 15px;
+			margin-bottom: rem(37);
+		}
+	}
+
+	// .faq__directory
+
+	&__directory {
+		display: block;
+		line-height: 20px;
+		transition: color 0.3s ease 0s;
+		color: #EB7A1D;
+		text-align: left;
+
+		&:hover {
+			color: #000;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: rem(25);
+
+			@media (max-width:$tablet) {
+				margin: 0;
+			}
+		}
+	}
+
+	// .faq__content
+
+	&__content {}
+
+	// .faq__body
+
+	&__body {}
+
+	// .faq__question
+
+	&__question {
+		margin-bottom: rem(25);
+	}
+
+	// .faq__title
+
+	&__title {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: rem(12);
+	}
+
+	// .faq__answer
+
+	&__answer {}
+}
+
+.answer {
+
+	// .answer__content
+
+	&__content {
+		line-height: 24px;
+
+		a {
+			color: #EB7A1D;
+
+			&:hover {
+				color: #000;
+			}
+		}
+
+		p {}
+
+		ul {
+			padding-left: rem(5);
+
+			li {
+				&::before {
+					content: '-';
+					position: relative;
+					left: -5px;
+				}
+
+			}
+		}
+
+		&> :not(:last-child) {
+			margin-bottom: rem(36);
+		}
+	}
+
+	// .answer__more
+
+	&__more {
+		color: #EB7A1D;
+		transition: color 0.3s ease 0s;
+
+		&:hover {
+			color: #000;
+		}
+	}
+}
+
+// Как сделать заказ ========================================================================================================================================================
+
+.faq-order {
+
+	// .faq-order__row
+
+	&__row {
+		display: grid;
+		grid-template-columns: minmax(245px, 520px) 52px 1fr;
+		margin-bottom: rem(75);
+		align-items: start;
+
+		@media (max-width: em(1280)) {
+			grid-template-rows: repeat(2, auto);
+		}
+	}
+
+	// .faq-order__image
+
+	&__image {
+		background: #F2E6DD;
+		height: 305px;
+
+		img {
+			width: 100%;
+			object-fit: contain;
+			height: 100%;
+		}
+	}
+
+	// .faq-order__row-count
+
+	&__row-count {
+		font-weight: 600;
+		font-size: 54px;
+		line-height: 66px;
+		color: #fff;
+		background: #EB7A1D;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	// .faq-order__desc
+
+	&__desc {
+		margin-left: rem(50);
+
+		@media (max-width: em(1280)) {
+			grid-row: 2/3;
+			grid-column: 1/4;
+			margin-left: 0;
+			margin-top: rem(20);
+		}
+	}
+
+	// .faq-order__title
+
+	&__title {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: rem(21);
+	}
+
+	// .faq-order__text
+
+	&__text {
+		line-height: 24px;
+	}
+}
+
+// Обмен и возврат ========================================================================================================================================================
+
+.exchange {
+
+	// .exchange__row
+
+	&__row {
+		display: flex;
+		margin-bottom: rem(41);
+
+		@media (max-width:$tablet) {
+			display: block;
+		}
+	}
+
+	// .exchange__title
+
+	&__title {
+		flex: 0 0 351px;
+		margin-right: rem(130);
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 37px;
+
+		@media (max-width: em(1280)) {
+			margin-right: rem(25);
+		}
+
+		@media (max-width:$tablet) {
+			margin-right: 0;
+			margin-bottom: rem(20);
+			font-size: 22px;
+		}
+	}
+
+	// .exchange__desc
+
+	&__desc {
+		max-width: 800px;
+
+		&> :not(:last-child) {
+			margin-bottom: rem(20);
+		}
+
+		line-height: 24px;
+
+		ul {
+			padding-left: rem(5);
+
+			li {
+				&::before {
+					content: '-';
+					position: relative;
+					left: -5px;
+				}
+
+			}
+		}
+	}
+}

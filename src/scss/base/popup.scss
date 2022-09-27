@@ -198,7 +198,11 @@ body::after {
 
 #empt-basket,
 #del-compare,
-#share-popup {
+#share-popup,
+#login-popup,
+#login-popup-second,
+#change-data,
+#add-profile {
 	.popup__content {
 		max-width: 624px;
 		padding: 0;
@@ -258,3 +262,175 @@ body::after {
 }
 
 // #endregion
+
+.login {
+
+	// .login__text
+
+	&__text {
+		margin-bottom: rem(32);
+		// max-width: 340px;
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	// .login__link
+
+	&__link {
+		color: #EB7A1D;
+	}
+
+	.form {
+
+		// .form__line
+
+		&__line {
+			margin-bottom: rem(44);
+		}
+
+		// .form__line-desc
+
+		&__line-desc {
+			margin-top: rem(-20);
+			margin-bottom: rem(27);
+		}
+
+		// .form__label
+
+		&__label {}
+
+		// .form__input
+
+		&__input {}
+
+		// .form__clear-svg
+
+		&__clear-svg {}
+
+		// .form__bottom
+
+		&__bottom {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			@media (max-width:$mobileSmall) {
+				flex-direction: column;
+			}
+
+			.login__link {
+				@media (max-width:$mobileSmall) {
+					margin-top: rem(30);
+				}
+			}
+		}
+
+		// .form__btn
+
+		&__btn {
+			width: 203px;
+
+			@media (max-width:$mobileSmall) {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.data-change {
+
+	// .data-change__navigation
+
+	&__navigation {
+		background: #F2E6DD;
+		border-radius: 31px;
+		display: flex;
+		padding: rem(4);
+		margin-bottom: rem(32);
+	}
+
+	// .data-change__title
+
+	&__title {
+		flex: 0 1 50%;
+		border-radius: 31px;
+		font-size: 18px;
+		line-height: 26px;
+		padding: rem(15) rem(0);
+		transition: background 0.3s ease 0s;
+
+		&._tab-active {
+			background: #FFFFFF;
+
+		}
+	}
+
+	// .data-change__content
+
+	&__content {}
+
+	// .data-change__body
+
+	&__body {
+
+		.form {
+
+			// .form__line
+
+			&__line {
+				margin-bottom: rem(30);
+			}
+
+			// .form__label
+
+			&__label {}
+
+			// .form__input
+
+			&__input {}
+
+			// .form__clear-svg
+
+			&__clear-svg {}
+
+			// .form__consent
+
+			&__consent {
+				font-size: 12px;
+				line-height: 18px;
+				opacity: 0.5;
+				margin-bottom: rem(27);
+			}
+
+			// .form__consent-link
+
+			&__consent-link {
+
+				&:link,
+				&:visited {
+					text-decoration: underline;
+
+					&:hover {
+
+						text-decoration: none;
+					}
+				}
+			}
+
+			// .form__btn
+
+			&__btn {
+				width: 100%;
+			}
+		}
+
+	}
+}
+
+// . {
+
+// 	// ._tab-active
+
+// 	&_tab-active {
+// 	}
+// }

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Контакты"
+})
+
+<body>
+	<div class="wrapper">
+
+		@@include('html/_header.htm',{})
+
+		<main class="page">
+			<div class="page__container">
+				@@include('html/_breadcrumbs.htm',{})
+				<div class="page__title">Контакты</div>
+
+				<div class="contacts">
+					<div class="contacts__wrapper">
+						<div class="contacts__main">
+							<div class="contacts__top">
+								<div class="contacts__row">
+									<div class="contacts__subtitle">Информация по заказам и товарам</div>
+									<div class="contacts__col">
+										<div class="contacts__inner-row">
+											<div class="contacts__name">Телефон</div>
+											<a href="tel:88001234567" class="contacts__value">8 800 123 45 67</a>
+										</div>
+										<div class="contacts__inner-row">
+											<div class="contacts__name">Емайл</div>
+											<a href="mailto:porech@litebuy.ru" class="contacts__value">porech@litebuy.ru</a>
+										</div>
+										<div class="contacts__inner-row">
+											<div class="contacts__name">Менеджер</div>
+											<div class="contacts__value">Пореченков Михаил</div>
+										</div>
+									</div>
+								</div>
+								<div class="contacts__row">
+									<div class="contacts__subtitle">По вопросам трудоустройства</div>
+									<div class="contacts__col">
+										<div class="contacts__inner-row">
+											<div class="contacts__name">Телефон</div>
+											<a href="tel:88001234567" class="contacts__value">8 800 123 45 67</a>
+										</div>
+										<div class="contacts__inner-row">
+											<div class="contacts__name">Емайл</div>
+											<a href="mailto:porech@litebuy.ru" class="contacts__value">porech@litebuy.ru</a>
+										</div>
+										<div class="contacts__inner-row">
+											<div class="contacts__name">Отдел кадров</div>
+											<div class="contacts__value">Пореченков Михаил</div>
+										</div>
+									</div>
+								</div>
+								<div class="contacts__row">
+									<div class="contacts__subtitle">Отдел рекламы</div>
+									<div class="contacts__col">
+										<div class="contacts__inner-row">
+											<div class="contacts__name">Телефон т.р.</div>
+											<a href="tel:+73912040666p501" class="contacts__value">(391) 20-40-666 (501)</a>
+										</div>
+										<div class="contacts__inner-row">
+											<div class="contacts__name">Телефон т.c.</div>
+											<a href="tel:+79333368014" class="contacts__value">8-933-336-80-14</a>
+										</div>
+										<div class="contacts__inner-row">
+											<div class="contacts__name">Емайл</div>
+											<a href="mailto:reklama@litebuy.ru" class="contacts__value">reklama@litebuy.ru</a>
+										</div>
+										<div class="contacts__inner-row">
+											<div class="contacts__name">Руководитель отдела маркетинга и рекламы</div>
+											<div class="contacts__value">Зубарева Наталья</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="contacts__bottom">
+								<div class="contacts__title">
+									Наш магазин
+								</div>
+								<div class="contacts__row">
+									<div class="contacts__icon"><img src="@img/icons/addres.svg" alt=""></div>
+									<div class="contacts__name">Адрес</div>
+									<div class="contacts__value">г.Красноярск, ул.Спандаряна 16а</div>
+								</div>
+								<div class="contacts__row">
+									<div class="contacts__icon"><img src="@img/icons/phone.svg" alt=""></div>
+									<div class="contacts__name">Телефон</div>
+									<div class="contacts__value">+7 (391) 20-40-801</div>
+								</div>
+								<div class="contacts__row">
+									<div class="contacts__icon"><img src="@img/icons/mail.svg" alt=""></div>
+									<div class="contacts__name">Емайл</div>
+									<div class="contacts__value">rozn@ochag-shop.ru</div>
+								</div>
+							</div>
+						</div>
+						<div class="contacts__sidebar sidebar-form">
+							<div class="sidebar-form__wrapper">
+								<div class="sidebar-form__header">
+									<div class="sidebar-form__title">Обратная связь</div>
+									<div class="sidebar-form__desc">Задайте вопрос, направьте нам претензию или оставьте отзыв о работе сайта или магазина. Наши сотрудники отвечают в течение 24 часов.</div>
+								</div>
+								<form action="" class="sidebar-form__form form" data-parsley-validate data-parsley-trigger="change" required="">
+									<div class="sidebar-form__line form__line">
+										<label for="callbackFormName" class="form__label">Ваше имя</label>
+										<input required id="name" type="text" name="name" class="form__input">
+										<svg class="form__clear-svg">
+											<use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+										</svg>
+									</div>
+									<div class="sidebar-form__line form__line">
+										<label for="callbackFormPhone" class="form__label">Контактный номер</label>
+										<input required id="callbackFormPhone" type="tel" name="tel" class="form__input js_phone">
+										<svg class="form__clear-svg">
+											<use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+										</svg>
+									</div>
+									<div class="sidebar-form__line form__line">
+										<label for="callbackFormMail" class="form__label">E-mail</label>
+										<input required id="callbackFormMail" type="email" name="email" class="form__input">
+										<svg class="form__clear-svg">
+											<use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+										</svg>
+									</div>
+									<div class="sidebar-form__line form__line">
+										<label for="callbackFormMessage" class="form__label">Сообщение</label>
+										<textarea id="callbackFormMessage" autocomplete="off" name="form[]" placeholder="" data-error="Ошибка" class="form__input"></textarea>
+										<svg class="form__clear-svg">
+											<use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+										</svg>
+									</div>
+									<div class="sidebar-form__consent">Отправляя данные, я даю свое <a href="" class="sidebar-form__consent-link" data-popup="#consent">согласие на обработку перс. данных</a></div>
+									<button type="submit" class="sidebar-form__button btn btn__transparent_black">Отправить</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="contacts-map">
+					<div id="map"></div>
+					<script>
+						if (document.querySelector('#map')) {
+							mapAdd();
+							function mapAdd() {
+								let tag = document.createElement('script');
+								tag.src = "https://api-maps.yandex.ru/2.1/?apikey=0aa2f6b6-353d-4a10-bb62-97763a975ef4&lang=ru_RU";
+								let firstScriptTag = document.getElementsByTagName('script')[0];
+								firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+							}
+							setTimeout(function () {
+
+								ymaps.ready(init);
+
+								function init() {
+									var myMap = new ymaps.Map("map", {
+										center: [56.028817, 92.890849],
+										zoom: 13,
+										controls: ['zoomControl'],
+									});
+									let addresFirst = new ymaps.Placemark([56.028817, 92.890849], {}, {
+										iconLayout: 'default#imageWithContent',
+										iconImageHref: '@img/icons/map-marker.svg',
+										iconImageSize: [76, 66],
+										iconImageOffset: [-30, -60],
+										iconContentOffset: [0, 0],
+									});
+									myMap.geoObjects.add(addresFirst);
+									myMap.behaviors.disable('scrollZoom');
+								}
+
+							}, 1000);
+						}
+					</script>
+				</div>
+
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

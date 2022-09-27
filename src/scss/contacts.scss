@@ -1,0 +1,318 @@
+.contacts {
+	margin-bottom: rem(77);
+
+	// .contacts__wrapper
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(auto, 700px));
+		justify-content: space-between;
+
+		@media (max-width: em(1280)) {
+			display: block;
+		}
+	}
+
+	// .contacts__main
+
+	&__main {
+		margin-right: rem(30);
+
+		@media (max-width: em(1440)) {
+			margin-right: rem(100);
+		}
+
+		@media (max-width: em(1280)) {
+			margin-right: 0;
+			margin-bottom: rem(70);
+		}
+	}
+
+	// .contacts__sidebar
+
+	&__sidebar {}
+
+	// .contacts__top
+
+	&__top {
+		margin-bottom: rem(100);
+
+		@media (max-width:$mobile) {
+			margin-bottom: rem(25);
+		}
+	}
+
+	// .contacts__row
+
+	&__row {
+		display: flex;
+
+		.contacts__top & {
+			@media (max-width:$mobile) {
+				flex-direction: column;
+			}
+		}
+
+		.contacts__bottom & {
+			@media (max-width:$mobileSmall) {
+				display: grid;
+				grid-template-columns: 33px 1fr;
+			}
+		}
+
+		&:not(:last-child) {
+			.contacts__top & {
+				margin-bottom: rem(70);
+
+				@media (max-width:$mobile) {
+					margin-bottom: rem(25);
+				}
+			}
+
+			.contacts__bottom & {
+				margin-bottom: rem(30);
+			}
+		}
+	}
+
+	// .contacts__subtitle
+
+	&__subtitle {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 24px;
+		flex: 0 0 240px;
+		margin-right: rem(70);
+
+		@media (max-width:$pc) {
+			flex: 0 0 180px;
+			margin-right: rem(30);
+		}
+
+		@media (max-width:$mobile) {
+			flex: none;
+			margin-right: 0;
+			margin-bottom: rem(20);
+		}
+	}
+
+	// .contacts__col
+
+	&__col {
+		flex: 1 1 auto;
+	}
+
+	// .contacts__inner-row
+
+	&__inner-row {
+		display: flex;
+		margin-bottom: rem(15);
+
+		@media (max-width:$mobileSmall) {
+			flex-direction: column;
+		}
+	}
+
+	// .contacts__name
+
+	&__name {
+		line-height: 20px;
+
+		.contacts__top & {
+			flex: 1 1 auto;
+			margin-right: rem(30);
+		}
+
+		.contacts__bottom & {
+			flex: 0 0 120px;
+			margin-right: rem(15);
+
+			@media (max-width:$mobile) {
+				flex: 0 0 85px;
+			}
+
+			@media (max-width:$mobileSmall) {
+				flex: none;
+				margin-bottom: rem(10);
+			}
+		}
+	}
+
+	// .contacts__value
+
+	&__value {
+		font-weight: 600;
+		line-height: 20px;
+		flex-shrink: 0;
+
+		@media (max-width:$mobileSmall) {
+			flex-shrink: 1;
+		}
+	}
+
+	// .contacts__bottom
+
+	&__bottom {}
+
+	// .contacts__title
+
+	&__title {
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 37px;
+		margin-bottom: rem(50);
+	}
+
+	// .contacts__icon
+
+	&__icon {
+		margin-right: rem(16);
+
+		@media (max-width:$mobileSmall) {
+			grid-row: 1/3;
+			margin-right: 0;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			margin-right: rem(10);
+		}
+	}
+}
+
+.sidebar-form {
+
+	// .sidebar-form__wrapper
+
+	&__wrapper {
+		padding: rem(45) rem(75) rem(65);
+		background: #F2E6DD;
+		border-radius: 10px;
+
+		@media (max-width: em(1440)) {
+			padding: rem(45) rem(20) rem(38);
+
+		}
+
+		@media (max-width: em(1280)) {
+			padding: rem(45) 0;
+			@include adaptiveValue("padding-left", 85, 20, 1000, 767, 1);
+			@include adaptiveValue("padding-right", 85, 20, 1000, 767, 1);
+
+		}
+
+		@media (max-width:$mobileSmall) {
+			margin: 0px rem(-10);
+		}
+	}
+
+	// .sidebar-form__header
+
+	&__header {
+		margin-bottom: rem(30);
+		display: flex;
+
+		@media (max-width:$mobile) {
+			display: block;
+		}
+	}
+
+	// .sidebar-form__title
+
+	&__title {
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 37px;
+		margin-right: rem(55);
+
+		@media (max-width:$mobile) {
+			margin-right: 0;
+			margin-bottom: rem(20);
+		}
+	}
+
+	// .sidebar-form__desc
+
+	&__desc {
+		line-height: 24px;
+	}
+
+	// .sidebar-form__form
+
+	&__form {
+		@media (max-width: em(1280)) {
+			max-width: 550px;
+		}
+	}
+
+	// .sidebar-form__line
+
+	&__line {
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+		}
+
+		textarea {
+			min-height: 100px;
+		}
+	}
+
+	// .sidebar-form__consent
+
+	&__consent {
+		margin-top: rem(-15);
+		margin-bottom: rem(15);
+		font-size: 12px;
+		line-height: 18px;
+		opacity: 0.5;
+	}
+
+	// .sidebar-form__consent-link
+
+	&__consent-link {
+
+		&:link,
+		&:visited {
+			text-decoration: underline;
+
+			&:hover {
+
+				text-decoration: none;
+			}
+		}
+	}
+
+	// .sidebar-form__button
+
+	&__button {
+		width: 100%;
+	}
+}
+
+.form {
+
+	// .form__line
+
+	&__line {}
+
+	// .form__label
+
+	&__label {}
+
+	// .form__input
+
+	&__input {}
+
+	// .form__clear-svg
+
+	&__clear-svg {}
+}
+
+.contacts-map {
+	@media (max-width:$mobileSmall) {
+		margin: 0px rem(-10);
+	}
+
+	#map {
+		height: 544px;
+	}
+}

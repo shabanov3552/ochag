@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Как сделать заказ"
+})
+
+<body>
+	<div class="wrapper">
+
+		@@include('html/_header.htm',{})
+
+		<main class="page">
+			<div class="page__container">
+				@@include('html/_breadcrumbs.htm',{})
+				<div class="page__title">Как сделать заказ</div>
+
+				<div class="faq-order">
+					<div class="faq-order__row">
+						<div class="faq-order__image"><img src="@img/about/about__1.jpg" alt=""></div>
+						<div class="faq-order__row-count">1</div>
+						<div class="faq-order__desc">
+							<div class="faq-order__title">Выберите понравившийся вам товар в каталоге</div>
+							<div class="faq-order__text">Если затрудняетесь найти товар в каталоге, воспользуйтесь поиском вверху страницы.</div>
+						</div>
+					</div>
+					<div class="faq-order__row">
+						<div class="faq-order__image"><img src="@img/about/about__2.jpg" alt=""></div>
+						<div class="faq-order__row-count">2</div>
+						<div class="faq-order__desc">
+							<div class="faq-order__title">Нажмите кнопку «В корзину» рядом с выбранным товаром</div>
+							<div class="faq-order__text">В некоторых товарах нужно сначала выбрать нужные опции: цвет, размер, состав и т.д.</div>
+						</div>
+					</div>
+					<div class="faq-order__row">
+						<div class="faq-order__image"><img src="@img/about/about__3.jpg" alt=""></div>
+						<div class="faq-order__row-count">3</div>
+						<div class="faq-order__desc">
+							<div class="faq-order__title">Перейдите в раздел «Корзина»</div>
+							<div class="faq-order__text">Ознакомьтесь с составом корзины. Укажите или скорректируйте количество товаров</div>
+						</div>
+					</div>
+					<div class="faq-order__row">
+						<div class="faq-order__image"><img src="@img/about/about__3.jpg" alt=""></div>
+						<div class="faq-order__row-count">4</div>
+						<div class="faq-order__desc">
+							<div class="faq-order__title">Нажмите кнопку «Оформить заказ»</div>
+							<div class="faq-order__text"></div>
+						</div>
+					</div>
+					<div class="faq-order__row">
+						<div class="faq-order__image"><img src="@img/about/about__3.jpg" alt=""></div>
+						<div class="faq-order__row-count">5</div>
+						<div class="faq-order__desc">
+							<div class="faq-order__title">Заполните форму с контактными данными на странице оформления доставки или самовывоза</div>
+							<div class="faq-order__text"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

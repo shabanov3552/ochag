@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"О нас"
+})
+
+<body>
+	<div class="wrapper">
+
+		@@include('html/_header.htm',{})
+
+		<main class="page">
+			<div class="page__container">
+				@@include('html/_breadcrumbs.htm',{})
+				<div class="page__title">О нас</div>
+
+				<div class="about">
+					<div class="about__row">
+						<div class="about__text about__text_first">
+							Магазин отделочных материалов LiteBuy это более 30000 наименований отделочных материалов, товаров для дома, уюта, комфорта!
+						</div>
+						<div class="about__image"><img src="@img/about/about__1.jpg" alt=""></div>
+					</div>
+					<div class="about__row">
+						<div class="about__text">
+							Мы являемся официальными дистрибьюторами многих производителей, работаем напрямую с заводами, поэтому цены на наши товары намного ниже в среднем по г.Красноярску. Мы участвуем во всех производственных выставках, внимательно следим за трендами, поэтому в нашем ассортименте есть и хиты продаж, и новинки, и акционные позиции.
+						</div>
+						<div class="about__image"><img src="@img/about/about__2.jpg" alt=""></div>
+					</div>
+					<div class="about__row">
+						<div class="about__text">
+							Обои, стеновые панели, карнизы, сантехника и аксессуары, линолеум, порожки, плинтуса, электротехническая продукция, электробензоинструмент, ручной инструмент, товары для сада и огорода, средства для борьбы с вредителями, товары для домашнего хозяйства, товары для отдыха и туризма, бытовая техника, посуда, клеенка, хозяйственные товары, товары из пластика и многое много другое.
+						</div>
+						<div class="about__image"><img src="@img/about/about__3.jpg" alt=""></div>
+					</div>
+
+				</div>
+
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
