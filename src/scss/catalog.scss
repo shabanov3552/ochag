@@ -740,6 +740,10 @@
 			gap: 10px;
 		}
 
+		@media (max-width:$mobile) {
+			display: none;
+		}
+
 		.sort__select-wrapper {
 			margin-right: rem(40);
 

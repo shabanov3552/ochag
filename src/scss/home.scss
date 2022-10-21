@@ -27,6 +27,10 @@
 			padding: 0;
 		}
 
+		@media (max-width:$mobileSmall) {
+			padding: 0;
+		}
+
 	}
 
 	// .main-page-baner__slider

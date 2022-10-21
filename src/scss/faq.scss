@@ -111,8 +111,11 @@
 		color: #EB7A1D;
 		transition: color 0.3s ease 0s;
 
-		&:hover {
-			color: #000;
+		@media (min-width:$mobile) {
+			&:hover {
+				color: #000;
+
+			}
 		}
 	}
 }

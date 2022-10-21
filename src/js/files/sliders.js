@@ -127,10 +127,10 @@ function initSliders() {
 
 			// Эффекты
 			// effect: 'fade',
-			// autoplay: {
-			// 	delay: 3000,
-			// 	disableOnInteraction: false,
-			// },
+			autoplay: {
+				delay: 4000,
+				disableOnInteraction: false,
+			},
 
 
 			// Пагинация
@@ -272,7 +272,7 @@ function initSliders() {
 	}
 	if (document.querySelector('.product-slider__slider')) { // Указываем скласс нужного слайдера
 		const productSliders = document.querySelectorAll('.product-slider__slider');
-		let count = 1
+		let count = 1;
 		productSliders.forEach(el => {
 			let className = 'product-slider__slider-' + count;
 			let btnClassName = 'product-slider__nav-btns-' + count;
@@ -283,7 +283,7 @@ function initSliders() {
 				new Swiper('.' + className, { // Указываем скласс нужного слайдера
 					// Подключаем модули слайдера
 					// для конкретного случая
-					modules: [Navigation, Autoplay],
+					modules: [Navigation],
 					observer: true,
 					observeParents: true,
 					slidesPerView: 6,
@@ -300,10 +300,10 @@ function initSliders() {
 
 					// Эффекты
 					// effect: 'fade',
-					autoplay: {
-						delay: 3000,
-						disableOnInteraction: false,
-					},
+					// autoplay: {
+					// 	delay: 3000,
+					// 	disableOnInteraction: false,
+					// },
 
 
 					// Пагинация
@@ -363,7 +363,7 @@ function initSliders() {
 				new Swiper('.' + className, { // Указываем скласс нужного слайдера
 					// Подключаем модули слайдера
 					// для конкретного случая
-					modules: [Navigation, Autoplay],
+					modules: [Navigation],
 					observer: true,
 					observeParents: true,
 					slidesPerView: 6,
@@ -380,10 +380,10 @@ function initSliders() {
 
 					// Эффекты
 					// effect: 'fade',
-					autoplay: {
-						delay: 3000,
-						disableOnInteraction: false,
-					},
+					// autoplay: {
+					// 	delay: 3000,
+					// 	disableOnInteraction: false,
+					// },
 
 
 					// Пагинация

@@ -15,3 +15,24 @@ import "../../scss/libs/tippy.scss";
 flsModules.tippy = tippy('[data-tippy-content]', {
 	placement: 'right-end',
 });
+const breakpoint = window.matchMedia("(max-width: 768px)");
+
+const breakpointChecker = () => {
+	if (breakpoint.matches) {
+		for (let i = 0; i < flsModules.tippy.length; i++) {
+			flsModules.tippy[i].setProps({
+				placement: "top"
+			});
+		}
+
+	} else {
+		for (let i = 0; i < flsModules.tippy.length; i++) {
+			flsModules.tippy[i].setProps({
+				placement: "right-end"
+			});
+		}
+	}
+};
+
+breakpoint.addEventListener("change", breakpointChecker);
+breakpointChecker();
