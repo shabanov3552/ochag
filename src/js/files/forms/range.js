@@ -46,14 +46,12 @@ export function rangeInit(rangeSlider) {
 			inputs[handle].value = Math.round(values[handle]);
 		});
 
-		var isFirst = true
-		rangeSlider.noUiSlider.on('set', function (values, handle) {
-			if (isFirst) {
-				isFirst = false
-				return;
-			}
+		var skipRecursiveBackward = false
+
+		rangeSlider.noUiSlider.on('end', function (values, handle) {
 			if (input0 && input1) {
-				// inputs[handle].dispatchEvent((new Event('change')))
+				skipRecursiveBackward = true
+				inputs[handle].dispatchEvent((new Event('change')))
 				inputs[handle].dispatchEvent((new Event('keyup')))
 			}
 		});
@@ -68,6 +66,10 @@ export function rangeInit(rangeSlider) {
 
 		inputs.forEach((el, index) => {
 			el.addEventListener('change', (e) => {
+				if (skipRecursiveBackward) {
+					skipRecursiveBackward = false
+					return
+				}
 				setRangeSlider(index, e.currentTarget.value);
 			});
 		});
