@@ -807,6 +807,7 @@
 			background: #F2E6DD;
 			border-radius: 5px;
 			padding: rem(0) rem(10) rem(0) rem(8);
+			position: relative;
 
 			&:not(:last-child) {
 				margin-right: rem(10);
@@ -846,6 +847,16 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		cursor: pointer;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	// .choice-items-filter__reset

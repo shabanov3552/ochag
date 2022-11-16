@@ -93,7 +93,7 @@
 			left: 0;
 			top: 0;
 			width: 93%;
-			height: 70%;
+			height: 58%;
 
 			@media (max-width:$mobile) {
 				width: 87%;
@@ -227,6 +227,14 @@
 	// .item-basket__favorites
 
 	&__favorites {}
+
+	.basket-items-list-item-warning-container {
+		color: #CB2424;
+	}
+
+	.basket-items-list-item-removed-container {
+		grid-column: 1/5;
+	}
 }
 
 .sidebar-basket {

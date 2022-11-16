@@ -1,8 +1,8 @@
 // Подключение функционала "Чертогов Фрилансера"
-import { isMobile, menuClose, _slideDown, _slideUp } from "./functions.js";
+import { isMobile, menuClose, _slideDown, _slideUp, showMore } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
-
+import { lazyMedia } from './scroll/lazyload.js'
 //#region Глобальный клик
 
 document.addEventListener("click", function (e) {
@@ -67,7 +67,7 @@ export function documentActions(e) {
 			document.documentElement.classList.add('sub-menu-open');
 			targetElement.classList.add('_sub-menu-active');
 			subMenu.classList.add('_sub-menu-open');
-
+			showMore();
 			e.preventDefault();
 		} else {
 			const activeLink = document.querySelector('._sub-menu-active');
@@ -230,8 +230,8 @@ if (shareButton) {
 				})
 
 		} else {
-			flsModules.popup.open('#share-popup')
-			copyUrl()
+			flsModules.popup.open('#share-popup');
+			copyUrl();
 		}
 	})
 }
@@ -239,16 +239,16 @@ function copyUrl() {
 	const copyButton = document.querySelector('.share__button');
 	const copyInput = document.querySelector('.share__input');
 
-	copyInput.value = window.location.href
-	copyInput.focus()
+	copyInput.value = window.location.href;
+	copyInput.focus();
 
 	copyButton.addEventListener("click", function (e) {
-		copyInput.select()
-		document.execCommand('copy')
+		copyInput.select();
+		document.execCommand('copy');
 		window.getSelection().removeAllRanges();
-		copyButton.innerHTML = 'Ссылка скопированна'
-		copyButton.classList.remove('btn__orange')
-		copyButton.setAttribute('disabled', 'true')
+		copyButton.innerHTML = 'Ссылка скопированна';
+		copyButton.classList.remove('btn__orange');
+		copyButton.setAttribute('disabled', 'true');
 	});
 }
 
@@ -309,3 +309,17 @@ function changeData(target) {
 
 //#endregion
 
+
+const catalog = document.querySelector('.main-catalog__content');
+
+
+if (catalog) {
+	let catalogObserve = new MutationObserver(() => {
+		lazyMedia.update();
+	});
+
+	catalogObserve.observe(catalog, {
+		childList: true,
+		subtree: true,
+	});
+}
