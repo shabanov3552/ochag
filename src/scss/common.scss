@@ -272,6 +272,10 @@
 		visibility: hidden;
 		transition: all 0.3s ease 0s;
 
+		>[id*="bx_"] {
+			height: 100%;
+		}
+
 		&.swiper-slide-visible {
 			opacity: 1;
 			visibility: visible;
@@ -307,18 +311,7 @@
 	flex-direction: column;
 
 	.product-slider__slide & {
-
 		height: 100%;
-	}
-
-	.main-catalog__cards & {
-		>div {
-			height: 100%;
-
-			>div {
-				height: 100%;
-			}
-		}
 	}
 
 	&::before {
@@ -554,6 +547,8 @@
 	// .product-card__btn-compare
 
 	&__btn-compare {
+		display: none;
+
 		&::before {
 			content: url(@img/icons/add-compare.svg);
 			width: 18px;

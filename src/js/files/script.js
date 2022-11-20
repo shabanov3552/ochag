@@ -67,7 +67,7 @@ export function documentActions(e) {
 			document.documentElement.classList.add('sub-menu-open');
 			targetElement.classList.add('_sub-menu-active');
 			subMenu.classList.add('_sub-menu-open');
-			showMore();
+			showMore(subMenu.querySelectorAll('[data-showmore]'));
 			e.preventDefault();
 		} else {
 			const activeLink = document.querySelector('._sub-menu-active');
@@ -309,6 +309,7 @@ function changeData(target) {
 
 //#endregion
 
+//#region Обновление lazyLoad в каталоге при изменении
 
 const catalog = document.querySelector('.main-catalog__content');
 
@@ -323,3 +324,16 @@ if (catalog) {
 		subtree: true,
 	});
 }
+
+//#endregion
+
+//#region Перемещение модалки с фильтрами под .wrapper
+
+const filtersPopup = document.querySelector('#filters-more');
+
+if (filtersPopup) {
+	filtersPopup.remove();
+	document.querySelector('.wrapper').insertAdjacentElement('afterend', filtersPopup);
+}
+
+//#endregion

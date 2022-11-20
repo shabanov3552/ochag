@@ -471,32 +471,41 @@ export function searchInit() {
 Документация по работе в шаблоне: https://template.fls.guru/template-docs/modul-pokazat-eshhjo.html
 Сниппет (HTML): showmore
 */
-export function showMore() {
-	const showMoreBlocks = document.querySelectorAll('[data-showmore]');
+export function showMore(targetBlocks) {
+	let showMoreBlocks;
 	let showMoreBlocksRegular;
 	let mdQueriesArray;
-	if (showMoreBlocks.length) {
-		// Получение обычных объектов
-		showMoreBlocksRegular = Array.from(showMoreBlocks).filter(function (item, index, self) {
-			return !item.dataset.showmoreMedia;
+	if (targetBlocks) {
+		targetBlocks.forEach(targetBlock => {
+			initItem(targetBlock);
 		});
-		// Инициализация обычных объектов
-		showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
-
-		document.addEventListener("click", showMoreActions);
-		window.addEventListener("resize", showMoreActions);
-
-		// Получение объектов с медиа запросами
-		mdQueriesArray = dataMediaQueries(showMoreBlocks, "showmoreMedia");
-		if (mdQueriesArray && mdQueriesArray.length) {
-			mdQueriesArray.forEach(mdQueriesItem => {
-				// Событие
-				mdQueriesItem.matchMedia.addEventListener("change", function () {
-					initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+	} else {
+		window.addEventListener('load', (e) => {
+			showMoreBlocks = document.querySelectorAll('[data-showmore]');
+			if (showMoreBlocks.length) {
+				// Получение обычных объектов
+				showMoreBlocksRegular = Array.from(showMoreBlocks).filter(function (item, index, self) {
+					return !item.dataset.showmoreMedia;
 				});
-			});
-			initItemsMedia(mdQueriesArray);
-		}
+				// Инициализация обычных объектов
+				showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
+
+				document.addEventListener("click", showMoreActions);
+				window.addEventListener("resize", showMoreActions);
+
+				// Получение объектов с медиа запросами
+				mdQueriesArray = dataMediaQueries(showMoreBlocks, "showmoreMedia");
+				if (mdQueriesArray && mdQueriesArray.length) {
+					mdQueriesArray.forEach(mdQueriesItem => {
+						// Событие
+						mdQueriesItem.matchMedia.addEventListener("change", function () {
+							initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+						});
+					});
+					initItemsMedia(mdQueriesArray);
+				}
+			}
+		});
 	}
 	function initItemsMedia(mdQueriesArray) {
 		mdQueriesArray.forEach(mdQueriesItem => {

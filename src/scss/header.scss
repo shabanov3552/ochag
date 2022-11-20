@@ -839,7 +839,7 @@
 			left: 0;
 			background-color: #fff;
 			width: 100%;
-			padding: rem(70) rem(0) rem(10) rem(30);
+			padding: rem(70) rem(0) rem(100) rem(30);
 			height: 100%;
 		}
 
@@ -886,7 +886,9 @@
 
 	&__categories {
 		@media (min-width:$tablet) {
-			column-count: 2;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 25px;
 		}
 	}
 
@@ -916,6 +918,12 @@
 		font-size: 20px;
 		line-height: 24px;
 		margin-bottom: rem(17);
+
+		a {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 
 	// .category__list

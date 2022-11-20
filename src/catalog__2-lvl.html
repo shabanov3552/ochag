@@ -155,6 +155,290 @@
 									<span>Показать все фильтры</span>
 								</div>
 							</div>
+							<div id="filters-more" aria-hidden="true" class="popup">
+								<div class="popup__wrapper">
+									<div class="popup__content">
+										<button data-close type="button" class="popup__close">
+											<svg class="popup__close-svg">
+												<use xlink:href="img/icons/icons.svg#svg-icon-close-modal"></use>
+											</svg>
+										</button>
+										<div class="popup__filters filters">
+											<div class="filters__title">Фильтры</div>
+											<div class="filters__wrapper">
+												<div class="filters__col">
+													<div class="filters__price">
+														<div class="filters__box-header">
+															<div class="filters__filter-title">Цена (₽)</div>
+														</div>
+														<div class="price">
+															<div class="price__inputs">
+																<input autocomplete="off" type="number" name="form[]" placeholder="" class="price__input js_input-from">
+																<span>—</span>
+																<input autocomplete="off" type="number" name="form[]" placeholder="" class="price__input js_input-to">
+															</div>
+															<div class="price__range-slider">
+																<div id="popup-range" data-from="0" data-to="999999"></div>
+															</div>
+														</div>
+													</div>
+													<div class="checkbox checkbox_switch">
+														<input id="c_100" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+														<label for="c_100" class="checkbox__label"><span class="checkbox__text">Гипоаллергенно</span></label>
+													</div>
+													<div class="filters__box">
+														<div class="filters__box-header">
+															<div class="filters__filter-title">Скидка</div>
+															<div class="filters__tippy tippy" data-tippy-content="Подсказка">
+																<img src="@img/icons/question-mark.svg" alt="">
+															</div>
+														</div>
+														<div class="filters__box-content">
+															<div class="options">
+																<div class="options__item">
+																	<input id="o_100" class="options__input" type="radio" value="1" name="option1">
+																	<label for="o_100" class="options__label"><span class="options__text">От 10% и выше</span></label>
+																</div>
+																<div class="options__item">
+																	<input id="o_200" class="options__input" type="radio" value="2" name="option1">
+																	<label for="o_200" class="options__label"><span class="options__text">От 30% и выше</span></label>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="filters__box showmore" data-showmore="items">
+														<div class="filters__box-header">
+															<div class="filters__filter-title">Размер</div>
+															<span class="filters__tippy tippy" data-tippy-content="Подсказка">
+																<img src="@img/icons/question-mark.svg" alt="">
+															</span>
+														</div>
+														<div class="filters__box-content" data-showmore-content="3">
+															<div class="checkbox">
+																<input id="c_200" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_200" class="checkbox__label"><span class="checkbox__text">150х200</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_300" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_300" class="checkbox__label"><span class="checkbox__text">100х125</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_400" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_400" class="checkbox__label"><span class="checkbox__text">125х150</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_500" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_500" class="checkbox__label"><span class="checkbox__text">150х200</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_600" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_600" class="checkbox__label"><span class="checkbox__text">100х125</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_700" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_700" class="checkbox__label"><span class="checkbox__text">125х150</span></label>
+															</div>
+														</div>
+														<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скрыть</span></button>
+													</div>
+													<div class="filters__box showmore" data-showmore="items">
+														<div class="filters__box-header">
+															<div class="filters__filter-title">Сезон</div>
+															<span class="filters__tippy tippy" data-tippy-content="Сезонность одеяла указывает, для какого времени года оно предназначено и на какую погоду рассчитано. Сезонность зависит в первую очередь от плотности наполнителя одеяла: у летних – 200 г/м. кв, у всесезонных – около 300 г/м. кв., у зимних – от 350 г/м. кв. и больше.">
+																<img src="@img/icons/question-mark.svg" alt="">
+															</span>
+														</div>
+														<div class="filters__box-content" data-showmore-content="3">
+															<div class="checkbox">
+																<input id="c_800" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_800" class="checkbox__label"><span class="checkbox__text">Всесезонное</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_900" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_900" class="checkbox__label"><span class="checkbox__text">Зимнее</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_1000" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_1000" class="checkbox__label"><span class="checkbox__text">Летнее</span></label>
+															</div>
+														</div>
+														<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скрыть</span></button>
+													</div>
+													<div class="filters__box">
+														<div class="filters__box-header">
+															<div class="filters__filter-title">Скидка</div>
+															<div class="filters__tippy tippy" data-tippy-content="Подсказка">
+																<img src="@img/icons/question-mark.svg" alt="">
+															</div>
+														</div>
+														<div class="filters__box-content">
+															<div class="options">
+																<div class="options__item">
+																	<input id="o_1100" class="options__input" type="radio" value="1" name="option2">
+																	<label for="o_1100" class="options__label"><span class="options__text">От 10% и выше</span></label>
+																</div>
+																<div class="options__item">
+																	<input id="o_1200" class="options__input" type="radio" value="2" name="option2">
+																	<label for="o_1200" class="options__label"><span class="options__text">От 30% и выше</span></label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="filters__box showmore" data-showmore="items">
+														<div class="filters__box-header">
+															<div class="filters__filter-title">Размер</div>
+															<span class="filters__tippy tippy" data-tippy-content="Подсказка">
+																<img src="@img/icons/question-mark.svg" alt="">
+															</span>
+														</div>
+														<div class="filters__box-content" data-showmore-content="3">
+															<div class="checkbox">
+																<input id="c_1200" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_1200" class="checkbox__label"><span class="checkbox__text">150х200</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_1300" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_1300" class="checkbox__label"><span class="checkbox__text">100х125</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_1400" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_1400" class="checkbox__label"><span class="checkbox__text">125х150</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_1500" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_1500" class="checkbox__label"><span class="checkbox__text">150х200</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_1600" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_1600" class="checkbox__label"><span class="checkbox__text">100х125</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_1700" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_1700" class="checkbox__label"><span class="checkbox__text">125х150</span></label>
+															</div>
+														</div>
+														<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скрыть</span></button>
+													</div>
+													<div class="filters__box showmore" data-showmore="items">
+														<div class="filters__box-header">
+															<div class="filters__filter-title">Сезон</div>
+															<span class="filters__tippy tippy" data-tippy-content="Сезонность одеяла указывает, для какого времени года оно предназначено и на какую погоду рассчитано. Сезонность зависит в первую очередь от плотности наполнителя одеяла: у летних – 200 г/м. кв, у всесезонных – около 300 г/м. кв., у зимних – от 350 г/м. кв. и больше.">
+																<img src="@img/icons/question-mark.svg" alt="">
+															</span>
+														</div>
+														<div class="filters__box-content" data-showmore-content="3">
+															<div class="checkbox">
+																<input id="c_1800" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_1800" class="checkbox__label"><span class="checkbox__text">Всесезонное</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_1900" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_1900" class="checkbox__label"><span class="checkbox__text">Зимнее</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_11000" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_11000" class="checkbox__label"><span class="checkbox__text">Летнее</span></label>
+															</div>
+														</div>
+														<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скрыть</span></button>
+													</div>
+													<div class="filters__box">
+														<div class="filters__box-header">
+															<div class="filters__filter-title">Скидка</div>
+															<div class="filters__tippy tippy" data-tippy-content="Подсказка">
+																<img src="@img/icons/question-mark.svg" alt="">
+															</div>
+														</div>
+														<div class="filters__box-content">
+															<div class="options">
+																<div class="options__item">
+																	<input id="o_2100" class="options__input" type="radio" value="1" name="option3">
+																	<label for="o_2100" class="options__label"><span class="options__text">От 10% и выше</span></label>
+																</div>
+																<div class="options__item">
+																	<input id="o_2200" class="options__input" type="radio" value="2" name="option3">
+																	<label for="o_2200" class="options__label"><span class="options__text">От 30% и выше</span></label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="filters__box showmore" data-showmore="items">
+														<div class="filters__box-header">
+															<div class="filters__filter-title">Размер</div>
+															<span class="filters__tippy tippy" data-tippy-content="Подсказка">
+																<img src="@img/icons/question-mark.svg" alt="">
+															</span>
+														</div>
+														<div class="filters__box-content" data-showmore-content="3">
+															<div class="checkbox">
+																<input id="c_2200" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_2200" class="checkbox__label"><span class="checkbox__text">150х200</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_2300" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_2300" class="checkbox__label"><span class="checkbox__text">100х125</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_2400" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_2400" class="checkbox__label"><span class="checkbox__text">125х150</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_2500" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_2500" class="checkbox__label"><span class="checkbox__text">150х200</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_2600" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_2600" class="checkbox__label"><span class="checkbox__text">100х125</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_2700" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_2700" class="checkbox__label"><span class="checkbox__text">125х150</span></label>
+															</div>
+														</div>
+														<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скрыть</span></button>
+													</div>
+													<div class="filters__box showmore" data-showmore="items">
+														<div class="filters__box-header">
+															<div class="filters__filter-title">Сезон</div>
+															<span class="filters__tippy tippy" data-tippy-content="Сезонность одеяла указывает, для какого времени года оно предназначено и на какую погоду рассчитано. Сезонность зависит в первую очередь от плотности наполнителя одеяла: у летних – 200 г/м. кв, у всесезонных – около 300 г/м. кв., у зимних – от 350 г/м. кв. и больше.">
+																<img src="@img/icons/question-mark.svg" alt="">
+															</span>
+														</div>
+														<div class="filters__box-content" data-showmore-content="3">
+															<div class="checkbox">
+																<input id="c_2800" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_2800" class="checkbox__label"><span class="checkbox__text">Всесезонное</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_2900" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_2900" class="checkbox__label"><span class="checkbox__text">Зимнее</span></label>
+															</div>
+															<div class="checkbox">
+																<input id="c_21000" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+																<label for="c_21000" class="checkbox__label"><span class="checkbox__text">Летнее</span></label>
+															</div>
+														</div>
+														<button hidden data-showmore-button type="button" class="showmore__button"><span>Раскрыть всё</span><span>Скрыть</span></button>
+													</div>
+												</div>
+											</div>
+											<div class="filters__buttons">
+												<div class="filters__reset-btn">
+													<svg class="filters__reset-svg">
+														<use xlink:href="img/icons/icons.svg#svg-reset-icon"></use>
+													</svg>
+													<span>Сбросить фильтры</span>
+												</div>
+												<button type="button" class="filters__apply-btn btn btn__orange btn__orange_white">
+													<span>Применить</span>
+												</button>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="main-catalog__content">
 							<div class="main-catalog__sort sort">
@@ -908,6 +1192,7 @@
 									</div>
 								</div>
 							</div>
+
 							<div class="main-catalog__pagging">
 								@@include('html/_pagging.htm',{})
 							</div>

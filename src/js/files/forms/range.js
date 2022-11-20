@@ -75,7 +75,9 @@ export function rangeInit(rangeSlider) {
 		});
 	}
 }
-rangeInit(document.querySelector('#range'));
-rangeInit(document.querySelector('#popup-range'));
 
 
+const rangesSlidersFilters = document.querySelectorAll('#range');
+rangesSlidersFilters.forEach(range => {
+	rangeInit(range);
+});

@@ -7,7 +7,6 @@
 		.main-catalog__sidebar-categories {
 			@media (max-width:$tablet) {
 				display: none;
-
 			}
 		}
 	}
@@ -46,6 +45,9 @@
 	// .main-catalog__sidebar-categories 
 
 	&__sidebar-categories {
+		display: flex;
+		flex-direction: column;
+
 		@media (max-width:$tablet) {
 			.category__title {
 				display: none;
@@ -210,6 +212,12 @@
 
 				.product-card {
 					display: flex;
+					flex-direction: row;
+
+					// >div>div {
+					// 	display: flex;
+					// }
+
 
 					&:not(:last-child) {
 						border-bottom: 1px solid #C0B9B4;
@@ -225,6 +233,7 @@
 				.product-card__link {
 					flex: 1 1 auto;
 					display: flex;
+					flex-direction: row;
 				}
 
 				.product-card__image-ibg {
