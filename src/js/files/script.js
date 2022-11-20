@@ -106,10 +106,9 @@ if (layout) {
 
 
 	if (localStorage.getItem('layout')) {
-		document.querySelector('.main-catalog__cards, .favorites__cards').classList.add('row')
-		layout.querySelector(".js-layout__row").classList.add('_active')
-		layout.querySelector(".js-layout__column").classList.remove('_active')
-
+		document.querySelector('.main-catalog__cards, .favorites__cards').classList.add('row');
+		layout.querySelector(".js-layout__row").classList.add('_active');
+		layout.querySelector(".js-layout__column").classList.remove('_active');
 	}
 
 
@@ -317,6 +316,9 @@ const catalog = document.querySelector('.main-catalog__content');
 if (catalog) {
 	let catalogObserve = new MutationObserver(() => {
 		lazyMedia.update();
+		if (localStorage.getItem('layout')) {
+			document.querySelector('.main-catalog__cards, .favorites__cards').classList.add('row');
+		}
 	});
 
 	catalogObserve.observe(catalog, {
