@@ -392,6 +392,10 @@
 		display: flex;
 		align-items: flex-end;
 		margin-bottom: rem(12);
+		flex-wrap: wrap;
+		row-gap: 7px;
+		column-gap: 17px;
+
 	}
 
 	// .product-card__price
@@ -409,7 +413,7 @@
 		font-size: 16px;
 		line-height: 20px;
 		color: rgba(0, 0, 0, 0.496476);
-		margin-left: rem(17);
+		text-decoration: line-through;
 	}
 
 	// .product-card__stock
