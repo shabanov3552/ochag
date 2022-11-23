@@ -167,7 +167,7 @@
 		.product-card {
 			flex: 0 1 20%;
 
-			@media (max-width:$pc) {
+			@media (max-width: em(1600)) {
 				flex: 0 1 25%;
 			}
 

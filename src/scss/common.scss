@@ -89,16 +89,20 @@
 .product-slider {
 	// min-width: 0;
 
-	&:not(:last-child) {
-		margin-bottom: rem(100);
 
-		@media (max-width:$mobile) {
-			margin-bottom: rem(20);
-		}
+	margin-bottom: rem(100);
+
+	@media (max-width:$mobile) {
+		margin-bottom: rem(20);
 	}
+
 
 	&:only-child {
 		margin-bottom: rem(0);
+	}
+
+	&.last-slider {
+		margin-bottom: 0;
 	}
 
 	// .product-slider__container
