@@ -101,7 +101,7 @@ class Popup {
 		this.bodyLock = false;
 		this.options.init ? this.initPopups() : null
 
-		window.popup = popup // раз уж синглетон
+		window.popup = this // раз уж синглетон
 	}
 	initPopups() {
 		this.popupLogging(`Проснулся`);
