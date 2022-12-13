@@ -66,5 +66,13 @@
 			margin-bottom: rem(15);
 			line-height: 20px;
 		}
+
+		ul {
+			padding-left: 25px;
+
+			li {
+				list-style: disc;
+			}
+		}
 	}
 }
