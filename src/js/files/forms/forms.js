@@ -22,6 +22,19 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 			}
 		});
 	}
+	document.body.addEventListener("input", function (e) {
+		const targetElement = e.target;
+		if ((targetElement.tagName === 'INPUT' || targetElement.tagName === 'TEXTAREA')) {
+			if (targetElement.dataset.placeholder) {
+				targetElement.placeholder = '';
+			}
+			if (!targetElement.hasAttribute('data-no-focus-classes')) {
+				targetElement.classList.add('_form-focus');
+				targetElement.parentElement.classList.add('_form-focus');
+				if (targetElement.parentElement.querySelector('.form__clear-svg')) targetElement.parentElement.querySelector('.form__clear-svg').classList.add('_active');
+			}
+		}
+	});
 	document.body.addEventListener("focusin", function (e) {
 		const targetElement = e.target;
 		if ((targetElement.tagName === 'INPUT' || targetElement.tagName === 'TEXTAREA')) {
@@ -33,7 +46,7 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 				targetElement.parentElement.classList.add('_form-focus');
 				targetElement.addEventListener('input', function (e) {
 					if (e.target.value.length > 0) {
-						if (targetElement.parentElement.querySelector('.form__clear-svg')) targetElement.parentElement.querySelector('.form__clear-svg').classList.add('_active')
+						if (targetElement.parentElement.querySelector('.form__clear-svg')) targetElement.parentElement.querySelector('.form__clear-svg').classList.add('_active');
 					}
 				})
 			}
@@ -70,6 +83,10 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 					targetElement.parentElement.classList.remove('_form-focus');
 					targetElement.nextElementSibling.classList.remove('_active')
 				}
+			}
+			if (targetElement.classList.contains('js_phone')) {
+				Inputmask.remove(targetElement);
+
 			}
 			// Моментальная валидация
 			if (targetElement.hasAttribute('data-validate')) {

@@ -10,7 +10,7 @@
 
 	&__cards {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 		margin-bottom: rem(87);
 
 		@media (min-width:$mobile) {
@@ -21,6 +21,8 @@
 
 				.product-card {
 					display: flex;
+					flex-direction: row;
+					max-width: 1020px;
 
 					&:not(:last-child) {
 						border-bottom: 1px solid #C0B9B4;
@@ -35,6 +37,7 @@
 
 				.product-card__link {
 					flex: 1 1 auto;
+					flex-direction: row;
 					display: flex;
 				}
 

@@ -15,7 +15,7 @@
 				<div class="page__title">Оформление заказа</div>
 
 				<div class="order">
-					<form action="" class="order__form form">
+					<form data-parsley-validate="" action="" class="order__form form">
 						<div class="order__wrapper">
 							<div class="order__sidebar" data-sticky data-sticky-top="20">
 								<div class="order__sidebar-inner" data-sticky-item>
@@ -163,21 +163,21 @@
 										<div class="order__col">
 											<div class="order__line form__line">
 												<label for="selectLocation" class="form__label">ФИО</label>
-												<input id="selectLocation" type="text" name="text" class="form__input">
+												<input id="selectLocation" required type="text" name="text" class="form__input">
 												<svg class="form__clear-svg">
 													<use xlink:href="img/icons/icons.svg#svg-input_close"></use>
 												</svg>
 											</div>
 											<div class="order__line form__line">
 												<label for="selectLocation" class="form__label">Контактный номер</label>
-												<input id="selectLocation" type="tel" name="tel" class="form__input js_phone">
+												<input id="selectLocation" required type="tel" name="tel" class="form__input js_phone">
 												<svg class="form__clear-svg">
 													<use xlink:href="img/icons/icons.svg#svg-input_close"></use>
 												</svg>
 											</div>
 											<div class="order__line form__line">
 												<label for="selectLocation" class="form__label">E-mail</label>
-												<input id="selectLocation" type="email" name="email" class="form__input">
+												<input id="selectLocation" required type="email" name="email" class="form__input">
 												<svg class="form__clear-svg">
 													<use xlink:href="img/icons/icons.svg#svg-input_close"></use>
 												</svg>

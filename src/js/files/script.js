@@ -13,6 +13,7 @@ document.addEventListener("click", function (e) {
 		input.classList.remove('_form-focus');
 		input.parentElement.classList.remove('_form-focus');
 		e.target.closest('.form__clear-svg').classList.remove('_active');
+		// Inputmask.remove(input);
 	}
 	// закрытие бокового каталога при клике вне каталога.
 	if (!e.target.closest(".catalog__body") && document.querySelector('.menu-open') || e.target.closest(".catalog__close")) {
@@ -336,6 +337,13 @@ const filtersPopup = document.querySelector('#filters-more');
 if (filtersPopup) {
 	filtersPopup.remove();
 	document.querySelector('.wrapper').insertAdjacentElement('afterend', filtersPopup);
+	getFilterColumns(filtersPopup);
+}
+
+function getFilterColumns(popup) {
+	const columns = popup.querySelectorAll('.filters__col');
+	const popupWrapper = popup.querySelector('.filters__wrapper');
+	columns.length > 1 ? popupWrapper.classList.add('many-cols') : null;
 }
 
 //#endregion

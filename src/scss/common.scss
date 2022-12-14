@@ -467,10 +467,14 @@
 	// .product-card__footer-bottom
 
 	&__footer-bottom {
-		display: flex;
+		display: none;
 		justify-content: space-between;
 		flex-wrap: wrap;
 		gap: 10px;
+
+		.favorites__cards & {
+			display: flex;
+		}
 	}
 
 	// .product-card__btn-favorites
