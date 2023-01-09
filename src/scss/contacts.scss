@@ -203,6 +203,10 @@
 		@media (max-width:$mobileSmall) {
 			margin: 0px rem(-10);
 		}
+
+		.error-text {
+			display: none;
+		}
 	}
 
 	// .sidebar-form__header

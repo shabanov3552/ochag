@@ -347,3 +347,37 @@ function getFilterColumns(popup) {
 }
 
 //#endregion
+
+
+window.addEventListener("load", function (e) {
+	var target = document.querySelector('.radio-buttons');
+
+	const config = {
+		attributes: true,
+		childList: true,
+		subtree: true
+	};
+
+	function styleButtonChange() {
+		const pickUpPointButtons = document.querySelectorAll('.radio-buttons__inner button, .radio-buttons__inner .btn');
+
+		pickUpPointButtons.forEach(btn => {
+			btn.setAttribute('class', '')
+			btn.style = 'display: flex; justify-content:center; align-items: center; text-align: center;';
+			btn.classList.add('btn__orange', 'btn');
+		});
+	}
+	styleButtonChange();
+
+	const callback = function (mutationsList, observer) {
+		for (let mutation of mutationsList) {
+			if (mutation.type === 'childList') {
+				styleButtonChange();
+			}
+		}
+	};
+
+	const observer = new MutationObserver(callback);
+
+	observer.observe(target, config);
+});

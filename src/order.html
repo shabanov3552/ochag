@@ -114,6 +114,24 @@
 								<div class="order__block order__block_delivery">
 									<div class="order__block-title">Способ доставки</div>
 									<div class="radio-buttons">
+										<div class="radio-buttons__item bx-soa-pp-company" data-id="31">
+											<label class="radio-buttons__label">
+												<input class="radio-buttons__input" id="ID_DELIVERY_ID_31" type="radio" value="31" name="delivery" data-parsley-multiple="DELIVERY_ID">
+												<div class="radio-buttons__inner">
+													<span class="radio-buttons__name">
+														Почта России (Доставка в отделение)
+													</span>
+													<div class="bx-soa-pp-company-inject clearfix hidden"></div>
+													<span class="radio-buttons__text bx-soa-pp-company-description">
+														бесплатно<br>
+														<div class="russianpost_link"><input type="hidden" id="russianpost_result_type" name="russianpost_result_type" value="">
+															<button id="russianpost_btn_openmap" onclick="event.preventDefault(); openMap('7bd35815-26c4-4478-9ecc-ebc79a87d5ab', 319600,1720,[], '');" class="btn" style="border-color: #0055A6; background-color:  #0055A6; color: #FFF;">Выбрать пункт выдачи на карте</button>
+															<br><span id="russianpost_select_address"></span>
+														</div><input type="hidden" id="russianpost_error_txt" name="russianpost_error_txt" value="null"><br>Самовывоз из отделения Почты России
+													</span>
+												</div>
+											</label>
+										</div>
 										<div class="radio-buttons__item">
 											<label class="radio-buttons__label">
 												<input class="radio-buttons__input" type="radio" value="1" name="delivery">

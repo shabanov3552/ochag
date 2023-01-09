@@ -570,6 +570,7 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(214px, 1fr));
 	gap: 30px;
+	margin-bottom: rem(10);
 
 	.order__block_pay & {
 		grid-template-columns: repeat(auto-fill, minmax(214px, 1fr));

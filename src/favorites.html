@@ -77,7 +77,15 @@
 								<div class="product-card__footer-top">
 									<button class="product-card__btn-basket btn btn__orange btn__orange">В корзину</button>
 								</div>
+								<div class="product-card__footer-bottom">
+									<button class="product-card__btn-favorites js-addToFavorite" data-id="28301">
+										<span class="product-card__btn-span">В избранное</span>
+									</button>
 
+									<button class="product-card__btn-compare js-addToCompare" data-id="28301">
+										<span class="product-card__btn-span">Сравнить</span>
+									</button>
+								</div>
 							</div>
 						</div>
 						<div class="product-card">
@@ -103,10 +111,18 @@
 								<div class="product-card__footer-top">
 									<button class="product-card__btn-basket btn btn__orange btn__orange_white">Нет в наличии</button>
 								</div>
+								<div class="product-card__footer-bottom">
+									<button class="product-card__btn-favorites js-addToFavorite _delete" data-id="28301">
+										<span class="product-card__btn-span">Убрать</span>
+									</button>
 
+									<button class="product-card__btn-compare js-addToCompare _delete" data-id="28301">
+										<span class="product-card__btn-span">Убрать</span>
+									</button>
+								</div>
 							</div>
 						</div>
-						<div class="product-card">
+						<!-- <div class="product-card">
 							<a href="" class="product-card__link">
 								<div class="product-card__image-ibg product-card__image-ibg_contain"><img data-src="@img/products/pd-c-3.png" alt=""></div>
 								<div class="product-card__info">
@@ -683,7 +699,7 @@
 								</div>
 
 							</div>
-						</div>
+						</div> -->
 					</div>
 					<div class="favorites__pagging">
 						@@include('html/_pagging.htm',{})

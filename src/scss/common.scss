@@ -508,28 +508,28 @@
 
 	&__btn-favorites {
 		&::before {
-			content: url(@img/icons/add-favorites.svg);
-			width: 18px;
-			height: 18px;
+			content: '';
+			width: 30px;
+			height: 27px;
 			margin-right: rem(4);
 			transition: all 0.3s ease 0s;
+			background-image: url(@img/icons/add-favorites.svg);
 		}
 
 		&:hover {
 			&::before {
-				content: url(@img/icons/add-favorites_green.svg);
+				background-image: url(@img/icons/add-favorites_full.svg);
 			}
 		}
 
 		&._delete {
 			&::before {
-				content: url(@img/icons/del-favorites.svg);
+				background-image: url(@img/icons/add-favorites_full.svg);
 			}
 
 			&:hover {
 				&::before {
-					content: url(@img/icons/del-favorites_green.svg);
-
+					background-image: url(@img/icons/add-favorites.svg);
 				}
 			}
 		}
@@ -559,31 +559,32 @@
 	// .product-card__btn-compare
 
 	&__btn-compare {
-		display: none;
 
 		&::before {
-			content: url(@img/icons/add-compare.svg);
-			width: 18px;
-			height: 18px;
+			content: '';
+			display: block;
+			width: 29px;
+			height: 26px;
 			margin-right: rem(4);
 			transition: all 0.3s ease 0s;
+			background-image: url(@img/icons/add-compare.svg);
+			background-repeat: no-repeat;
 		}
 
 		&:hover {
 			&::before {
-				content: url(@img/icons/add-compare_green.svg);
+				background-image: url(@img/icons/add-compare_full.svg);
 			}
 		}
 
 		&._delete {
 			&::before {
-				content: url(@img/icons/add-compare.svg);
+				background-image: url(@img/icons/add-compare_full.svg);
 			}
 
 			&:hover {
 				&::before {
-					content: url(@img/icons/add-compare_green.svg);
-
+					background-image: url(@img/icons/add-compare.svg);
 				}
 			}
 		}
