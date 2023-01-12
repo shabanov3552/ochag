@@ -873,8 +873,8 @@
 		padding: 38px 42px 0px 120px;
 		overflow: hidden;
 
-		@media (max-width: 768px) {
-			padding: 34px 0px 35px 0px;
+		@media (max-width:$tablet){
+			padding: 34px 0px 35px 0px;	
 		}
 	}
 
@@ -1006,6 +1006,12 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		width: 100%;
+		@media (max-width:$mobile){
+			 display: grid;
+			 grid-template-rows:minmax(100px, 1fr);
+			 align-items: start; 
+		}
 	}
 
 	// .card-order__name
@@ -1017,11 +1023,11 @@
 		margin: 0px 20px 15px 0px;
 
 		@media (max-width: 768px) {
-			margin: 0px 0px 100px 0px;
+			// margin: 0px 0px 100px 0px;
 		}
 
 		@media (max-width: 480px) {
-			margin: 0px 0px 80px 0px;
+			// margin: 0px 0px 80px 0px;
 		}
 	}
 
@@ -1043,19 +1049,19 @@
 	// .card-order__prices
 
 	&__prices {
-		display: flex;
 		font-weight: normal;
 		font-size: 20px;
 		line-height: 28px;
 		color: #000;
 		flex: 1 1 100%;
-		flex-wrap: wrap;
-		row-gap: 10px;
+		gap: 20px;
+		display: grid;
+		grid-template-columns: minmax(140px, 200px) 80px 1fr;
 
 		@media (max-width: 768px) {
-			position: absolute;
-			left: 0;
-			bottom: 0;
+			grid-template-columns: repeat(auto-fill, minmax(160px, auto));
+			width: calc(100% + 95px);
+			margin-left: -110px;
 		}
 
 		@media (max-width: 375px) {
@@ -1066,20 +1072,20 @@
 	// .card-order__price
 
 	&__price {
-		margin: 0px 70px 0px 0px;
+		// margin: 0px 70px 0px 0px;
 
 		@media (max-width: 998px) {
-			margin: 0px 20px 0px 0px;
+			// margin: 0px 20px 0px 0px;
 		}
 	}
 
 	// .card-order__quantity
 
 	&__quantity {
-		margin: 0px 70px 0px 0px;
+		// margin: 0px 70px 0px 0px;
 
 		@media (max-width: 998px) {
-			margin: 0px 14px 0px 0px;
+			// margin: 0px 14px 0px 0px;
 		}
 	}
 

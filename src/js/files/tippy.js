@@ -65,3 +65,32 @@ function getFavorBtn(node) {
 }
 
 //#endregion
+
+//#region Добавление подсказок к кнопкам сравнения
+
+let compareBtn = document.querySelector('.product__btn-compare') || Array.from(document.querySelectorAll('.item-basket__compare'));
+
+if (compareBtn) { getCompareBtn(compareBtn); }
+
+function setCompareTippy(btn) {
+	let compareBtnTippy = tippy(btn);
+
+	compareBtnTippy.setContent('Добавить в сравнение');
+
+	let btnsObserv = new MutationObserver(records => {
+		records[0].target.classList.forEach(item => {
+			item == '_active' ? compareBtnTippy.setContent('Удалить из сравнения') : compareBtnTippy.setContent('Добавить в сравнение');
+		});
+	});
+
+	btnsObserv.observe(btn, {
+		subtree: true,
+		attributes: true,
+	});
+}
+
+function getCompareBtn(node) {
+	Array.isArray(node) ? node.forEach(item => setCompareTippy(item)) : setCompareTippy(node);
+}
+
+//#endregion

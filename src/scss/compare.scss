@@ -177,6 +177,7 @@
 	}
 }
 
+
 .compare-card {
 	padding: 20px;
 	border: 1px solid #818181;
@@ -210,6 +211,10 @@
 		font-size: 16px;
 		line-height: 20px;
 		padding-bottom: rem(18);
+
+		&+.compare-card__characteristics {
+			margin-top: calc(48px + 1.75rem);
+		}
 	}
 
 	// .compare-card__add-basket

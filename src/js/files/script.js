@@ -350,34 +350,75 @@ function getFilterColumns(popup) {
 
 
 window.addEventListener("load", function (e) {
-	var target = document.querySelector('.radio-buttons');
+	const target = document.querySelector('.radio-buttons');
+	if (target) {
 
-	const config = {
-		attributes: true,
-		childList: true,
-		subtree: true
-	};
+		const config = {
+			attributes: true,
+			childList: true,
+			subtree: true
+		};
 
-	function styleButtonChange() {
-		const pickUpPointButtons = document.querySelectorAll('.radio-buttons__inner button, .radio-buttons__inner .btn');
+		function styleButtonChange() {
+			const pickUpPointButtons = document.querySelectorAll('.radio-buttons__inner button, .radio-buttons__inner .btn');
 
-		pickUpPointButtons.forEach(btn => {
-			btn.setAttribute('class', '')
-			btn.style = 'display: flex; justify-content:center; align-items: center; text-align: center;';
-			btn.classList.add('btn__orange', 'btn');
-		});
-	}
-	styleButtonChange();
-
-	const callback = function (mutationsList, observer) {
-		for (let mutation of mutationsList) {
-			if (mutation.type === 'childList') {
-				styleButtonChange();
-			}
+			pickUpPointButtons.forEach(btn => {
+				btn.setAttribute('class', '')
+				btn.style = 'display: flex; justify-content:center; align-items: center; text-align: center;';
+				btn.classList.add('btn__orange', 'btn');
+			});
 		}
-	};
+		styleButtonChange();
 
-	const observer = new MutationObserver(callback);
+		const callback = function (mutationsList, observer) {
+			for (let mutation of mutationsList) {
+				if (mutation.type === 'childList') {
+					styleButtonChange();
+				}
+			}
+		};
 
-	observer.observe(target, config);
+		const observer = new MutationObserver(callback);
+
+		observer.observe(target, config);
+	}
 });
+
+// const contactsForm = document.querySelector('.sidebar-form__wrapper');
+// if (contactsForm) {
+// 	function showThanksMessage(e) {
+// 		const target = e.target;
+// 		target.style.display = 'none'
+// 		target.insertAdjacentHTML('afterEnd', `
+// 		<div class="sidebar-form__thanks">
+// 			<button type="button" class="sidebar-form__button btn btn__transparent_black">Ок</button>
+// 			<svg width="145" height="115" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+// 				<path fill-rule="evenodd" clip-rule="evenodd" d="M19.0919 2.82843L7.07107 14.8492L4.24264 12.0208L4.3029 11.9594L0 7.65685L2.82843 4.82843L7.13132 9.13102L16.2635 0L19.0919 2.82843Z" fill="#2FA827"/>
+// 			</svg>
+// 		</div>`)
+
+
+// 		const title = contactsForm.querySelector('.sidebar-form__title');
+// 		const message = contactsForm.querySelector('.sidebar-form__desc');
+// 		title.innerText = 'Спасибо'
+// 		message.innerText = 'Наш сотрудник ответит в течение 24 часов.'
+
+
+// 		const thanksBtn = document.querySelector('.sidebar-form__thanks .sidebar-form__button');
+// 		thanksBtn.addEventListener('click', vernutFormu)
+// 	}
+
+
+// 	function vernutFormu() {
+// 		let title = contactsForm.querySelector('.sidebar-form__title');
+// 		let message = contactsForm.querySelector('.sidebar-form__desc');
+
+// 		title.innerText = 'Обратная связь'
+// 		message.innerText = 'Задайте вопрос, направьте нам претензию или оставьте отзыв о работе сайта или магазина. Наши сотрудники отвечают в течение 24 часов.'
+
+// 		document.querySelector('.sidebar-form__form').style.display = 'block';
+
+// 		this.parentElement.remove();
+// 	}
+// 	contactsForm.addEventListener('submit', showThanksMessage)
+// }
