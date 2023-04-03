@@ -121,6 +121,11 @@
 						@include adaptiveValue("flex-basis", 190, 127, 999.98, 767.98, 1);
 					}
 				}
+
+				.product-card__btn-favorites {
+					right: auto;
+					left: 10px;
+				}
 			}
 		}
 

@@ -27,6 +27,10 @@
 		font-size: 18px;
 		line-height: 22px;
 		pointer-events: none;
+
+		.has-error & {
+			top: 35px;
+		}
 	}
 
 	&__input {
@@ -37,6 +41,10 @@
 		height: 48px;
 		padding: rem(16) rem(32) rem(16) rem(16);
 		width: 100%;
+
+		.has-error & {
+			border: 2px solid #CB2424;
+		}
 
 		&.parsley-error {
 			border: 2px solid #CB2424;

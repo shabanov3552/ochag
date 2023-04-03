@@ -4,7 +4,12 @@
 
 	@media (max-width:$mobile) {
 		margin-top: rem(50);
+
+		.detail-product & {
+			padding-bottom: rem(70);
+		}
 	}
+
 
 	// .footer__form
 

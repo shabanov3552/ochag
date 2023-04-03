@@ -1079,7 +1079,7 @@
 		position: relative;
 		display: grid;
 		grid-template-columns: 80px 1fr;
-		grid-template-rows: 1fr 1fr;
+		grid-template-rows: 1fr auto;
 		align-items: start;
 		column-gap: 20px;
 	}

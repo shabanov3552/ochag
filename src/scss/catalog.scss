@@ -312,6 +312,11 @@
 						@include adaptiveValue("flex-basis", 190, 127, 999.98, 767.98, 1);
 					}
 				}
+
+				.product-card__btn-favorites {
+					right: auto;
+					left: 10px;
+				}
 			}
 
 		}
@@ -819,6 +824,8 @@
 			}
 
 			span {
+				white-space: nowrap;
+
 				&:first-child {
 					font-weight: 400;
 					font-size: 14px;
@@ -843,8 +850,6 @@
 			overflow: auto;
 		}
 	}
-
-
 
 	// .choice-items-filter__del
 

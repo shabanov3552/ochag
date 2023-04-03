@@ -44,11 +44,11 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 			if (!targetElement.hasAttribute('data-no-focus-classes')) {
 				targetElement.classList.add('_form-focus');
 				targetElement.parentElement.classList.add('_form-focus');
-				targetElement.addEventListener('input', function (e) {
-					if (e.target.value.length > 0) {
-						if (targetElement.parentElement.querySelector('.form__clear-svg')) targetElement.parentElement.querySelector('.form__clear-svg').classList.add('_active');
-					}
-				})
+
+				if (e.target.value.length > 0) {
+					if (targetElement.parentElement.querySelector('.form__clear-svg')) targetElement.parentElement.querySelector('.form__clear-svg').classList.add('_active');
+				}
+
 			}
 			formValidate.removeError(targetElement);
 		}
@@ -81,7 +81,7 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 				if (!targetElement.hasAttribute('data-no-focus-classes')) {
 					targetElement.classList.remove('_form-focus');
 					targetElement.parentElement.classList.remove('_form-focus');
-					targetElement.nextElementSibling.classList.remove('_active')
+					targetElement.nextElementSibling.classList.remove('_active');
 				}
 			}
 			if (targetElement.classList.contains('js_phone')) {

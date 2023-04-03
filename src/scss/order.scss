@@ -430,6 +430,22 @@
 
 		}
 	}
+
+	#bx-soa-properties {
+		.tooltip-inner {
+			margin-bottom: rem(5);
+			color: #cb2424;
+		}
+
+		.alert {
+			margin-bottom: rem(12);
+			line-height: 22px;
+
+			&.alert-danger {
+				color: #cb2424;
+			}
+		}
+	}
 }
 
 .form {
@@ -673,8 +689,6 @@
 		margin-right: rem(-32);
 	}
 
-
-
 	// .radio-buttons__images
 
 	&__images {
@@ -696,6 +710,11 @@
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 22px;
+
+		span,
+		div {
+			color: inherit !important;
+		}
 	}
 }
 

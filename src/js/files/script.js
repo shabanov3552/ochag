@@ -44,6 +44,9 @@ document.addEventListener("click", function (e) {
 		target.classList.contains('_spoller-active') ? target.innerHTML = 'Свернуть детали заказа' : target.innerHTML = 'Показать детали заказа';
 		e.preventDefault()
 	}
+	if (e.target.closest('.alert-popup__close')) {
+		closeAlertPopup()
+	}
 });
 
 //#endregion
@@ -382,6 +385,10 @@ window.addEventListener("load", function (e) {
 
 		observer.observe(target, config);
 	}
+
+	setTimeout(() => {
+		closeAlertPopup();
+	}, 20000);
 });
 
 // const contactsForm = document.querySelector('.sidebar-form__wrapper');
@@ -422,3 +429,53 @@ window.addEventListener("load", function (e) {
 // 	}
 // 	contactsForm.addEventListener('submit', showThanksMessage)
 // }
+
+//#region отсчет секунд после открытия второй модалки авторизации
+
+document.addEventListener('afterPopupOpen', e => {
+	if (e.detail.popup.targetOpen.selector === '#login-popup-second') {
+		countdown(document.querySelector(`${e.detail.popup.targetOpen.selector} .js-countdown`));
+	}
+});
+document.addEventListener('afterPopupClose', e => {
+	if (e.detail.popup.targetOpen.selector === '#login-popup-second') {
+		clearCountdown(document.querySelector(`${e.detail.popup.targetOpen.selector} .js-countdown`));
+	}
+});
+let testInterv;
+function countdown(element) {
+	let counter = 60;
+	testInterv = setInterval(() => {
+		counter--;
+		element.innerHTML = `Получить новый код вы сможете через ${counter} секунд`;
+		if (counter == 0) {
+			element.style.display = 'none';
+			element.nextElementSibling.style.display = 'block';
+			clearInterval(testInterv);
+		}
+	}, 1000);
+}
+
+
+function clearCountdown(element) {
+	element.innerHTML = `Получить новый код вы сможете через 59 секунд`;
+	element.style.display = 'block';
+	element.nextElementSibling.style.display = 'none';
+	clearInterval(testInterv);
+}
+
+//#endregion
+
+//#region закрытие модалки предупреждения 
+
+function closeAlertPopup() {
+	const alertPopup = document.querySelector('.alert-popup');
+	alertPopup.style.cssText = `
+	transition: all 0.3s ease 0s;
+	transform: translate(0px,100%);`;
+	setTimeout(() => {
+		alertPopup.style.display = "none";
+	}, 1000);
+}
+
+//#endregion

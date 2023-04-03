@@ -466,7 +466,7 @@ function initSliders() {
 					el: '.mini-prod__slider',
 					modules: [Lazy],
 					direction: 'vertical',
-					slidesPerView: 'auto',
+					slidesPerView: 4,
 					spaceBetween: 12,
 					lazy: true,
 					loadPrevNext: true,
@@ -474,11 +474,15 @@ function initSliders() {
 					breakpoints: {
 						320: {
 							direction: "horizontal",
-
+							slidesPerView: 'auto'
 						},
 						767.98: {
 							direction: "vertical",
+							slidesPerView: 3,
 						},
+						1280.98: {
+							slidesPerView: 4
+						}
 					},
 				},
 			},
