@@ -467,7 +467,9 @@ function clearCountdown(element) {
 //#endregion
 
 //#region закрытие модалки предупреждения 
-
+if (localStorage.getItem('alert-popup') === 'close') {
+	document.querySelector('.alert-popup').style.display = 'none';
+}
 function closeAlertPopup() {
 	const alertPopup = document.querySelector('.alert-popup');
 	alertPopup.style.cssText = `
@@ -476,6 +478,7 @@ function closeAlertPopup() {
 	setTimeout(() => {
 		alertPopup.style.display = "none";
 	}, 1000);
+	localStorage.setItem('alert-popup', 'close');
 }
 
 //#endregion
