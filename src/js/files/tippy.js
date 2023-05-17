@@ -37,60 +37,93 @@ const breakpointChecker = () => {
 breakpoint.addEventListener("change", breakpointChecker);
 breakpointChecker();
 
-//#region Добавление подсказок к кнопкам Избранное
+//#region Добавление подсказок к кнопкам 
 
-let favorBtn = document.querySelector('.product__btn-favorites') || Array.from(document.querySelectorAll('.item-basket__favorites'));
+class CustomTippy {
+	constructor(node, text, activeText) {
+		this.node = node;
+		this.text = text;
+		this.activeText = activeText;
+		this.tippyItem = tippy(this.node);
+		this.isMobile = isMobile.any();
+		this.breakpoint = null;
+	}
 
-if (favorBtn) { getFavorBtn(favorBtn); }
+	initTippy() {
+		this.tippyItem.setContent(`Добавить в ${this.text}`);
 
-function setFavoritTippy(btn) {
-	let favorBtnTippy = tippy(btn);
-
-	favorBtnTippy.setContent('Добавить в избранное');
-
-	let btnsObserv = new MutationObserver(records => {
-		records[0].target.classList.forEach(item => {
-			item == '_active' ? favorBtnTippy.setContent('Удалить из избранного') : favorBtnTippy.setContent('Добавить в избранное');
+		let observer = new MutationObserver(records => {
+			records[0].target.classList.forEach(item => {
+				item == '_active' ? this.tippyItem.setContent(`Удалить из ${this.activeText}`) : this.tippyItem.setContent(`Добавить в ${this.text}`);
+			});
 		});
-	});
 
-	btnsObserv.observe(btn, {
-		subtree: true,
-		attributes: true,
-	});
-}
-
-function getFavorBtn(node) {
-	Array.isArray(node) ? node.forEach(item => setFavoritTippy(item)) : setFavoritTippy(node);
-}
-
-//#endregion
-
-//#region Добавление подсказок к кнопкам сравнения
-
-let compareBtn = document.querySelector('.product__btn-compare') || Array.from(document.querySelectorAll('.item-basket__compare'));
-
-if (compareBtn) { getCompareBtn(compareBtn); }
-
-function setCompareTippy(btn) {
-	let compareBtnTippy = tippy(btn);
-
-	compareBtnTippy.setContent('Добавить в сравнение');
-
-	let btnsObserv = new MutationObserver(records => {
-		records[0].target.classList.forEach(item => {
-			item == '_active' ? compareBtnTippy.setContent('Удалить из сравнения') : compareBtnTippy.setContent('Добавить в сравнение');
+		observer.observe(this.node, {
+			subtree: true,
+			attributes: true,
 		});
-	});
+		this.breakpointCheck();
+		this.node.addEventListener("click", (e) => { this.createMobileTippy(e) });
+	}
 
-	btnsObserv.observe(btn, {
-		subtree: true,
-		attributes: true,
-	});
+	breakpointCheck() {
+
+		const breakpoint = window.matchMedia("(max-width: 768px)");
+
+		const breakpointChecker = () => {
+			if (breakpoint.matches) {
+				this.breakpoint = true;
+				this.tippyItem.disable();
+			} else {
+				this.breakpoint = false;
+				this.tippyItem.enable();
+			}
+		};
+
+		breakpoint.addEventListener("change", breakpointChecker);
+		breakpointChecker();
+	}
+
+	createMobileTippy(e) {
+
+		if (this.breakpoint) {
+			let element = document.createElement('div');
+			element.classList.add('action-notification');
+
+			if (!this.node.classList.contains('_active')) {
+				element.insertAdjacentHTML('afterbegin', `
+				<p>Товар добавлен в ${this.text}</p>
+			`);
+			} else {
+				element.insertAdjacentHTML('afterbegin', `
+				<p>Товар удален из ${this.activeText}</p>
+			`);
+			}
+
+			document.querySelector('.wrapper').insertAdjacentElement('afterend', element);
+			setTimeout(() => {
+				element.classList.add('show');
+				setTimeout(() => {
+					element.classList.remove('show');
+					element.remove();
+				}, 2000);
+			}, 100);
+		}
+	}
 }
 
-function getCompareBtn(node) {
-	Array.isArray(node) ? node.forEach(item => setCompareTippy(item)) : setCompareTippy(node);
+const favorButtons = document.querySelectorAll('.item-basket__favorites');
+favorButtons.forEach(element => {
+	let tip = new CustomTippy(element, 'избранное', 'избранного');
+	tip.initTippy();
+});
+
+if (document.querySelector('.product')) {
+	let productFavorTippy = new CustomTippy(document.querySelector('.product__btn-favorites'), 'избранное', 'избранного');
+	productFavorTippy.initTippy();
+
+	let productCompareTippy = new CustomTippy(document.querySelector('.product__btn-compare'), 'сравнение', 'сравнения');
+	productCompareTippy.initTippy();
 }
 
 //#endregion

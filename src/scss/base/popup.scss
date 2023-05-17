@@ -216,7 +216,9 @@ body::after {
 #login-popup,
 #login-popup-second,
 #change-data,
-#add-profile {
+#add-profile,
+#addProduct,
+#addGroup {
 	.popup__content {
 		max-width: 624px;
 		padding: 0;
@@ -268,6 +270,19 @@ body::after {
 		@media (max-width:$mobile) {
 			margin: rem(40) 0;
 		}
+	}
+}
+
+#addProduct,
+#addGroup {
+	@media (max-width:$mobile) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.popup__content {
+		max-width: 1000px;
+		padding: 0;
 	}
 }
 

@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Личный кабинет продавца"
+})
+
+<body>
+   <div class="wrapper">
+
+      @@include('html/_header.htm',{})
+
+      <main class="page">
+         <div class="page__container">
+            @@include('html/_breadcrumbs.htm',{})
+            <div class="page__title">Личный кабинет продавца</div>
+            <div class="merchant-cabinet">
+               <div data-tabs class="tabs">
+                  <nav class="tabs__navigation">
+                     <div data-tabs-titles class="tabs__navigation-inner float-line">
+                        <button type="button" class="tabs__title float-line__item">Заказы</button>
+                        <button type="button" class="tabs__title float-line__item">Товары</button>
+                        <button type="button" class="tabs__title float-line__item">Персональные данные</button>
+                        <button type="button" class="tabs__title float-line__item">Финансы</button>
+                        <button type="button" class="tabs__title float-line__item _tab-active">Маркетинг</button>
+                     </div>
+                  </nav>
+                  <div data-tabs-body class="tabs__content">
+                     <div class="tabs__body">
+                        <div class="merchant-cabinet__chart-wrapper">
+                           <div class="merchant-cabinet__chart-header">
+                              <div class="merchant-cabinet__chart-left">
+                                 <div class="merchant-cabinet__title">Заказы</div>
+                                 <div class="merchant-cabinet__select">
+                                    <select name="form[]" data-class-modif="sort">
+                                       <option value="1" selected>В рублях</option>
+                                       <option value="2">В штуках</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="merchant-cabinet__time-zone">Часовой пояс: +4</div>
+                           </div>
+                           <div class="merchant-cabinet__chart">
+                              <canvas id="myChart"></canvas>
+                              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                           </div>
+                        </div>
+                        <div class="merchant-cabinet__orders">
+                           <div class="merchant-cabinet__head">
+                              <div class="merchant-cabinet__title">Заказы</div>
+                              <div class="merchant-cabinet__select">
+                                 <select name="form[]" data-class-modif="sort">
+                                    <option value="1" selected>В сборке</option>
+                                    <option value="2">Доставлены</option>
+                                    <option value="3">Ожидают отправки</option>
+                                    <option value="4">Отправлены</option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div class="merchant-cabinet__table">
+                              <div class="merchant-cabinet__headline">
+                                 <div class="merchant-cabinet__col-name">Статус заказа</div>
+                                 <div class="merchant-cabinet__col-name">Артикул</div>
+                                 <div class="merchant-cabinet__col-name">Наименование товара</div>
+                                 <div class="merchant-cabinet__col-name">Кол-во</div>
+                                 <div class="merchant-cabinet__col-name">Стоимость</div>
+                                 <div class="merchant-cabinet__col-name">Дата заказа</div>
+                              </div>
+                              <div class="merchant-cabinet__row">
+                                 <div class="merchant-cabinet__order-status" style="color: #FCAB36;">
+                                    <span>В сборке</span>
+                                    <span>В сборке</span>
+                                    <span>В сборке</span>
+                                 </div>
+                                 <div class="merchant-cabinet__article">
+                                    <span>298-142-122</span>
+                                    <span>298-142-122</span>
+                                    <span>298-142-122</span>
+                                 </div>
+                                 <div class="merchant-cabinet__name">
+                                    <span>Подушка надувная на шею для отдыха и путешествий </span>
+                                    <span>Казан 4 литра шоколад Горница</span>
+                                    <span>Жаровня 4,5 литра шоколад Горница</span>
+                                 </div>
+                                 <div class="merchant-cabinet__count">
+                                    <span>1 шт.</span>
+                                    <span>1 шт.</span>
+                                    <span>1 шт.</span>
+                                 </div>
+                                 <div class="merchant-cabinet__price">
+                                    <span>23 999 ₽</span>
+                                    <span>1 999 ₽</span>
+                                    <span>5 200 ₽</span>
+                                 </div>
+                                 <div class="merchant-cabinet__date">
+                                    <span>25.10.22 18:35</span>
+                                 </div>
+                              </div>
+                              <div class="merchant-cabinet__row">
+                                 <div class="merchant-cabinet__order-status" style="color: #FC8636;">
+                                    <span>Ожидают отправки</span>
+                                 </div>
+                                 <div class="merchant-cabinet__article">
+                                    <span>298-142-122</span>
+                                 </div>
+                                 <div class="merchant-cabinet__name">
+                                    <span>Тюбинг 100 см Nika</span>
+                                 </div>
+                                 <div class="merchant-cabinet__count">
+                                    <span>2 шт.</span>
+                                 </div>
+                                 <div class="merchant-cabinet__price">
+                                    <span>1 999 ₽</span>
+                                 </div>
+                                 <div class="merchant-cabinet__date">
+                                    <span>24.10.22 12:35</span>
+                                 </div>
+                              </div>
+                              <div class="merchant-cabinet__row">
+                                 <div class="merchant-cabinet__order-status" style="color: #36C3FC;">
+                                    <span>Отправлены</span>
+                                 </div>
+                                 <div class="merchant-cabinet__article">
+                                    <span>298-142-122</span>
+                                 </div>
+                                 <div class="merchant-cabinet__name">
+                                    <span>Казан 4 литра шоколад Горница</span>
+                                 </div>
+                                 <div class="merchant-cabinet__count">
+                                    <span>1 шт.</span>
+                                 </div>
+                                 <div class="merchant-cabinet__price">
+                                    <span>5 000 ₽</span>
+                                 </div>
+                                 <div class="merchant-cabinet__date">
+                                    <span>15.10.22 13:45</span>
+                                 </div>
+                              </div>
+                              <div class="merchant-cabinet__row">
+                                 <div class="merchant-cabinet__order-status" style="color: #2EC9AA;">
+                                    <span>Доставлены</span>
+                                 </div>
+                                 <div class="merchant-cabinet__article">
+                                    <span>298-142-122</span>
+                                 </div>
+                                 <div class="merchant-cabinet__name">
+                                    <span>Жаровня 4,5 литра шоколад Горница</span>
+                                 </div>
+                                 <div class="merchant-cabinet__count">
+                                    <span>1 шт.</span>
+                                 </div>
+                                 <div class="merchant-cabinet__price">
+                                    <span>1 999 ₽</span>
+                                 </div>
+                                 <div class="merchant-cabinet__date">
+                                    <span>13.10.22 11:55</span>
+                                 </div>
+                              </div>
+                              <div class="merchant-cabinet__row">
+                                 <div class="merchant-cabinet__order-status" style="color: #2EC9AA;">
+                                    <span>Доставлены</span>
+                                 </div>
+                                 <div class="merchant-cabinet__article">
+                                    <span>298-142-122</span>
+                                 </div>
+                                 <div class="merchant-cabinet__name">
+                                    <span>Тюбинг 100 см Nika</span>
+                                 </div>
+                                 <div class="merchant-cabinet__count">
+                                    <span>1 шт.</span>
+                                 </div>
+                                 <div class="merchant-cabinet__price">
+                                    <span>5 200 ₽</span>
+                                 </div>
+                                 <div class="merchant-cabinet__date">
+                                    <span>21.10.22 23:15</span>
+                                 </div>
+                              </div>
+                           </div>
+                           @@include('html/_pagging.htm',{})
+                        </div>
+                     </div>
+                     <div class="tabs__body">
+                        <div class="merchant-cabinet__products">
+                           <div class="merchant-cabinet__products-header">
+                              <div class="merchant-cabinet__pr-hd-left">
+                                 <div class="form__line">
+                                    <label for="searchName" class="form__label">Поиск по названию</label>
+                                    <input required id="searchName" type="search" name="" class="form__input">
+                                    <svg class="form__clear-svg">
+                                       <use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+                                    </svg>
+                                 </div>
+                                 <div class="form__line">
+                                    <label for="searchArticle" class="form__label">Поиск по артикулу</label>
+                                    <input required id="searchArticle" type="search" name="" class="form__input">
+                                    <svg class="form__clear-svg">
+                                       <use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+                                    </svg>
+                                 </div>
+                              </div>
+                              <a href="" class="merchant-cabinet__orange-btn">
+                                 <svg class="">
+                                    <use xlink:href="img/icons/icons.svg#svg-upload-btn"></use>
+                                 </svg>
+                                 <span>Загрузить товары</span>
+                              </a>
+                           </div>
+                           <div class="merchant-cabinet__table">
+                              <div class="merchant-cabinet__headline">
+                                 <div class="merchant-cabinet__col-name">Артикул</div>
+                                 <div class="merchant-cabinet__col-name">Фото</div>
+                                 <div class="merchant-cabinet__col-name">Наименование товара</div>
+                                 <div class="merchant-cabinet__col-name">Активен</div>
+                                 <div class="merchant-cabinet__col-name">Дата создания</div>
+                                 <div class="merchant-cabinet__col-name">Кол-во</div>
+                                 <div class="merchant-cabinet__all-checked">
+                                    <div class="checkbox">
+                                       <input id="allCheck" data-error="Ошибка" class="checkbox__input js-allCheck" type="checkbox" value="1" name="form[]">
+                                       <label for="allCheck" class="checkbox__label"><span class="checkbox__text"></span></label>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="merchant-cabinet__row">
+                                 <div class="merchant-cabinet__article">
+                                    <span>298-142-122</span>
+                                 </div>
+                                 <div class="merchant-cabinet__photo">
+                                    <img src="img/products/pd-c-10.png" alt="">
+                                 </div>
+                                 <div class="merchant-cabinet__name">
+                                    <span>Казан 4 литра шоколад Горница</span>
+                                 </div>
+                                 <div class="merchant-cabinet__active">
+                                    <span>Да</span>
+                                 </div>
+                                 <div class="merchant-cabinet__date">
+                                    <span>15.10.22</span>
+                                 </div>
+                                 <div class="merchant-cabinet__count">
+                                    <span>1 шт.</span>
+                                 </div>
+                                 <div class="merchant-cabinet__checkbox">
+                                    <div class="checkbox">
+                                       <input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                       <label for="c_1" class="checkbox__label"><span class="checkbox__text"></span></label>
+                                    </div>
+                                 </div>
+                                 <div class="merchant-cabinet__context-menu">
+                                    <div class="context-menu">
+                                       <button type="button" class="context-menu__btn"></button>
+                                       <div class="context-menu__dropdown">
+                                          <a href="" class="context-menu__link">Редактировать товар</a>
+                                          <a href="" class="context-menu__link">Деактивировать товар</a>
+                                          <a href="" class="context-menu__link">Удалить</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="merchant-cabinet__row">
+                                 <div class="merchant-cabinet__article">
+                                    <span>298-142-122</span>
+                                 </div>
+                                 <div class="merchant-cabinet__photo">
+                                    <img src="img/products/pd-c-10.png" alt="">
+                                 </div>
+                                 <div class="merchant-cabinet__name">
+                                    <span>Казан 4 литра шоколад Горница</span>
+                                 </div>
+                                 <div class="merchant-cabinet__active">
+                                    <span>Да</span>
+                                 </div>
+                                 <div class="merchant-cabinet__date">
+                                    <span>15.10.22</span>
+                                 </div>
+                                 <div class="merchant-cabinet__count">
+                                    <span>1 шт.</span>
+                                 </div>
+                                 <div class="merchant-cabinet__checkbox">
+                                    <div class="checkbox">
+                                       <input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="2" name="form[]">
+                                       <label for="c_2" class="checkbox__label"><span class="checkbox__text"></span></label>
+                                    </div>
+                                 </div>
+                                 <div class="merchant-cabinet__context-menu">
+                                    <div class="context-menu">
+                                       <button type="button" class="context-menu__btn"></button>
+                                       <div class="context-menu__dropdown">
+                                          <a href="" class="context-menu__link">Редактировать товар</a>
+                                          <a href="" class="context-menu__link">Деактивировать товар</a>
+                                          <a href="" class="context-menu__link">Удалить</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="merchant-cabinet__row">
+                                 <div class="merchant-cabinet__article">
+                                    <span>298-142-122</span>
+                                 </div>
+                                 <div class="merchant-cabinet__photo">
+                                    <img src="img/products/pd-c-10.png" alt="">
+                                 </div>
+                                 <div class="merchant-cabinet__name">
+                                    <span>Казан 4 литра шоколад Горница</span>
+                                 </div>
+                                 <div class="merchant-cabinet__active">
+                                    <span>Да</span>
+                                 </div>
+                                 <div class="merchant-cabinet__date">
+                                    <span>15.10.22</span>
+                                 </div>
+                                 <div class="merchant-cabinet__count">
+                                    <span>1 шт.</span>
+                                 </div>
+                                 <div class="merchant-cabinet__checkbox">
+                                    <div class="checkbox">
+                                       <input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3" name="form[]">
+                                       <label for="c_3" class="checkbox__label"><span class="checkbox__text"></span></label>
+                                    </div>
+                                 </div>
+                                 <div class="merchant-cabinet__context-menu">
+                                    <div class="context-menu">
+                                       <button type="button" class="context-menu__btn"></button>
+                                       <div class="context-menu__dropdown">
+                                          <a href="" class="context-menu__link">Редактировать товар</a>
+                                          <a href="" class="context-menu__link">Деактивировать товар</a>
+                                          <a href="" class="context-menu__link">Удалить</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="merchant-cabinet__row">
+                                 <div class="merchant-cabinet__article">
+                                    <span>298-142-122</span>
+                                 </div>
+                                 <div class="merchant-cabinet__photo">
+                                    <img src="img/products/pd-c-10.png" alt="">
+                                 </div>
+                                 <div class="merchant-cabinet__name">
+                                    <span>Казан 4 литра шоколад Горница</span>
+                                 </div>
+                                 <div class="merchant-cabinet__active">
+                                    <span>Да</span>
+                                 </div>
+                                 <div class="merchant-cabinet__date">
+                                    <span>15.10.22</span>
+                                 </div>
+                                 <div class="merchant-cabinet__count">
+                                    <span>1 шт.</span>
+                                 </div>
+                                 <div class="merchant-cabinet__checkbox">
+                                    <div class="checkbox">
+                                       <input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="4" name="form[]">
+                                       <label for="c_4" class="checkbox__label"><span class="checkbox__text"></span></label>
+                                    </div>
+                                 </div>
+                                 <div class="merchant-cabinet__context-menu">
+                                    <div class="context-menu">
+                                       <button type="button" class="context-menu__btn"></button>
+                                       <div class="context-menu__dropdown">
+                                          <a href="" class="context-menu__link">Редактировать товар</a>
+                                          <a href="" class="context-menu__link">Деактивировать товар</a>
+                                          <a href="" class="context-menu__link">Удалить</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="merchant-cabinet__row">
+                                 <div class="merchant-cabinet__article">
+                                    <span>298-142-122</span>
+                                 </div>
+                                 <div class="merchant-cabinet__photo">
+                                    <img src="img/products/pd-c-10.png" alt="">
+                                 </div>
+                                 <div class="merchant-cabinet__name">
+                                    <span>Казан 4 литра шоколад Горница</span>
+                                 </div>
+                                 <div class="merchant-cabinet__active">
+                                    <span>Да</span>
+                                 </div>
+                                 <div class="merchant-cabinet__date">
+                                    <span>15.10.22</span>
+                                 </div>
+                                 <div class="merchant-cabinet__count">
+                                    <span>1 шт.</span>
+                                 </div>
+                                 <div class="merchant-cabinet__checkbox">
+                                    <div class="checkbox">
+                                       <input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="5" name="form[]">
+                                       <label for="c_5" class="checkbox__label"><span class="checkbox__text"></span></label>
+                                    </div>
+                                 </div>
+                                 <div class="merchant-cabinet__context-menu">
+                                    <div class="context-menu">
+                                       <button type="button" class="context-menu__btn"></button>
+                                       <div class="context-menu__dropdown">
+                                          <a href="" class="context-menu__link">Редактировать товар</a>
+                                          <a href="" class="context-menu__link">Деактивировать товар</a>
+                                          <a href="" class="context-menu__link">Удалить</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="merchant-cabinet__footer-row">
+                              <a href="" class="merchant-cabinet__btn btn btn__transparent_black">Активировать</a>
+                              <a href="" class="merchant-cabinet__btn btn btn__transparent_black">Деактивировать</a>
+                              <a href="" class="merchant-cabinet__btn btn btn__transparent_black">Редактировать</a>
+                              <a href="" class="merchant-cabinet__btn btn btn__transparent_black">Удалить</a>
+                           </div>
+                           @@include('html/_pagging.htm',{})
+                        </div>
+                     </div>
+                     <div class="tabs__body">
+                        <div class="personal-data">
+                           <div class="personal-data__content">
+                              <div class="personal-data__row">
+                                 <div class="personal-data__name">ФИО</div>
+                                 <a href="#" class="personal-data__change">
+                                    <svg class="personal-data__change-svg">
+                                       <use xlink:href="img/icons/icons.svg#svg-icon_change"></use>
+                                    </svg>
+                                 </a>
+                                 <div class="personal-data__text">Михаил Пореченков Кностантинопольский</div>
+                                 <div class="personal-data__change-block">
+                                    <button type="submit" class="personal-data__btn">
+                                       <svg class="personal-data__btn-svg">
+                                          <use xlink:href="img/icons/icons.svg#svg-icon_enter"></use>
+                                       </svg>
+                                    </button>
+                                    <div class="form__line">
+                                       <input type="text" name="form[]" data-error="Ошибка" data-value="" class="personal-data__input form__input">
+                                    </div>
+                                 </div>
+                                 <div class="personal-data__row-msg">Изменения внесены</div>
+                              </div>
+                              <div class="personal-data__row">
+                                 <div class="personal-data__name">Название компании</div>
+                                 <a href="#" class="personal-data__change">
+                                    <svg class="personal-data__change-svg">
+                                       <use xlink:href="img/icons/icons.svg#svg-icon_change"></use>
+                                    </svg>
+                                 </a>
+                                 <div class="personal-data__text">СОЛЬ</div>
+                                 <div class="personal-data__change-block">
+                                    <button type="submit" class="personal-data__btn">
+                                       <svg class="personal-data__btn-svg">
+                                          <use xlink:href="img/icons/icons.svg#svg-icon_enter"></use>
+                                       </svg>
+                                    </button>
+                                    <div class="form__line">
+                                       <input type="text" name="form[]" data-error="Ошибка" data-value="" class="personal-data__input form__input">
+                                    </div>
+                                 </div>
+                                 <div class="personal-data__row-msg err">Ошибка</div>
+                              </div>
+                              <div class="personal-data__row">
+                                 <div class="personal-data__name">E-mail</div>
+                                 <a href="#" class="personal-data__change">
+                                    <svg class="personal-data__change-svg">
+                                       <use xlink:href="img/icons/icons.svg#svg-icon_change"></use>
+                                    </svg>
+                                 </a>
+                                 <div class="personal-data__text">konstkonstkonst@gmail.com</div>
+                                 <div class="personal-data__change-block">
+                                    <button type="submit" class="personal-data__btn">
+                                       <svg class="personal-data__btn-svg">
+                                          <use xlink:href="img/icons/icons.svg#svg-icon_enter"></use>
+                                       </svg>
+                                    </button>
+                                    <div class="form__line">
+                                       <input type="text" name="form[]" data-error="Ошибка" data-value="" value="qwer" class="personal-data__input form__input">
+                                    </div>
+                                 </div>
+                                 <div class="personal-data__row-msg">Изменения внесены</div>
+                              </div>
+                              <div class="personal-data__row">
+                                 <div class="personal-data__name">Телефон</div>
+                                 <a href="#" class="personal-data__change">
+                                    <svg class="personal-data__change-svg">
+                                       <use xlink:href="img/icons/icons.svg#svg-icon_change"></use>
+                                    </svg>
+                                 </a>
+                                 <div class="personal-data__text">8 800 555 35 35</div>
+                                 <div class="personal-data__change-block">
+                                    <button type="submit" class="personal-data__btn">
+                                       <svg class="personal-data__btn-svg">
+                                          <use xlink:href="img/icons/icons.svg#svg-icon_enter"></use>
+                                       </svg>
+                                    </button>
+                                    <div class="form__line">
+                                       <input type="text" name="form[]" data-error="Ошибка" data-value="" class="personal-data__input form__input">
+                                    </div>
+                                 </div>
+                                 <div class="personal-data__row-msg">Изменения внесены</div>
+                              </div>
+                              <div class="personal-data__row">
+                                 <div class="personal-data__name">Пароль</div>
+                                 <a href="#" class="personal-data__change">
+                                    <svg class="personal-data__change-svg">
+                                       <use xlink:href="img/icons/icons.svg#svg-icon_change"></use>
+                                    </svg>
+                                 </a>
+                                 <div class="personal-data__text">*******</div>
+                                 <div class="personal-data__change-block">
+                                    <button type="submit" class="personal-data__btn">
+                                       <svg class="personal-data__btn-svg">
+                                          <use xlink:href="img/icons/icons.svg#svg-icon_enter"></use>
+                                       </svg>
+                                    </button>
+                                    <div class="form__line">
+                                       <input type="text" name="form[]" data-error="Ошибка" data-value="" class="personal-data__input form__input">
+                                    </div>
+                                 </div>
+                                 <div class="personal-data__row-msg">Изменения внесены</div>
+                              </div>
+                           </div>
+                           <a href="" class="personal-data__log-out btn btn btn__transparent_black_black">Выйти из аккаунта</a>
+                        </div>
+                     </div>
+                     <div class="tabs__body">
+                        <div class="merchant-cabinet__finance">
+                           <div class="merchant-cabinet__finance-header">
+                              <div class="merchant-cabinet__title">Отчет за период</div>
+                              <div class="merchant-cabinet__right">
+                                 <div class="merchant-cabinet__select">
+                                    <select name="form[]" data-class-modif="sort" data-show-selected data-scroll="175">
+                                       <option value="1" selected>Текущий</option>
+                                       <option value="2">1 марта 23 – 1 апреля 23</option>
+                                       <option value="3">1 февраля 23 – 1 марта 23</option>
+                                       <option value="4">1 января 23 – 1 февраля 23</option>
+                                    </select>
+                                 </div>
+                                 <a href="" class="merchant-cabinet__orange-btn">
+                                    <span>Заказать выплату</span>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="merchant-cabinet__report">
+                              <div class="merchant-cabinet__report-row">
+                                 <div class="merchant-cabinet__report-name">Сумма продаж</div>
+                                 <div class="merchant-cabinet__report-content">160 000 ₽</div>
+                              </div>
+                              <div class="merchant-cabinet__report-row">
+                                 <div class="merchant-cabinet__report-name">Размер комиссии</div>
+                                 <div class="merchant-cabinet__report-content">-60 600 ₽</div>
+                              </div>
+                              <div class="merchant-cabinet__report-row">
+                                 <div class="merchant-cabinet__report-name">Сумма к выплате</div>
+                                 <div class="merchant-cabinet__report-content">99 400 ₽</div>
+                              </div>
+                           </div>
+                           <div class="merchant-cabinet__title">Документы</div>
+                           <div class="merchant-cabinet__wrapper">
+                              <div class="merchant-cabinet__sidebar float-line float-line__horizontal">
+                                 <a href="" class="merchant-cabinet__link float-line__item _active">Отчеты о реализации</a>
+                                 <a href="" class="merchant-cabinet__link float-line__item">Счета на оплату</a>
+                                 <a href="" class="merchant-cabinet__link float-line__item">Акты сверки</a>
+                              </div>
+                              <div class="merchant-cabinet__inner">
+                                 <div class="merchant-cabinet__table">
+                                    <div class="merchant-cabinet__headline">
+                                       <div class="merchant-cabinet__col-name">Дата формирования</div>
+                                       <div class="merchant-cabinet__col-name">Наименование товара</div>
+                                       <div class="merchant-cabinet__col-name">Номер</div>
+                                       <div class="merchant-cabinet__col-name">Формат</div>
+                                    </div>
+                                    <div class="merchant-cabinet__row">
+                                       <div class="merchant-cabinet__date">
+                                          <span>25.10.22</span>
+                                       </div>
+                                       <div class="merchant-cabinet__name">
+                                          <span>УПД-1 к отчету о реализации</span>
+                                       </div>
+                                       <div class="merchant-cabinet__number">
+                                          <span>66363757</span>
+                                       </div>
+                                       <div class="merchant-cabinet__file-type">
+                                          <span>pdf</span>
+                                       </div>
+                                       <div class="merchant-cabinet__download">
+                                          <a href="" class="download-btn">
+                                             <svg class="">
+                                                <use xlink:href="img/icons/icons.svg#svg-download"></use>
+                                             </svg>
+                                          </a>
+                                       </div>
+                                    </div>
+                                    <div class="merchant-cabinet__row">
+                                       <div class="merchant-cabinet__date">
+                                          <span>25.10.22</span>
+                                       </div>
+                                       <div class="merchant-cabinet__name">
+                                          <span>Акт выполненных работ селлера</span>
+                                       </div>
+                                       <div class="merchant-cabinet__number">
+                                          <span>66363757</span>
+                                       </div>
+                                       <div class="merchant-cabinet__file-type">
+                                          <span>pdf</span>
+                                       </div>
+                                       <div class="merchant-cabinet__download">
+                                          <a href="" class="download-btn">
+                                             <svg class="">
+                                                <use xlink:href="img/icons/icons.svg#svg-download"></use>
+                                             </svg>
+                                          </a>
+                                       </div>
+                                    </div>
+                                    <div class="merchant-cabinet__row">
+                                       <div class="merchant-cabinet__date">
+                                          <span>25.10.22</span>
+                                       </div>
+                                       <div class="merchant-cabinet__name">
+                                          <span>УПД-1 к отчету о реализации</span>
+                                       </div>
+                                       <div class="merchant-cabinet__number">
+                                          <span>66363757</span>
+                                       </div>
+                                       <div class="merchant-cabinet__file-type">
+                                          <span>pdf</span>
+                                       </div>
+                                       <div class="merchant-cabinet__download">
+                                          <a href="" class="download-btn">
+                                             <svg class="">
+                                                <use xlink:href="img/icons/icons.svg#svg-download"></use>
+                                             </svg>
+                                          </a>
+                                       </div>
+                                    </div>
+                                    <div class="merchant-cabinet__row">
+                                       <div class="merchant-cabinet__date">
+                                          <span>25.10.22</span>
+                                       </div>
+                                       <div class="merchant-cabinet__name">
+                                          <span>Акт выполненных работ селлера</span>
+                                       </div>
+                                       <div class="merchant-cabinet__number">
+                                          <span>66363757</span>
+                                       </div>
+                                       <div class="merchant-cabinet__file-type">
+                                          <span>pdf</span>
+                                       </div>
+                                       <div class="merchant-cabinet__download">
+                                          <a href="" class="download-btn">
+                                             <svg class="">
+                                                <use xlink:href="img/icons/icons.svg#svg-download"></use>
+                                             </svg>
+                                          </a>
+                                       </div>
+                                    </div>
+                                    <div class="merchant-cabinet__row">
+                                       <div class="merchant-cabinet__date">
+                                          <span>25.10.22</span>
+                                       </div>
+                                       <div class="merchant-cabinet__name">
+                                          <span>УПД-1 к отчету о реализации</span>
+                                       </div>
+                                       <div class="merchant-cabinet__number">
+                                          <span>66363757</span>
+                                       </div>
+                                       <div class="merchant-cabinet__file-type">
+                                          <span>pdf</span>
+                                       </div>
+                                       <div class="merchant-cabinet__download">
+                                          <a href="" class="download-btn">
+                                             <svg class="">
+                                                <use xlink:href="img/icons/icons.svg#svg-download"></use>
+                                             </svg>
+                                          </a>
+                                       </div>
+                                    </div>
+                                    <div class="merchant-cabinet__row">
+                                       <div class="merchant-cabinet__date">
+                                          <span>25.10.22</span>
+                                       </div>
+                                       <div class="merchant-cabinet__name">
+                                          <span>Акт выполненных работ селлера</span>
+                                       </div>
+                                       <div class="merchant-cabinet__number">
+                                          <span>66363757</span>
+                                       </div>
+                                       <div class="merchant-cabinet__file-type">
+                                          <span>pdf</span>
+                                       </div>
+                                       <div class="merchant-cabinet__download">
+                                          <a href="" class="download-btn">
+                                             <svg class="">
+                                                <use xlink:href="img/icons/icons.svg#svg-download"></use>
+                                             </svg>
+                                          </a>
+                                       </div>
+                                    </div>
+                                    <div class="merchant-cabinet__row">
+                                       <div class="merchant-cabinet__date">
+                                          <span>25.10.22</span>
+                                       </div>
+                                       <div class="merchant-cabinet__name">
+                                          <span>УПД-1 к отчету о реализации</span>
+                                       </div>
+                                       <div class="merchant-cabinet__number">
+                                          <span>66363757</span>
+                                       </div>
+                                       <div class="merchant-cabinet__file-type">
+                                          <span>pdf</span>
+                                       </div>
+                                       <div class="merchant-cabinet__download">
+                                          <a href="" class="download-btn">
+                                             <svg class="">
+                                                <use xlink:href="img/icons/icons.svg#svg-download"></use>
+                                             </svg>
+                                          </a>
+                                       </div>
+                                    </div>
+                                    <div class="merchant-cabinet__row">
+                                       <div class="merchant-cabinet__date">
+                                          <span>25.10.22</span>
+                                       </div>
+                                       <div class="merchant-cabinet__name">
+                                          <span>Акт выполненных работ селлера</span>
+                                       </div>
+                                       <div class="merchant-cabinet__number">
+                                          <span>66363757</span>
+                                       </div>
+                                       <div class="merchant-cabinet__file-type">
+                                          <span>pdf</span>
+                                       </div>
+                                       <div class="merchant-cabinet__download">
+                                          <a href="" class="download-btn">
+                                             <svg class="">
+                                                <use xlink:href="img/icons/icons.svg#svg-download"></use>
+                                             </svg>
+                                          </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 @@include('html/_pagging.htm',{})
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tabs__body">
+                        <div class="merchant-cabinet__marketing">
+                           <div class="merchant-cabinet__title">Доступные маркетинговые акции</div>
+                           <div class="merchant-cabinet__grid">
+                              <div class="merchant-cabinet__create">
+                                 <div class="merchant-cabinet__create-name">Скидка на товары, группы товаров</div>
+                                 <a href="" class="merchant-cabinet__create-btn">Создать</a>
+                              </div>
+                              <div class="merchant-cabinet__create">
+                                 <div class="merchant-cabinet__create-name">Оформи заказ на N рублей, получи скидку</div>
+                                 <a href="" class="merchant-cabinet__create-btn">Создать</a>
+                              </div>
+                              <div class="merchant-cabinet__create">
+                                 <div class="merchant-cabinet__create-name">Скидка на комбинацию товаров</div>
+                                 <a href="" class="merchant-cabinet__create-btn">Создать</a>
+                              </div>
+                              <div class="merchant-cabinet__create">
+                                 <div class="merchant-cabinet__create-name">Скидка на доставку</div>
+                                 <a href="" class="merchant-cabinet__create-btn">Создать</a>
+                              </div>
+                              <div class="merchant-cabinet__create">
+                                 <div class="merchant-cabinet__create-name">Бесплатная доставка</div>
+                                 <a href="" class="merchant-cabinet__create-btn">Создать</a>
+                              </div>
+                           </div>
+                           <div class="merchant-cabinet__stocks">
+                              <div class="merchant-cabinet__title">Созданные акции</div>
+                              <div class="merchant-cabinet__table">
+                                 <div class="merchant-cabinet__headline">
+                                    <div class="merchant-cabinet__col-name">Наименование товара</div>
+                                    <div class="merchant-cabinet__col-name">Активен</div>
+                                    <div class="merchant-cabinet__all-checked">
+                                       <div class="checkbox">
+                                          <input id="allCheck_2" data-error="Ошибка" class="checkbox__input js-allCheck" type="checkbox" value="1_2" name="form[]">
+                                          <label for="allCheck_2" class="checkbox__label"><span class="checkbox__text"></span></label>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="merchant-cabinet__row">
+                                    <div class="merchant-cabinet__name">
+                                       <span>Скидка на товары для туризма 10%</span>
+                                    </div>
+                                    <div class="merchant-cabinet__active">
+                                       <span>Да</span>
+                                    </div>
+                                    <div class="merchant-cabinet__checkbox">
+                                       <div class="checkbox">
+                                          <input id="c_11" data-error="Ошибка" class="checkbox__input" type="checkbox" value="11" name="form[]">
+                                          <label for="c_11" class="checkbox__label"><span class="checkbox__text"></span></label>
+                                       </div>
+                                    </div>
+                                    <div class="merchant-cabinet__context-menu">
+                                       <div class="context-menu">
+                                          <button type="button" class="context-menu__btn"></button>
+                                          <div class="context-menu__dropdown">
+                                             <a href="" class="context-menu__link">Редактировать товар</a>
+                                             <a href="" class="context-menu__link">Деактивировать товар</a>
+                                             <a href="" class="context-menu__link">Удалить</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="merchant-cabinet__row">
+                                    <div class="merchant-cabinet__name">
+                                       <span>Скидки на черную пятницу</span>
+                                    </div>
+                                    <div class="merchant-cabinet__active">
+                                       <span>Да</span>
+                                    </div>
+                                    <div class="merchant-cabinet__checkbox">
+                                       <div class="checkbox">
+                                          <input id="c_12" data-error="Ошибка" class="checkbox__input" type="checkbox" value="12" name="form[]">
+                                          <label for="c_12" class="checkbox__label"><span class="checkbox__text"></span></label>
+                                       </div>
+                                    </div>
+                                    <div class="merchant-cabinet__context-menu">
+                                       <div class="context-menu">
+                                          <button type="button" class="context-menu__btn"></button>
+                                          <div class="context-menu__dropdown">
+                                             <a href="" class="context-menu__link">Редактировать товар</a>
+                                             <a href="" class="context-menu__link">Деактивировать товар</a>
+                                             <a href="" class="context-menu__link">Удалить</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="merchant-cabinet__row">
+                                    <div class="merchant-cabinet__name">
+                                       <span>Скидки на 8 марта</span>
+                                    </div>
+                                    <div class="merchant-cabinet__active">
+                                       <span>Да</span>
+                                    </div>
+                                    <div class="merchant-cabinet__checkbox">
+                                       <div class="checkbox">
+                                          <input id="c_13" data-error="Ошибка" class="checkbox__input" type="checkbox" value="13" name="form[]">
+                                          <label for="c_13" class="checkbox__label"><span class="checkbox__text"></span></label>
+                                       </div>
+                                    </div>
+                                    <div class="merchant-cabinet__context-menu">
+                                       <div class="context-menu">
+                                          <button type="button" class="context-menu__btn"></button>
+                                          <div class="context-menu__dropdown">
+                                             <a href="" class="context-menu__link">Редактировать товар</a>
+                                             <a href="" class="context-menu__link">Деактивировать товар</a>
+                                             <a href="" class="context-menu__link">Удалить</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="merchant-cabinet__create-block">
+                           <div class="merchant-cabinet__title">Скидка на товары, группы товаров</div>
+                           <div class="form__line">
+                              <label for="discountName" class="form__label">Название скидки</label>
+                              <input required id="discountName" type="text" name="" class="form__input">
+                              <svg class="form__clear-svg">
+                                 <use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+                              </svg>
+                           </div>
+                           <div class="form__row">
+                              <div class="form__line">
+                                 <label for="discountAmount" class="form__label">Размер скидки</label>
+                                 <input required id="discountAmount" type="text" name="" class="form__input">
+                                 <svg class="form__clear-svg">
+                                    <use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+                                 </svg>
+                              </div>
+                              <div class="merchant-cabinet__select">
+                                 <select name="form[]" data-class-modif="sort">
+                                    <option value="1" selected>%</option>
+                                    <option value="2">Рубли</option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div class="merchant-cabinet__products">
+                              <div class="merchant-cabinet__table-header">
+                                 <div class="merchant-cabinet__subtitle">Список товаров</div>
+                                 <div class="merchant-cabinet__text">Если товары не указаны, то действие распространяется на все товары</div>
+                                 <a href="" data-popup="#addProduct" class="merchant-cabinet__orange-btn">
+                                    <span>Добавить</span>
+                                 </a>
+                              </div>
+                              <div class="merchant-cabinet__table">
+                                 <div class="merchant-cabinet__headline">
+                                    <div class="merchant-cabinet__col-name">Артикул</div>
+                                    <div class="merchant-cabinet__col-name">Фото</div>
+                                    <div class="merchant-cabinet__col-name">Наименование товара</div>
+                                    <div class="merchant-cabinet__col-name">Активен</div>
+                                    <div class="merchant-cabinet__col-name">Дата создания</div>
+                                    <div class="merchant-cabinet__col-name">Кол-во</div>
+                                    <div class="merchant-cabinet__all-checked">
+                                       <div class="checkbox">
+                                          <input id="allCheck" data-error="Ошибка" class="checkbox__input js-allCheck" type="checkbox" value="1" name="form[]">
+                                          <label for="allCheck" class="checkbox__label"><span class="checkbox__text"></span></label>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="merchant-cabinet__row">
+                                    <div class="merchant-cabinet__article">
+                                       <span>298-142-122</span>
+                                    </div>
+                                    <div class="merchant-cabinet__photo">
+                                       <img src="img/products/pd-c-10.png" alt="">
+                                    </div>
+                                    <div class="merchant-cabinet__name">
+                                       <span>Казан 4 литра шоколад Горница</span>
+                                    </div>
+                                    <div class="merchant-cabinet__active">
+                                       <span>Да</span>
+                                    </div>
+                                    <div class="merchant-cabinet__date">
+                                       <span>15.10.22</span>
+                                    </div>
+                                    <div class="merchant-cabinet__count">
+                                       <span>1 шт.</span>
+                                    </div>
+                                    <div class="merchant-cabinet__checkbox">
+                                       <div class="checkbox">
+                                          <input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                          <label for="c_1" class="checkbox__label"><span class="checkbox__text"></span></label>
+                                       </div>
+                                    </div>
+                                    <div class="merchant-cabinet__context-menu">
+                                       <div class="context-menu">
+                                          <button type="button" class="context-menu__btn"></button>
+                                          <div class="context-menu__dropdown">
+                                             <a href="" class="context-menu__link">Редактировать товар</a>
+                                             <a href="" class="context-menu__link">Деактивировать товар</a>
+                                             <a href="" class="context-menu__link">Удалить</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="merchant-cabinet__row">
+                                    <div class="merchant-cabinet__article">
+                                       <span>298-142-122</span>
+                                    </div>
+                                    <div class="merchant-cabinet__photo">
+                                       <img src="img/products/pd-c-10.png" alt="">
+                                    </div>
+                                    <div class="merchant-cabinet__name">
+                                       <span>Казан 4 литра шоколад Горница</span>
+                                    </div>
+                                    <div class="merchant-cabinet__active">
+                                       <span>Да</span>
+                                    </div>
+                                    <div class="merchant-cabinet__date">
+                                       <span>15.10.22</span>
+                                    </div>
+                                    <div class="merchant-cabinet__count">
+                                       <span>1 шт.</span>
+                                    </div>
+                                    <div class="merchant-cabinet__checkbox">
+                                       <div class="checkbox">
+                                          <input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="2" name="form[]">
+                                          <label for="c_2" class="checkbox__label"><span class="checkbox__text"></span></label>
+                                       </div>
+                                    </div>
+                                    <div class="merchant-cabinet__context-menu">
+                                       <div class="context-menu">
+                                          <button type="button" class="context-menu__btn"></button>
+                                          <div class="context-menu__dropdown">
+                                             <a href="" class="context-menu__link">Редактировать товар</a>
+                                             <a href="" class="context-menu__link">Деактивировать товар</a>
+                                             <a href="" class="context-menu__link">Удалить</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="merchant-cabinet__row">
+                                    <div class="merchant-cabinet__article">
+                                       <span>298-142-122</span>
+                                    </div>
+                                    <div class="merchant-cabinet__photo">
+                                       <img src="img/products/pd-c-10.png" alt="">
+                                    </div>
+                                    <div class="merchant-cabinet__name">
+                                       <span>Казан 4 литра шоколад Горница</span>
+                                    </div>
+                                    <div class="merchant-cabinet__active">
+                                       <span>Да</span>
+                                    </div>
+                                    <div class="merchant-cabinet__date">
+                                       <span>15.10.22</span>
+                                    </div>
+                                    <div class="merchant-cabinet__count">
+                                       <span>1 шт.</span>
+                                    </div>
+                                    <div class="merchant-cabinet__checkbox">
+                                       <div class="checkbox">
+                                          <input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3" name="form[]">
+                                          <label for="c_3" class="checkbox__label"><span class="checkbox__text"></span></label>
+                                       </div>
+                                    </div>
+                                    <div class="merchant-cabinet__context-menu">
+                                       <div class="context-menu">
+                                          <button type="button" class="context-menu__btn"></button>
+                                          <div class="context-menu__dropdown">
+                                             <a href="" class="context-menu__link">Редактировать товар</a>
+                                             <a href="" class="context-menu__link">Деактивировать товар</a>
+                                             <a href="" class="context-menu__link">Удалить</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="merchant-cabinet__row">
+                                    <div class="merchant-cabinet__article">
+                                       <span>298-142-122</span>
+                                    </div>
+                                    <div class="merchant-cabinet__photo">
+                                       <img src="img/products/pd-c-10.png" alt="">
+                                    </div>
+                                    <div class="merchant-cabinet__name">
+                                       <span>Казан 4 литра шоколад Горница</span>
+                                    </div>
+                                    <div class="merchant-cabinet__active">
+                                       <span>Да</span>
+                                    </div>
+                                    <div class="merchant-cabinet__date">
+                                       <span>15.10.22</span>
+                                    </div>
+                                    <div class="merchant-cabinet__count">
+                                       <span>1 шт.</span>
+                                    </div>
+                                    <div class="merchant-cabinet__checkbox">
+                                       <div class="checkbox">
+                                          <input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="4" name="form[]">
+                                          <label for="c_4" class="checkbox__label"><span class="checkbox__text"></span></label>
+                                       </div>
+                                    </div>
+                                    <div class="merchant-cabinet__context-menu">
+                                       <div class="context-menu">
+                                          <button type="button" class="context-menu__btn"></button>
+                                          <div class="context-menu__dropdown">
+                                             <a href="" class="context-menu__link">Редактировать товар</a>
+                                             <a href="" class="context-menu__link">Деактивировать товар</a>
+                                             <a href="" class="context-menu__link">Удалить</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="merchant-cabinet__row">
+                                    <div class="merchant-cabinet__article">
+                                       <span>298-142-122</span>
+                                    </div>
+                                    <div class="merchant-cabinet__photo">
+                                       <img src="img/products/pd-c-10.png" alt="">
+                                    </div>
+                                    <div class="merchant-cabinet__name">
+                                       <span>Казан 4 литра шоколад Горница</span>
+                                    </div>
+                                    <div class="merchant-cabinet__active">
+                                       <span>Да</span>
+                                    </div>
+                                    <div class="merchant-cabinet__date">
+                                       <span>15.10.22</span>
+                                    </div>
+                                    <div class="merchant-cabinet__count">
+                                       <span>1 шт.</span>
+                                    </div>
+                                    <div class="merchant-cabinet__checkbox">
+                                       <div class="checkbox">
+                                          <input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="5" name="form[]">
+                                          <label for="c_5" class="checkbox__label"><span class="checkbox__text"></span></label>
+                                       </div>
+                                    </div>
+                                    <div class="merchant-cabinet__context-menu">
+                                       <div class="context-menu">
+                                          <button type="button" class="context-menu__btn"></button>
+                                          <div class="context-menu__dropdown">
+                                             <a href="" class="context-menu__link">Редактировать товар</a>
+                                             <a href="" class="context-menu__link">Деактивировать товар</a>
+                                             <a href="" class="context-menu__link">Удалить</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="merchant-cabinet__bottom-row">
+                              <div class="merchant-cabinet__subtitle">Разделы</div>
+                              <a href="" data-popup="#addGroup" class="merchant-cabinet__orange-btn">
+                                 <span>Добавить</span>
+                              </a>
+                           </div>
+                           <div class="merchant-cabinet__line form__line">
+                              <label for="callbackFormMessage" class="form__label">Укажите разделы</label>
+                              <textarea required id="callbackFormMessage" data-autoheight data-autoheight-min="160" autocomplete="off" name="form[]" placeholder="" data-error="Ошибка" class="form__input"></textarea>
+                              <svg class="form__clear-svg">
+                                 <use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+                              </svg>
+                           </div>
+                           <a href="" class="merchant-cabinet__green-btn">
+                              <span>Сохранить акцию</span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="merchant-cabinet__popups">
+               <div id="addProduct" aria-hidden="true" class="popup">
+                  <div class="popup__wrapper">
+                     <div class="popup__content">
+                        <div class="popup__header">
+                           <div class="popup__title">Добавление товара для акции</div>
+                           <button data-close type="button" class="popup__close">
+                              <svg class="popup__close-svg">
+                                 <use xlink:href="img/icons/icons.svg#svg-icon-close-modal"></use>
+                              </svg>
+                           </button>
+                        </div>
+                        <div class="popup__main">
+                           <div class="add-product">
+                              <div class="add-product__header">
+                                 <div class="form__line">
+                                    <label for="nameProd" class="form__label">Название товара</label>
+                                    <input id="nameProd" type="text" name="" class="form__input">
+                                    <svg class="form__clear-svg">
+                                       <use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+                                    </svg>
+                                 </div>
+                                 <div class="form__line">
+                                    <label for="articleProd" class="form__label">Артикул товара</label>
+                                    <input required id="articleProd" type="text" name="" class="form__input">
+                                    <svg class="form__clear-svg">
+                                       <use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+                                    </svg>
+                                 </div>
+                                 <a href="" class="merchant-cabinet__orange-btn">
+                                    <span>Найти</span>
+                                 </a>
+                              </div>
+                              <div class="merchant-cabinet__table merchant-cabinet__table_add-prod">
+                                 <div class="merchant-cabinet__headline">
+                                    <div class="merchant-cabinet__col-name">Артикул</div>
+                                    <div class="merchant-cabinet__col-name">Фото</div>
+                                    <div class="merchant-cabinet__col-name">Наименование товара</div>
+                                    <div class="merchant-cabinet__col-name">Кол-во</div>
+                                 </div>
+                                 <div class="merchant-cabinet__row">
+                                    <div class="merchant-cabinet__article">
+                                       <span>298-142-122</span>
+                                    </div>
+                                    <div class="merchant-cabinet__photo">
+                                       <img src="img/products/pd-c-10.png" alt="">
+                                    </div>
+                                    <div class="merchant-cabinet__name">
+                                       <span>Казан 4 литра шоколад Горница</span>
+                                    </div>
+                                    <div class="merchant-cabinet__count">
+                                       <span>1 шт.</span>
+                                    </div>
+                                    <a href="" class="merchant-cabinet__add-btn btn btn__transparent_black">Добавить</a>
+                                 </div>
+                                 <div class="merchant-cabinet__row">
+                                    <div class="merchant-cabinet__article">
+                                       <span>298-142-122</span>
+                                    </div>
+                                    <div class="merchant-cabinet__photo">
+                                       <img src="img/products/pd-c-10.png" alt="">
+                                    </div>
+                                    <div class="merchant-cabinet__name">
+                                       <span>Казан 4 литра шоколад Горница</span>
+                                    </div>
+                                    <div class="merchant-cabinet__count">
+                                       <span>1 шт.</span>
+                                    </div>
+                                    <a href="" class="merchant-cabinet__add-btn btn btn__transparent_black">Добавить</a>
+                                 </div>
+                                 <div class="merchant-cabinet__row">
+                                    <div class="merchant-cabinet__article">
+                                       <span>298-142-122</span>
+                                    </div>
+                                    <div class="merchant-cabinet__photo">
+                                       <img src="img/products/pd-c-10.png" alt="">
+                                    </div>
+                                    <div class="merchant-cabinet__name">
+                                       <span>Казан 4 литра шоколад Горница</span>
+                                    </div>
+                                    <div class="merchant-cabinet__count">
+                                       <span>1 шт.</span>
+                                    </div>
+                                    <a href="" class="merchant-cabinet__add-btn btn btn__transparent_black">Добавить</a>
+                                 </div>
+                                 <div class="merchant-cabinet__row">
+                                    <div class="merchant-cabinet__article">
+                                       <span>298-142-122</span>
+                                    </div>
+                                    <div class="merchant-cabinet__photo">
+                                       <img src="img/products/pd-c-10.png" alt="">
+                                    </div>
+                                    <div class="merchant-cabinet__name">
+                                       <span>Казан 4 литра шоколад Горница</span>
+                                    </div>
+                                    <div class="merchant-cabinet__count">
+                                       <span>1 шт.</span>
+                                    </div>
+                                    <a href="" class="merchant-cabinet__add-btn btn btn__transparent_black">Добавить</a>
+                                 </div>
+                              </div>
+                              @@include('html/_pagging.htm',{})
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div id="addGroup" aria-hidden="true" class="popup">
+                  <div class="popup__wrapper">
+                     <div class="popup__content">
+                        <div class="popup__header">
+                           <div class="popup__title">Добавление товара для акции</div>
+                           <button data-close type="button" class="popup__close">
+                              <svg class="popup__close-svg">
+                                 <use xlink:href="img/icons/icons.svg#svg-icon-close-modal"></use>
+                              </svg>
+                           </button>
+                        </div>
+                        <div class="popup__main">
+                           <div class="add-product">
+                              <div class="add-product__header">
+                                 <div class="form__line">
+                                    <label for="groupeName" class="form__label">Название группы</label>
+                                    <input id="groupeName" type="text" name="" class="form__input">
+                                    <svg class="form__clear-svg">
+                                       <use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+                                    </svg>
+                                 </div>
+                                 <a href="" class="merchant-cabinet__orange-btn">
+                                    <span>Найти</span>
+                                 </a>
+                              </div>
+                              <div class="merchant-cabinet__table merchant-cabinet__table_add-groupe">
+                                 <div class="merchant-cabinet__headline">
+                                    <div class="merchant-cabinet__col-name">Название</div>
+                                 </div>
+                                 <div class="merchant-cabinet__row">
+                                    <div class="merchant-cabinet__name">
+                                       <span>Кухонные полотенца</span>
+                                    </div>
+                                    <a href="" class="merchant-cabinet__add-btn btn btn__transparent_black">Добавить</a>
+                                 </div>
+                                 <div class="merchant-cabinet__row">
+                                    <div class="merchant-cabinet__name">
+                                       <span>Кухонные столы</span>
+                                    </div>
+                                    <a href="" class="merchant-cabinet__add-btn btn btn__transparent_black">Добавить</a>
+                                 </div>
+                                 <div class="merchant-cabinet__row">
+                                    <div class="merchant-cabinet__name">
+                                       <span>Кухонная техника</span>
+                                    </div>
+                                    <a href="" class="merchant-cabinet__add-btn btn btn__transparent_black">Добавить</a>
+                                 </div>
+                                 <div class="merchant-cabinet__row">
+                                    <div class="merchant-cabinet__name">
+                                       <span>Кухонные раковины</span>
+                                    </div>
+                                    <a href="" class="merchant-cabinet__add-btn btn btn__transparent_black">Добавить</a>
+                                 </div>
+                              </div>
+                              @@include('html/_pagging.htm',{})
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_popup.htm',{})
+   @@include('html/_js.htm',{})
+</body>
+
+</html>

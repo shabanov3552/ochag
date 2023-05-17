@@ -44,9 +44,21 @@ document.addEventListener("click", function (e) {
 		target.classList.contains('_spoller-active') ? target.innerHTML = 'Свернуть детали заказа' : target.innerHTML = 'Показать детали заказа';
 		e.preventDefault()
 	}
+	// закрыть всплывашку-предупреждение
 	if (e.target.closest('.alert-popup__close')) {
 		closeAlertPopup()
 	}
+	// открыть context menu в ЛК мерчанта
+	if (e.target.closest('.context-menu__btn')) {
+		openContextMenu(e.target.closest('.context-menu__btn'));
+	}
+	if (!e.target.closest('.context-menu__btn')) {
+		const openedMenuNodes = document.querySelectorAll('.context-menu-open');
+		openedMenuNodes.forEach(e => {
+			e.classList.remove('context-menu-open');
+		});
+	}
+
 });
 
 //#endregion
@@ -190,19 +202,34 @@ function floatLine(node) {
 
 	node.addEventListener("mouseover", (e) => {
 		if (e.target.classList.contains("float-line__item")) {
-			node.style.setProperty(
-				"--underline-width",
-				`${e.target.offsetWidth}px`
-			);
-			node.style.setProperty(
-				"--underline-offset-x",
-				`${e.target.offsetLeft}px`
-			);
+			if (node.closest('.float-line__horizontal')) {
+				node.style.setProperty(
+					"--underline-offset-y",
+					`${e.target.offsetTop}px`
+				);
+				node.style.setProperty(
+					"--underline-height",
+					`${e.target.offsetHeight}px`
+				);
+			} else {
+				node.style.setProperty(
+					"--underline-width",
+					`${e.target.offsetWidth}px`
+				);
+				node.style.setProperty(
+					"--underline-offset-x",
+					`${e.target.offsetLeft}px`
+				);
+			}
 		}
 	});
-	node.addEventListener("mouseleave", () =>
-		node.style.setProperty("--underline-width", "0")
-	);
+	node.addEventListener("mouseleave", () => {
+		if (node.closest('.float-line__horizontal')) {
+			node.style.setProperty("--underline-height", "0")
+		} else {
+			node.style.setProperty("--underline-width", "0")
+		}
+	});
 }
 
 //#endregion
@@ -351,7 +378,6 @@ function getFilterColumns(popup) {
 
 //#endregion
 
-
 window.addEventListener("load", function (e) {
 	const target = document.querySelector('.radio-buttons');
 	if (target) {
@@ -391,94 +417,102 @@ window.addEventListener("load", function (e) {
 	}, 20000);
 });
 
-// const contactsForm = document.querySelector('.sidebar-form__wrapper');
-// if (contactsForm) {
-// 	function showThanksMessage(e) {
-// 		const target = e.target;
-// 		target.style.display = 'none'
-// 		target.insertAdjacentHTML('afterEnd', `
-// 		<div class="sidebar-form__thanks">
-// 			<button type="button" class="sidebar-form__button btn btn__transparent_black">Ок</button>
-// 			<svg width="145" height="115" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-// 				<path fill-rule="evenodd" clip-rule="evenodd" d="M19.0919 2.82843L7.07107 14.8492L4.24264 12.0208L4.3029 11.9594L0 7.65685L2.82843 4.82843L7.13132 9.13102L16.2635 0L19.0919 2.82843Z" fill="#2FA827"/>
-// 			</svg>
-// 		</div>`)
-
-
-// 		const title = contactsForm.querySelector('.sidebar-form__title');
-// 		const message = contactsForm.querySelector('.sidebar-form__desc');
-// 		title.innerText = 'Спасибо'
-// 		message.innerText = 'Наш сотрудник ответит в течение 24 часов.'
-
-
-// 		const thanksBtn = document.querySelector('.sidebar-form__thanks .sidebar-form__button');
-// 		thanksBtn.addEventListener('click', vernutFormu)
-// 	}
-
-
-// 	function vernutFormu() {
-// 		let title = contactsForm.querySelector('.sidebar-form__title');
-// 		let message = contactsForm.querySelector('.sidebar-form__desc');
-
-// 		title.innerText = 'Обратная связь'
-// 		message.innerText = 'Задайте вопрос, направьте нам претензию или оставьте отзыв о работе сайта или магазина. Наши сотрудники отвечают в течение 24 часов.'
-
-// 		document.querySelector('.sidebar-form__form').style.display = 'block';
-
-// 		this.parentElement.remove();
-// 	}
-// 	contactsForm.addEventListener('submit', showThanksMessage)
-// }
-
-//#region отсчет секунд после открытия второй модалки авторизации
-
-document.addEventListener('afterPopupOpen', e => {
-	if (e.detail.popup.targetOpen.selector === '#login-popup-second') {
-		countdown(document.querySelector(`${e.detail.popup.targetOpen.selector} .js-countdown`));
-	}
-});
-document.addEventListener('afterPopupClose', e => {
-	if (e.detail.popup.targetOpen.selector === '#login-popup-second') {
-		clearCountdown(document.querySelector(`${e.detail.popup.targetOpen.selector} .js-countdown`));
-	}
-});
-let testInterv;
-function countdown(element) {
-	let counter = 60;
-	testInterv = setInterval(() => {
-		counter--;
-		element.innerHTML = `Получить новый код вы сможете через ${counter} секунд`;
-		if (counter == 0) {
-			element.style.display = 'none';
-			element.nextElementSibling.style.display = 'block';
-			clearInterval(testInterv);
-		}
-	}, 1000);
-}
-
-
-function clearCountdown(element) {
-	element.innerHTML = `Получить новый код вы сможете через 59 секунд`;
-	element.style.display = 'block';
-	element.nextElementSibling.style.display = 'none';
-	clearInterval(testInterv);
-}
-
-//#endregion
-
 //#region закрытие модалки предупреждения 
-if (localStorage.getItem('alert-popup') === 'close') {
+
+if (localStorage.getItem('alert-popup') === 'close' && document.querySelector('.alert-popup')) {
 	document.querySelector('.alert-popup').style.display = 'none';
 }
 function closeAlertPopup() {
 	const alertPopup = document.querySelector('.alert-popup');
-	alertPopup.style.cssText = `
+	if (alertPopup) {
+		alertPopup.style.cssText = `
 	transition: all 0.3s ease 0s;
 	transform: translate(0px,100%);`;
-	setTimeout(() => {
-		alertPopup.style.display = "none";
-	}, 1000);
-	localStorage.setItem('alert-popup', 'close');
+		setTimeout(() => {
+			alertPopup.style.display = "none";
+		}, 1000);
+		localStorage.setItem('alert-popup', 'close');
+	}
 }
+
+//#endregion
+
+//#region рендер графика в ЛК мерчанта
+
+const ctx = document.getElementById('myChart');
+if (ctx) {
+
+	const myChart = new Chart(ctx, {
+		type: 'line',
+		data: {
+
+			labels: ['12, чт ', '13, пт', '14, сб', '15, вс', '16, пн', '17, вт', '18, ср', '19, чт', '20, пт', '21, сб', '22, вс', '23, пн', '24, вт', '25, ср', '26, чт', '27, пт', '28, сб'],
+			datasets: [{
+				label: 'Заказано товаров',
+				data: [12, 19, 3, 5, 2, 3, 50, 30, 40, 6, 48, 1, 6, 2, 9, 6],
+				borderColor: '#EB7A1D',
+				borderWidth: 2,
+				backgroundColor: '#2FA827',
+				tension: 0.4,
+				pointBorderColor: '#2FA827',
+				pointBorderWidth: '7.5',
+				pointHoverBorderWidth: '7.5',
+			}]
+		},
+		options: {
+			maintainAspectRatio: false,
+			scales: {
+				y: {
+					beginAtZero: true,
+					grid: {
+						display: false
+					},
+					display: false,
+				},
+				x: {
+					grid: {
+						display: false
+					}
+				}
+			},
+			plugins: {
+				legend: { display: false }
+			},
+		}
+	});
+	window.chart = myChart;
+	// window.chart.config._config.options.scales.x.grid.lineWidth = 0
+	// console.log(window.chart);
+}
+
+//#endregion
+
+//#region Открытие\закрытие context menu
+
+function openContextMenu(btn) {
+	if (btn.closest('.context-menu-open')) {
+		btn.parentElement.classList.remove('context-menu-open');
+	} else {
+		const openedMenuNodes = document.querySelectorAll('.context-menu-open');
+		openedMenuNodes.forEach(e => {
+			e.classList.remove('context-menu-open');
+		});
+		btn.parentElement.classList.add('context-menu-open');
+	}
+}
+
+//#endregion
+
+//#region выбор всех чекбоксов
+
+// js-allCheck
+document.addEventListener('change', e => {
+	let target = e.target;
+	if (target.classList.contains('js-allCheck')) {
+		let table = target.closest('.merchant-cabinet__table')
+		let checkboxes = table.querySelectorAll('.merchant-cabinet__checkbox input');
+		target.checked ? checkboxes.forEach(e => e.checked = true) : checkboxes.forEach(e => e.checked = false);
+	}
+});
 
 //#endregion
