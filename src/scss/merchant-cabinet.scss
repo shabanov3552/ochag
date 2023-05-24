@@ -1180,6 +1180,11 @@
       font-weight: 600;
       font-size: 17px;
       line-height: 21px;
+
+      .merchant-cabinet__bottom-row & {
+         flex: 1 1 auto;
+
+      }
    }
 
    // .merchant-cabinet__text
@@ -1194,7 +1199,11 @@
 
    // .merchant-cabinet__table
 
-   &__table {}
+   &__table {
+      &+.merchant-cabinet__footer-row {
+         margin-top: rem(-50);
+      }
+   }
 
    // .merchant-cabinet__headline
 

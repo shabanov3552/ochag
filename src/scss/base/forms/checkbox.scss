@@ -15,17 +15,20 @@
 		// &:focus+.checkbox__label:before {
 		// 	box-shadow: 0 0 5px #000;
 		// }
-		&:hover+.checkbox__label:before {
-			background: url('@img/icons/check-black.svg') center center no-repeat;
+		@media (any-hover:hover) {
+
+			&:hover+.checkbox__label:before {
+				background: url('@img/icons/check-black.svg') center center no-repeat;
+			}
+
+			&:checked:hover+.checkbox__label:before {
+				opacity: 0.5;
+			}
 		}
 
 		&:checked+.checkbox__label:before {
 			background: #4C4C4C url('@img/icons/check.svg') center center no-repeat;
 			box-shadow: none;
-		}
-
-		&:checked:hover+.checkbox__label:before {
-			opacity: 0.5;
 		}
 	}
 
@@ -71,13 +74,15 @@
 				right: 5px;
 			}
 
-			&:hover+.checkbox__label:before {
-				background: none;
-			}
+			@media (any-hover:hover) {
+				&:hover+.checkbox__label:before {
+					background: none;
+				}
 
-			&:checked:hover+.checkbox__label:before {
-				opacity: 1;
-				background: #979797;
+				&:checked:hover+.checkbox__label:before {
+					opacity: 1;
+					background: #979797;
+				}
 			}
 		}
 
