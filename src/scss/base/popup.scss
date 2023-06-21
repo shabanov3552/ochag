@@ -218,7 +218,8 @@ body::after {
 #change-data,
 #add-profile,
 #addProduct,
-#addGroup {
+#addGroup,
+#collaboration {
 	.popup__content {
 		max-width: 624px;
 		padding: 0;
@@ -540,5 +541,67 @@ body::after {
 	@media (max-width: em(374)) {
 		height: calc(100% - 130px);
 
+	}
+}
+
+
+.collaboration {
+
+	// .collaboration__text
+
+	&__text {
+		font-size: 20px;
+		line-height: 28px;
+		margin-bottom: rem(35);
+	}
+
+	// .collaboration__form
+
+	&__form {
+		.form {
+
+			// .form__line
+
+			&__line {
+				margin-bottom: rem(30);
+			}
+
+			// .form__label
+
+			&__label {}
+
+			// .form__input
+
+			&__input {}
+
+			// .form__clear-svg
+
+			&__clear-svg {}
+
+			// .form__consent
+
+			&__consent {
+				font-size: 12px;
+				line-height: 18px;
+				opacity: 0.5;
+				margin-bottom: rem(30);
+			}
+
+			// .form__consent-link
+
+			&__consent-link {
+				text-decoration: underline;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+			// .form__btn
+
+			&__btn {
+				width: 100%;
+			}
+		}
 	}
 }

@@ -17,11 +17,11 @@
                <div data-tabs class="tabs">
                   <nav class="tabs__navigation">
                      <div data-tabs-titles class="tabs__navigation-inner float-line">
-                        <button type="button" class="tabs__title float-line__item">Заказы</button>
+                        <button type="button" class="tabs__title float-line__item _tab-active">Заказы</button>
                         <button type="button" class="tabs__title float-line__item">Товары</button>
                         <button type="button" class="tabs__title float-line__item">Персональные данные</button>
                         <button type="button" class="tabs__title float-line__item">Финансы</button>
-                        <button type="button" class="tabs__title float-line__item _tab-active">Маркетинг</button>
+                        <button type="button" class="tabs__title float-line__item">Маркетинг</button>
                      </div>
                   </nav>
                   <div data-tabs-body class="tabs__content">
@@ -746,22 +746,6 @@
                                  <div class="merchant-cabinet__create-name">Скидка на товары, группы товаров</div>
                                  <a href="" class="merchant-cabinet__create-btn">Создать</a>
                               </div>
-                              <div class="merchant-cabinet__create">
-                                 <div class="merchant-cabinet__create-name">Оформи заказ на N рублей, получи скидку</div>
-                                 <a href="" class="merchant-cabinet__create-btn">Создать</a>
-                              </div>
-                              <div class="merchant-cabinet__create">
-                                 <div class="merchant-cabinet__create-name">Скидка на комбинацию товаров</div>
-                                 <a href="" class="merchant-cabinet__create-btn">Создать</a>
-                              </div>
-                              <div class="merchant-cabinet__create">
-                                 <div class="merchant-cabinet__create-name">Скидка на доставку</div>
-                                 <a href="" class="merchant-cabinet__create-btn">Создать</a>
-                              </div>
-                              <div class="merchant-cabinet__create">
-                                 <div class="merchant-cabinet__create-name">Бесплатная доставка</div>
-                                 <a href="" class="merchant-cabinet__create-btn">Создать</a>
-                              </div>
                            </div>
                            <div class="merchant-cabinet__stocks">
                               <div class="merchant-cabinet__title">Созданные акции</div>
@@ -852,7 +836,6 @@
                               <div class="merchant-cabinet__footer-row">
                                  <a href="" class="merchant-cabinet__btn btn btn__transparent_black">Активировать</a>
                                  <a href="" class="merchant-cabinet__btn btn btn__transparent_black">Деактивировать</a>
-                                 <a href="" class="merchant-cabinet__btn btn btn__transparent_black">Редактировать</a>
                                  <a href="" class="merchant-cabinet__btn btn btn__transparent_black">Удалить</a>
                               </div>
                            </div>
@@ -933,8 +916,6 @@
                                        <div class="context-menu">
                                           <button type="button" class="context-menu__btn"></button>
                                           <div class="context-menu__dropdown">
-                                             <a href="" class="context-menu__link">Редактировать товар</a>
-                                             <a href="" class="context-menu__link">Деактивировать товар</a>
                                              <a href="" class="context-menu__link">Удалить</a>
                                           </div>
                                        </div>
@@ -969,8 +950,6 @@
                                        <div class="context-menu">
                                           <button type="button" class="context-menu__btn"></button>
                                           <div class="context-menu__dropdown">
-                                             <a href="" class="context-menu__link">Редактировать товар</a>
-                                             <a href="" class="context-menu__link">Деактивировать товар</a>
                                              <a href="" class="context-menu__link">Удалить</a>
                                           </div>
                                        </div>
@@ -1005,8 +984,6 @@
                                        <div class="context-menu">
                                           <button type="button" class="context-menu__btn"></button>
                                           <div class="context-menu__dropdown">
-                                             <a href="" class="context-menu__link">Редактировать товар</a>
-                                             <a href="" class="context-menu__link">Деактивировать товар</a>
                                              <a href="" class="context-menu__link">Удалить</a>
                                           </div>
                                        </div>
@@ -1041,8 +1018,6 @@
                                        <div class="context-menu">
                                           <button type="button" class="context-menu__btn"></button>
                                           <div class="context-menu__dropdown">
-                                             <a href="" class="context-menu__link">Редактировать товар</a>
-                                             <a href="" class="context-menu__link">Деактивировать товар</a>
                                              <a href="" class="context-menu__link">Удалить</a>
                                           </div>
                                        </div>
@@ -1077,8 +1052,6 @@
                                        <div class="context-menu">
                                           <button type="button" class="context-menu__btn"></button>
                                           <div class="context-menu__dropdown">
-                                             <a href="" class="context-menu__link">Редактировать товар</a>
-                                             <a href="" class="context-menu__link">Деактивировать товар</a>
                                              <a href="" class="context-menu__link">Удалить</a>
                                           </div>
                                        </div>
@@ -1270,6 +1243,52 @@
                                  </div>
                               </div>
                               @@include('html/_pagging.htm',{})
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div id="collaboration" aria-hidden="true" class="popup">
+                  <div class="popup__wrapper">
+                     <div class="popup__content">
+                        <div class="popup__header">
+                           <div class="popup__title">Сотрудничество<br> с Litebuy</div>
+                           <button data-close type="button" class="popup__close">
+                              <svg class="popup__close-svg">
+                                 <use xlink:href="img/icons/icons.svg#svg-icon-close-modal"></use>
+                              </svg>
+                           </button>
+                        </div>
+                        <div class="popup__main">
+                           <div class="collaboration">
+                              <div class="collaboration__text">Заполните контактные данные и наш менеджер свяжется с вами для продолжения регистрации</div>
+                              <div class="collaboration__form">
+                                 <form action="" class="form" data-parsley-validate data-parsley-trigger="change" required="">
+                                    <div class="form__line">
+                                       <label for="collaboration1" class="form__label">Ваше имя</label>
+                                       <input id="collaboration1" type="name" name="name" class="form__input">
+                                       <svg class="form__clear-svg">
+                                          <use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+                                       </svg>
+                                    </div>
+                                    <div class="form__line">
+                                       <label for="collaboration2" class="form__label">Телефон</label>
+                                       <input id="collaboration2" type="tel" name="tel" class="form__input js_phone">
+                                       <svg class="form__clear-svg">
+                                          <use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+                                       </svg>
+                                    </div>
+                                    <div class="form__line">
+                                       <label for="collaboration3" class="form__label">E-mail</label>
+                                       <input id="collaboration3" type="email" name="email" class="form__input">
+                                       <svg class="form__clear-svg">
+                                          <use xlink:href="img/icons/icons.svg#svg-input_close"></use>
+                                       </svg>
+                                    </div>
+                                    <div class="form__consent">Отправляя данные, я даю свое <a href="" class="form__consent-link" data-popup="#consent">согласие на обработку перс. данных</a></div>
+                                    <button type="submit" class="form__btn btn btn__transparent_black">Отправить</button>
+                                 </form>
+                              </div>
                            </div>
                         </div>
                      </div>

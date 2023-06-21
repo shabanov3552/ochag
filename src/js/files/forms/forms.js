@@ -81,7 +81,7 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 				if (!targetElement.hasAttribute('data-no-focus-classes')) {
 					targetElement.classList.remove('_form-focus');
 					targetElement.parentElement.classList.remove('_form-focus');
-					targetElement.nextElementSibling.classList.remove('_active');
+					if (targetElement.nextElementSibling) { targetElement.nextElementSibling.classList.remove('_active'); }
 				}
 			}
 			if (targetElement.classList.contains('js_phone')) {

@@ -50,6 +50,7 @@
 
    .personal-data {
       display: block;
+
       // .personal-data__content
 
       &__content {}
@@ -89,10 +90,6 @@
 
       &__change-block {}
 
-      // .personal-data__input
-
-      &__input {}
-
       // .personal-data__btn
 
       &__btn {
@@ -105,6 +102,10 @@
 
       &__btn-svg {}
 
+      // .personal-data__input
+
+      &__input {}
+
       // .personal-data__row-msg
 
       &__row-msg {}
@@ -116,25 +117,6 @@
          max-width: 200px;
       }
    }
-
-   .form {
-
-      // .form__line
-
-      &__line {}
-
-      // .form__input
-
-      &__input {}
-   }
-}
-
-//========================================================================================================================================================
-// заказы
-
-.merchant-cabinet {
-
-
 
    // .merchant-cabinet__chart-wrapper
 
@@ -185,54 +167,18 @@
 
    // .merchant-cabinet__title
 
-   &__title {}
-
-   // .merchant-cabinet__select
-
-   &__select {}
-
-   // .merchant-cabinet__time-zone
-
-   &__time-zone {
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 26px;
-   }
-
-   // .merchant-cabinet__chart
-
-   &__chart {
-      height: 260px;
-   }
-
-   .js-time-zone {}
-
-   // .merchant-cabinet__orders
-
-   &__orders {}
-
-   // .merchant-cabinet__head
-
-   &__head {
-      padding-left: rem(30);
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      margin-bottom: rem(30);
-
-      @media (max-width:$mobile) {
-         flex-direction: column;
-         align-items: stretch;
-         padding-left: 0;
-      }
-   }
-
-   // .merchant-cabinet__title
-
    &__title {
       font-weight: 600;
       font-size: 20px;
       line-height: 24px;
+
+      .merchant-cabinet__marketing & {
+         margin-bottom: rem(30);
+      }
+
+      .merchant-cabinet__create-block & {
+         margin-bottom: rem(30);
+      }
    }
 
    // .merchant-cabinet__select
@@ -261,6 +207,57 @@
             padding: rem(12);
          }
       }
+
+      .select__options {
+         background: #FFFFFF;
+         box-shadow: 0px 15px 32px #9F968F;
+         border-radius: 5px;
+      }
+
+      .select__option {
+         padding: rem(17);
+         padding-right: rem(28);
+      }
+
+      .merchant-cabinet__finance & {
+         @media (min-width:$mobileSmall) {
+            min-width: 334px;
+         }
+      }
+   }
+
+   // .merchant-cabinet__time-zone
+
+   &__time-zone {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+   }
+
+   // .merchant-cabinet__chart
+
+   &__chart {
+      height: 260px;
+   }
+
+   // .merchant-cabinet__orders
+
+   &__orders {}
+
+   // .merchant-cabinet__head
+
+   &__head {
+      padding-left: rem(30);
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: rem(30);
+
+      @media (max-width:$mobile) {
+         flex-direction: column;
+         align-items: stretch;
+         padding-left: 0;
+      }
    }
 
    // .merchant-cabinet__table
@@ -268,6 +265,10 @@
    &__table {
       margin-bottom: rem(90);
       overflow: auto;
+
+      .merchant-cabinet__marketing & {
+         margin-bottom: rem(40);
+      }
 
       @media (max-width:$mobile) {
          .merchant-cabinet__inner & {
@@ -288,6 +289,35 @@
          margin: 0px rem(-10);
          margin-bottom: rem(25);
       }
+
+      .merchant-cabinet__products & {
+         border-bottom: 1px solid #8a8a8a;
+         margin-bottom: rem(20);
+      }
+
+      // .merchant-cabinet__table_add-prod
+
+      &_add-prod {
+         .merchant-cabinet__headline {
+            grid-template-columns: 110px 74px minmax(350px, 1fr) minmax(65px, 100px) 130px;
+         }
+
+         .merchant-cabinet__row {
+            grid-template-columns: 110px 74px minmax(350px, 1fr) minmax(65px, 100px) 130px;
+         }
+      }
+
+      // .merchant-cabinet__table_add-groupe
+
+      &_add-groupe {
+         .merchant-cabinet__headline {
+            grid-template-columns: minmax(250px, 1fr) 130px;
+         }
+
+         .merchant-cabinet__row {
+            grid-template-columns: minmax(250px, 1fr) 130px;
+         }
+      }
    }
 
    // .merchant-cabinet__headline
@@ -302,6 +332,18 @@
 
       .merchant-cabinet__orders & {
          grid-template-columns: minmax(170px, 200px) minmax(100px, 130px) minmax(350px, 1fr) minmax(75px, 130px) minmax(100px, 150px) 110px;
+      }
+
+      .merchant-cabinet__products & {
+         grid-template-columns: 115px 74px minmax(350px, 1fr) minmax(75px, 130px) minmax(140px, 174px) minmax(65px, 100px) 36px 42px;
+      }
+
+      .merchant-cabinet__finance & {
+         grid-template-columns: 187px minmax(350px, 1fr) minmax(100px, 178px) minmax(65px, 120px) 42px;
+      }
+
+      .merchant-cabinet__marketing & {
+         grid-template-columns: minmax(350px, 1fr) minmax(80px, 140px) 36px 42px;
       }
    }
 
@@ -325,12 +367,24 @@
       padding: rem(6) rem(23);
       min-height: 66px;
 
+      &:nth-child(odd) {
+         background: #F6F6F6;
+      }
+
       .merchant-cabinet__orders & {
          grid-template-columns: minmax(170px, 200px) minmax(100px, 130px) minmax(350px, 1fr) minmax(75px, 130px) minmax(100px, 150px) 110px;
       }
 
-      &:nth-child(odd) {
-         background: #F6F6F6;
+      .merchant-cabinet__products & {
+         grid-template-columns: 115px 74px minmax(350px, 1fr) minmax(75px, 130px) minmax(140px, 174px) minmax(65px, 100px) 36px 42px;
+      }
+
+      .merchant-cabinet__finance & {
+         grid-template-columns: 187px minmax(350px, 1fr) minmax(100px, 178px) minmax(65px, 120px) 42px;
+      }
+
+      .merchant-cabinet__marketing & {
+         grid-template-columns: minmax(350px, 1fr) minmax(80px, 140px) 36px 42px;
       }
    }
 
@@ -339,7 +393,14 @@
    &__name,
    &__count,
    &__price,
-   &__date {
+   &__date,
+   &__photo,
+   &__active,
+   &__checkbox,
+   &__context-menu,
+   &__number,
+   &__file-type,
+   &__download {
       display: flex;
       flex-direction: column;
    }
@@ -350,7 +411,6 @@
       font-weight: 700;
       font-size: 16px;
       line-height: 20px;
-
    }
 
    // .merchant-cabinet__article
@@ -372,12 +432,6 @@
    // .merchant-cabinet__date
 
    &__date {}
-}
-
-//========================================================================================================================================================
-// товары
-
-.merchant-cabinet {
 
    // .merchant-cabinet__products
 
@@ -462,108 +516,11 @@
             }
          }
       }
-
    }
-
-   // .merchant-cabinet__green-btn
-
-   &__green-btn {
-      background: #2FA827;
-      border-radius: 3px;
-      color: #fff;
-      font-size: 16px;
-      line-height: 18px;
-      height: 48px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 14px;
-      cursor: pointer;
-      padding: 0 rem(25);
-      transition: all 0.3s ease 0s;
-      border: 1px solid transparent;
-      white-space: nowrap;
-
-      .merchant-cabinet__create-block & {
-         max-width: 1386px;
-         margin: 0 auto;
-         margin-top: rem(43);
-      }
-
-      svg {
-         width: 15px;
-         height: 20px;
-         flex: 0 0 15px;
-
-         use {
-            transition: all 0.3s ease 0s;
-            fill: #fff;
-         }
-      }
-
-      &:hover {
-         background: transparent;
-         border: 1px solid #2FA827;
-         color: #2FA827;
-
-         svg {
-            use {
-               fill: #2FA827;
-            }
-         }
-      }
-
-   }
-
-   // .merchant-cabinet__table
-
-   &__table {
-      .merchant-cabinet__products & {
-         border-bottom: 1px solid #8a8a8a;
-         margin-bottom: rem(20);
-      }
-   }
-
-   // .merchant-cabinet__headline
-
-   &__headline {
-      .merchant-cabinet__products & {
-         grid-template-columns: 115px 74px minmax(350px, 1fr) minmax(75px, 130px) minmax(140px, 174px) minmax(65px, 100px) 36px 42px;
-      }
-   }
-
-   // .merchant-cabinet__col-name
-
-   &__col-name {}
 
    // .merchant-cabinet__all-checked
 
    &__all-checked {}
-
-   // .merchant-cabinet__row
-
-   &__row {
-      .merchant-cabinet__products & {
-         grid-template-columns: 115px 74px minmax(350px, 1fr) minmax(75px, 130px) minmax(140px, 174px) minmax(65px, 100px) 36px 42px;
-      }
-
-      &:nth-last-of-type(-n+2) {
-         .context-menu__dropdown {
-            top: -80px;
-         }
-      }
-
-      &:last-child {
-         .context-menu__dropdown {
-            bottom: -0px;
-            top: auto;
-         }
-      }
-   }
-
-   // .merchant-cabinet__article
-
-   &__article {}
 
    // .merchant-cabinet__photo
 
@@ -575,21 +532,9 @@
       }
    }
 
-   // .merchant-cabinet__name
-
-   &__name {}
-
    // .merchant-cabinet__active
 
    &__active {}
-
-   // .merchant-cabinet__date
-
-   &__date {}
-
-   // .merchant-cabinet__count
-
-   &__count {}
 
    // .merchant-cabinet__checkbox
 
@@ -623,127 +568,6 @@
    &__btn {
       min-width: 166px;
    }
-}
-
-.form {
-
-   // .form__line
-
-   &__line {}
-
-   // .form__label
-
-   &__label {}
-
-   // .form__input
-
-   &__input {}
-
-   // .form__clear-svg
-
-   &__clear-svg {}
-}
-
-.checkbox {
-
-   // .checkbox__input
-
-   &__input {}
-
-   // .checkbox__label
-
-   &__label {}
-
-   // .checkbox__text
-
-   &__text {}
-}
-
-.context-menu {
-   position: relative;
-   // .context-menu__btn
-
-   &__btn {
-      width: 42px;
-      height: 42px;
-      border: 1px solid #CDCDCD;
-      border-radius: 3px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.3s ease 0s;
-
-      .context-menu-open & {
-         background: #C0B9B4;
-
-         &::before {
-            color: #fff;
-         }
-      }
-
-      &:hover {
-         background: #C0B9B4;
-
-         &::before {
-            color: #fff;
-         }
-      }
-
-      &::before {
-         transition: all 0.3s ease 0s;
-         content: '\22EE';
-         color: #797979;
-         font-size: 40px;
-      }
-   }
-
-   // .context-menu__dropdown
-
-   &__dropdown {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      display: none;
-      position: absolute;
-      width: 240px;
-      top: 0;
-      right: calc(100% + 3px);
-      background: #FFFFFF;
-      box-shadow: 0px 15px 32px #9F968F;
-      border-radius: 5px;
-      flex-direction: column;
-      padding: rem(10) 0;
-      z-index: 10;
-
-      .context-menu-open & {
-         opacity: 1;
-         visibility: visible;
-         pointer-events: all;
-         display: block;
-      }
-   }
-
-   // .context-menu__link
-
-   &__link {
-      display: block;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-      padding: rem(13)rem(20);
-
-      @media (any-hover: hover) {
-         &:hover {
-            background-color: rgb(226, 226, 226);
-         }
-      }
-   }
-}
-
-//========================================================================================================================================================
-// Финансы
-
-.merchant-cabinet {
 
    // .merchant-cabinet__finance
 
@@ -764,10 +588,6 @@
       }
    }
 
-   // .merchant-cabinet__title
-
-   &__title {}
-
    // .merchant-cabinet__right
 
    &__right {
@@ -782,31 +602,6 @@
          gap: 20px;
       }
    }
-
-   // .merchant-cabinet__select
-
-   &__select {
-      .select__options {
-         background: #FFFFFF;
-         box-shadow: 0px 15px 32px #9F968F;
-         border-radius: 5px;
-      }
-
-      .select__option {
-         padding: rem(17);
-         padding-right: rem(28);
-      }
-
-      .merchant-cabinet__finance & {
-         @media (min-width:$mobileSmall) {
-            min-width: 334px;
-         }
-      }
-   }
-
-   // .merchant-cabinet__orange-btn
-
-   &__orange-btn {}
 
    // .merchant-cabinet__report
 
@@ -914,38 +709,6 @@
       }
    }
 
-   // .merchant-cabinet__table
-
-   &__table {}
-
-   // .merchant-cabinet__headline
-
-   &__headline {
-      .merchant-cabinet__finance & {
-         grid-template-columns: 187px minmax(350px, 1fr) minmax(100px, 178px) minmax(65px, 120px) 42px;
-      }
-   }
-
-   // .merchant-cabinet__col-name
-
-   &__col-name {}
-
-   // .merchant-cabinet__row
-
-   &__row {
-      .merchant-cabinet__finance & {
-         grid-template-columns: 187px minmax(350px, 1fr) minmax(100px, 178px) minmax(65px, 120px) 42px;
-      }
-   }
-
-   // .merchant-cabinet__date
-
-   &__date {}
-
-   // .merchant-cabinet__name
-
-   &__name {}
-
    // .merchant-cabinet__number
 
    &__number {}
@@ -957,30 +720,16 @@
    // .merchant-cabinet__download
 
    &__download {}
-}
-
-//========================================================================================================================================================
-// маркетинг
-
-.merchant-cabinet {
 
    // .merchant-cabinet__marketing
 
    &__marketing {}
 
-   // .merchant-cabinet__title
-
-   &__title {
-      .merchant-cabinet__marketing & {
-         margin-bottom: rem(30);
-      }
-   }
-
    // .merchant-cabinet__grid
 
    &__grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 30px;
       margin-bottom: rem(68);
    }
@@ -1029,92 +778,9 @@
 
    &__stocks {}
 
-   // .merchant-cabinet__table
-
-   &__table {}
-
-   // .merchant-cabinet__headline
-
-   &__headline {
-      .merchant-cabinet__marketing & {
-         grid-template-columns: minmax(350px, 1fr) minmax(80px, 140px) 36px 42px;
-      }
-   }
-
-   // .merchant-cabinet__col-name
-
-   &__col-name {}
-
-   // .merchant-cabinet__all-checked
-
-   &__all-checked {}
-
-   // .merchant-cabinet__row
-
-   &__row {
-      .merchant-cabinet__marketing & {
-         grid-template-columns: minmax(350px, 1fr) minmax(80px, 140px) 36px 42px;
-      }
-   }
-
-   // .merchant-cabinet__name
-
-   &__name {}
-
-   // .merchant-cabinet__active
-
-   &__active {}
-
-   // .merchant-cabinet__checkbox
-
-   &__checkbox {}
-
-   // .merchant-cabinet__context-menu
-
-   &__context-menu {}
-}
-
-.checkbox {
-
-   // .checkbox__input
-
-   &__input {}
-
-   // .checkbox__label
-
-   &__label {}
-
-   // .checkbox__text
-
-   &__text {}
-}
-
-.js-allCheck {}
-
-.context-menu {
-
-   // .context-menu__btn
-
-   &__btn {}
-
-   // .context-menu__dropdown
-
-   &__dropdown {}
-
-   // .context-menu__link
-
-   &__link {}
-}
-
-//========================================================================================================================================================
-
-.merchant-cabinet {
-
    // .merchant-cabinet__create-block
 
    &__create-block {
-      // .form__row
-
       .form__row {
          margin-top: rem(30);
          display: flex;
@@ -1130,7 +796,6 @@
          }
       }
 
-
       .form__line,
       .form__row {
          width: 100%;
@@ -1142,18 +807,6 @@
          }
       }
    }
-
-   // .merchant-cabinet__title
-
-   &__title {
-      .merchant-cabinet__create-block & {
-         margin-bottom: rem(30);
-      }
-   }
-
-   // .merchant-cabinet__products
-
-   &__products {}
 
    // .merchant-cabinet__table-header
 
@@ -1183,7 +836,6 @@
 
       .merchant-cabinet__bottom-row & {
          flex: 1 1 auto;
-
       }
    }
 
@@ -1192,125 +844,6 @@
    &__text {
       flex: 1 1 auto;
    }
-
-   // .merchant-cabinet__orange-btn
-
-   &__orange-btn {}
-
-   // .merchant-cabinet__table
-
-   &__table {
-      &+.merchant-cabinet__footer-row {
-         margin-top: rem(-50);
-      }
-   }
-
-   // .merchant-cabinet__headline
-
-   &__headline {}
-
-   // .merchant-cabinet__col-name
-
-   &__col-name {}
-
-   // .merchant-cabinet__all-checked
-
-   &__all-checked {}
-
-   // .merchant-cabinet__row
-
-   &__row {}
-
-   // .merchant-cabinet__article
-
-   &__article {}
-
-   // .merchant-cabinet__photo
-
-   &__photo {}
-
-   // .merchant-cabinet__name
-
-   &__name {}
-
-   // .merchant-cabinet__active
-
-   &__active {}
-
-   // .merchant-cabinet__date
-
-   &__date {}
-
-   // .merchant-cabinet__count
-
-   &__count {}
-
-   // .merchant-cabinet__checkbox
-
-   &__checkbox {}
-
-   // .merchant-cabinet__context-menu
-
-   &__context-menu {}
-
-}
-
-.form {
-
-   // .form__line
-
-   &__line {}
-
-   // .form__label
-
-   &__label {}
-
-   // .form__input
-
-   &__input {}
-
-   // .form__clear-svg
-
-   &__clear-svg {}
-
-   // .form__row
-
-   &__row {}
-}
-
-.checkbox {
-
-   // .checkbox__input
-
-   &__input {}
-
-   // .checkbox__label
-
-   &__label {}
-
-   // .checkbox__text
-
-   &__text {}
-}
-
-.js-allCheck {}
-
-.context-menu {
-
-   // .context-menu__btn
-
-   &__btn {}
-
-   // .context-menu__dropdown
-
-   &__dropdown {}
-
-   // .context-menu__link
-
-   &__link {}
-}
-
-.merchant-cabinet {
 
    // .merchant-cabinet__bottom-row
 
@@ -1333,67 +866,147 @@
       }
    }
 
-   // .merchant-cabinet__subtitle
-
-   &__subtitle {}
-
-   // .merchant-cabinet__orange-btn
-
-   &__orange-btn {}
-
    // .merchant-cabinet__line
 
    &__line {}
+
+   // .merchant-cabinet__green-btn
+
+   &__green-btn {
+      background: #2FA827;
+      border-radius: 3px;
+      color: #fff;
+      font-size: 16px;
+      line-height: 18px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      cursor: pointer;
+      padding: 0 rem(25);
+      transition: all 0.3s ease 0s;
+      border: 1px solid transparent;
+      white-space: nowrap;
+
+      .merchant-cabinet__create-block & {
+         max-width: 1386px;
+         margin: 0 auto;
+         margin-top: rem(43);
+      }
+
+      svg {
+         width: 15px;
+         height: 20px;
+         flex: 0 0 15px;
+
+         use {
+            transition: all 0.3s ease 0s;
+            fill: #fff;
+         }
+      }
+
+      &:hover {
+         background: transparent;
+         border: 1px solid #2FA827;
+         color: #2FA827;
+
+         svg {
+            use {
+               fill: #2FA827;
+            }
+         }
+      }
+   }
+
+   // .merchant-cabinet__popups
+
+   &__popups {}
+
+   // .merchant-cabinet__add-btn
+
+   &__add-btn {}
 }
 
-.form {
+.context-menu {
 
-   // .form__line
+   // .context-menu__btn
 
-   &__line {}
+   &__btn {
+      width: 42px;
+      height: 42px;
+      border: 1px solid #CDCDCD;
+      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease 0s;
 
-   // .form__label
+      .context-menu-open & {
+         background: #C0B9B4;
 
-   &__label {}
+         &::before {
+            color: #fff;
+         }
+      }
 
-   // .form__input
+      &:hover {
+         background: #C0B9B4;
 
-   &__input {}
+         &::before {
+            color: #fff;
+         }
+      }
 
-   // .form__clear-svg
+      &::before {
+         transition: all 0.3s ease 0s;
+         content: '\22EE';
+         color: #797979;
+         font-size: 40px;
+      }
+   }
 
-   &__clear-svg {}
-}
+   // .context-menu__dropdown
 
-.popup {
+   &__dropdown {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      display: none;
+      position: absolute;
+      width: 240px;
+      // top: 0;
+      // right: calc(100% + 3px);
+      background: #FFFFFF;
+      box-shadow: 0px 15px 32px #9F968F;
+      border-radius: 5px;
+      flex-direction: column;
+      padding: rem(10) 0;
+      z-index: 10;
 
-   // .popup__wrapper
+      .context-menu-open & {
+         opacity: 1;
+         visibility: visible;
+         pointer-events: all;
+         display: block;
+      }
+   }
 
-   &__wrapper {}
+   // .context-menu__link
 
-   // .popup__content
+   &__link {
+      display: block;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      padding: rem(13)rem(20);
 
-   &__content {}
-
-   // .popup__header
-
-   &__header {}
-
-   // .popup__title
-
-   &__title {}
-
-   // .popup__close
-
-   &__close {}
-
-   // .popup__close-svg
-
-   &__close-svg {}
-
-   // .popup__main
-
-   &__main {}
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: rgb(226, 226, 226);
+         }
+      }
+   }
 }
 
 .add-product {
@@ -1422,91 +1035,4 @@
          }
       }
    }
-}
-
-.form {
-
-   // .form__line
-
-   &__line {}
-
-   // .form__label
-
-   &__label {}
-
-   // .form__input
-
-   &__input {}
-
-   // .form__clear-svg
-
-   &__clear-svg {}
-}
-
-.merchant-cabinet {
-
-   // .merchant-cabinet__orange-btn
-
-   &__orange-btn {}
-
-   // .merchant-cabinet__table
-
-   &__table {
-
-      // .merchant-cabinet__table_add-prod
-
-      &_add-prod {
-         .merchant-cabinet__headline {
-            grid-template-columns: 110px 74px minmax(350px, 1fr) minmax(65px, 100px) 130px;
-         }
-
-         .merchant-cabinet__row {
-            grid-template-columns: 110px 74px minmax(350px, 1fr) minmax(65px, 100px) 130px;
-         }
-      }
-
-      // .merchant-cabinet__table_add-groupe
-
-      &_add-groupe {
-         .merchant-cabinet__headline {
-            grid-template-columns: minmax(250px, 1fr) 130px;
-         }
-
-         .merchant-cabinet__row {
-            grid-template-columns: minmax(250px, 1fr) 130px;
-         }
-      }
-   }
-
-   // .merchant-cabinet__headline
-
-   &__headline {}
-
-   // .merchant-cabinet__col-name
-
-   &__col-name {}
-
-   // .merchant-cabinet__row
-
-   &__row {}
-
-   // .merchant-cabinet__article
-
-   &__article {}
-
-   // .merchant-cabinet__photo
-
-   &__photo {}
-
-   // .merchant-cabinet__name
-
-   &__name {}
-
-   // .merchant-cabinet__count
-
-   &__count {}
-
-   // .merchant-cabinet__add-btn
-
-   &__add-btn {}
 }

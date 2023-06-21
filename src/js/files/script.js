@@ -44,10 +44,6 @@ document.addEventListener("click", function (e) {
 		target.classList.contains('_spoller-active') ? target.innerHTML = 'Свернуть детали заказа' : target.innerHTML = 'Показать детали заказа';
 		e.preventDefault()
 	}
-	// закрыть всплывашку-предупреждение
-	if (e.target.closest('.alert-popup__close')) {
-		closeAlertPopup()
-	}
 	// открыть context menu в ЛК мерчанта
 	if (e.target.closest('.context-menu__btn')) {
 		openContextMenu(e.target.closest('.context-menu__btn'));
@@ -417,26 +413,6 @@ window.addEventListener("load", function (e) {
 	}, 20000);
 });
 
-//#region закрытие модалки предупреждения 
-
-if (localStorage.getItem('alert-popup') === 'close' && document.querySelector('.alert-popup')) {
-	document.querySelector('.alert-popup').style.display = 'none';
-}
-function closeAlertPopup() {
-	const alertPopup = document.querySelector('.alert-popup');
-	if (alertPopup) {
-		alertPopup.style.cssText = `
-	transition: all 0.3s ease 0s;
-	transform: translate(0px,100%);`;
-		setTimeout(() => {
-			alertPopup.style.display = "none";
-		}, 1000);
-		localStorage.setItem('alert-popup', 'close');
-	}
-}
-
-//#endregion
-
 //#region рендер графика в ЛК мерчанта
 
 const ctx = document.getElementById('myChart');
@@ -482,7 +458,7 @@ if (ctx) {
 	});
 	window.chart = myChart;
 	// window.chart.config._config.options.scales.x.grid.lineWidth = 0
-	// console.log(window.chart);
+	console.log(window.chart);
 }
 
 //#endregion
@@ -498,6 +474,11 @@ function openContextMenu(btn) {
 			e.classList.remove('context-menu-open');
 		});
 		btn.parentElement.classList.add('context-menu-open');
+
+		let dropdown = btn.closest('.context-menu').querySelector('.context-menu__dropdown');
+		dropdown.style.cssText = `
+		top: ${btn.offsetTop}px; 
+		left: ${btn.offsetLeft - 243 - btn.closest('.merchant-cabinet__table').scrollLeft}px;`;
 	}
 }
 
