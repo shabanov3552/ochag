@@ -4,6 +4,10 @@
 	// .main-catalog_first-level
 
 	&_first-level {
+		.page-description {
+			grid-column: 2/3;
+		}
+
 		.main-catalog__sidebar-categories {
 			@media (max-width:$tablet) {
 				display: none;
@@ -16,6 +20,14 @@
 
 	&__row {
 		display: flex;
+
+		@media (min-width:$tablet) {
+			.main-catalog_first-level & {
+				display: grid;
+				grid-template-columns: 251px 1fr;
+			}
+
+		}
 
 		@media (max-width:$tablet) {
 			display: block;
@@ -69,6 +81,11 @@
 	&__content {
 		flex: 1 1 auto;
 		max-width: calc(100% - 320px);
+
+		.main-catalog_first-level & {
+			min-width: 0;
+			max-width: 100%;
+		}
 
 		@media (max-width:$tablet) {
 			max-width: 100%;
@@ -1008,5 +1025,69 @@
 
 	&__range-slider {
 		padding: 10px;
+	}
+}
+
+.page-description {
+	padding-top: rem(20);
+
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: 600;
+		line-height: normal;
+	}
+
+	h2 {
+		font-size: 21px;
+		margin: rem(17.5) 0;
+		line-height: normal;
+	}
+
+	h3 {
+		margin: rem(16.4) 0;
+		font-size: 16px;
+		line-height: normal;
+	}
+
+	ol {
+		margin: rem(14) 0;
+		padding-left: rem(25);
+		font-size: 14px;
+		line-height: normal;
+	}
+
+	p {
+		margin: rem(14) 0;
+		font-size: 14px;
+		line-height: normal;
+	}
+
+	dd {
+		padding-left: rem(20);
+		line-height: normal;
+	}
+
+	ul {
+		margin: rem(14) 0;
+		padding-left: 25px;
+		font-size: 14px;
+		line-height: normal;
+
+		li {
+			list-style: disc;
+		}
+	}
+
+	table {
+		border-spacing: 0px;
+		border: 1px solid #000;
+	}
+
+	td {
+		border: 1px solid #000;
+		padding: 0 rem(10);
 	}
 }
